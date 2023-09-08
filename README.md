@@ -22,3 +22,7 @@ Today, I learned how to apply visual style (bold and italics) to text. The prefe
 ## Day 004 - 2023/09/06
 
 Today, I learned how to list items. There are two types of lists: ordered (ol) and unordered (ul). Within the tags of the list, use the tag (li) to add an item to the list. Nested lists are allowed.
+
+## Day 005 - 2023/09/07
+
+Today, I learned how to link to external and internal web pages. To include a link, use the <a> tag and specify in the href attribute the destination webpage.
