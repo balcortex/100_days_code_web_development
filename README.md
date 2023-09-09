@@ -26,3 +26,7 @@ Today, I learned how to list items. There are two types of lists: ordered (ol) a
 ## Day 005 - 2023/09/07
 
 Today, I learned how to link to external and internal web pages. To include a link, use the <a> tag and specify in the href attribute the destination webpage.
+
+## Day 006 - 2023/09/08
+
+Today I learned how to display an image on a web page. Use the <img src='' alt=''> tag to include an image. The src attribute is the path of the image (can be relative or absolute, as with links; see day 005). The alt attribute is the description of the image in case the web browser cannot render the image.
