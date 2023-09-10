@@ -30,3 +30,7 @@ Today, I learned how to link to external and internal web pages. To include a li
 ## Day 006 - 2023/09/08
 
 Today I learned how to display an image on a web page. Use the <img src='' alt=''> tag to include an image. The src attribute is the path of the image (can be relative or absolute, as with links; see day 005). The alt attribute is the description of the image in case the web browser cannot render the image.
+
+## Day 007 - 2023/09/09
+
+Today I learned how to change the style of individual elements, using CCS inline style. The style is defined in the opening tag with the syntax <p style="">. There are many CSS properties like color, font-size, text-alignment. You can find a complete list of CSS properties at https://www.w3schools.com/cssref/index.php.
