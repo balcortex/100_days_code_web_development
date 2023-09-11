@@ -34,3 +34,7 @@ Today I learned how to display an image on a web page. Use the <img src='' alt='
 ## Day 007 - 2023/09/09
 
 Today I learned how to change the style of individual elements, using CCS inline style. The style is defined in the opening tag with the syntax <p style="">. There are many CSS properties like color, font-size, text-alignment. You can find a complete list of CSS properties at https://www.w3schools.com/cssref/index.php.
+
+## Day 008 - 2023/09/10
+
+Today I learned how to change the style of all matching elements with the internal CCS style. Instead of styling each element as inline CSS, internal CSS creates a style for all the elements sharing one tag (selector).
