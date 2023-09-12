@@ -38,3 +38,7 @@ Today I learned how to change the style of individual elements, using CCS inline
 ## Day 008 - 2023/09/10
 
 Today I learned how to change the style of all matching elements with the internal CCS style. Instead of styling each element as inline CSS, internal CSS creates a style for all the elements sharing one tag (selector).
+
+## Day 009 - 2023/09/11
+
+Today I learned CSS External Style. When you have multiple pages, the use of Internal CSS would require changing each individual file. With External CSS, you only need to make the changes in one file, despite the number of pages your website has.
