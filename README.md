@@ -42,3 +42,7 @@ Today I learned how to change the style of all matching elements with the intern
 ## Day 009 - 2023/09/11
 
 Today I learned CSS External Style. When you have multiple pages, the use of Internal CSS would require changing each individual file. With External CSS, you only need to make the changes in one file, despite the number of pages your website has.
+
+## Day 009 - 2023/09/11
+
+Today I learned to mix Inline, Internal, and External CSS Styles. The resolution order is the following: Inline, Internal, and External. That means Inline CSS Style will always be applied if there are conflicting attributes.
