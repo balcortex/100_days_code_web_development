@@ -33,7 +33,7 @@ Today I learned how to display an image on a web page. Use the <img src='' alt='
 
 ## Day 007 - 2023/09/09
 
-Today I learned how to change the style of individual elements, using CCS inline style. The style is defined in the opening tag with the syntax <p style="">. There are many CSS properties like color, font-size, text-alignment. You can find a complete list of CSS properties at https://www.w3schools.com/cssref/index.php.
+Today I learned how to change the style of individual elements, using CCS inline style. The style is defined in the opening tag with the syntax <p style="">. There are many CSS properties like color, font-size, text-alignment. You can find a complete list of CSS properties at <https://www.w3schools.com/cssref/index.php>.
 
 ## Day 008 - 2023/09/10
 
@@ -43,6 +43,10 @@ Today I learned how to change the style of all matching elements with the intern
 
 Today I learned CSS External Style. When you have multiple pages, the use of Internal CSS would require changing each individual file. With External CSS, you only need to make the changes in one file, despite the number of pages your website has.
 
-## Day 009 - 2023/09/11
+## Day 010 - 2023/09/12
 
 Today I learned to mix Inline, Internal, and External CSS Styles. The resolution order is the following: Inline, Internal, and External. That means Inline CSS Style will always be applied if there are conflicting attributes.
+
+## Day 011 - 2023/09/13
+
+Today I learned CSS classes, which are used to group HTML elements, regardless of their type, to apply unique styling and formatting to those elements.
