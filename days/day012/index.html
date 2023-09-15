@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CCS ID Selector</title>
+    <style>
+        p{color:blue;}
+        .text-center{text-align: center;}
+        .text-red{color:red}
+        #critical{
+            color:black;
+            font-size: 20px;
+            border: 5px solid red;
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+    <h1 class="text-center text-red">CCS ID Selector</h1>
+    <p>There is another selector in CSS, apart from the Type Selector and the Class Selector, which is the ID Selector.</p>
+    <p>The ID attribute is declared similarly to a Class attribute inside the opening tag with the syntax <em>id="id_name"</em> . However, an ID must be unique, which means two HTML elements cannot share the same ID.</p>
+    <p>In addition, the ID Selector has the highest specificity (i.e., importance). If an element has colliding CSS attributes, those declared in the ID selector will be applied. The specificity order is the following:</p>
+    <ol>
+        <li>ID</li>
+        <li>Class</li>
+        <li>Type</li>
+    </ol>
+    <p>To define an ID Selector in CSS, use the # symbol before the id_name.</p>
+    <p class="text-center" id="critical">The importance of the ID attribute is yet to be explored later in JavaScript.</p>
+</body>
+</html>

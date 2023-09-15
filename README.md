@@ -17,7 +17,7 @@ Today, I learned several things:
 
 ## Day 003 - 2023/09/05
 
-Today, I learned how to apply visual style (bold and italics) to text. The preferred way is using <strong> and <em> because these tags also change the semantics (the way screen readers pronounce the words).
+Today, I learned how to apply visual style (bold and italics) to text. The preferred way is using "strong" and "em" because these tags also change the semantics (the way screen readers pronounce the words).
 
 ## Day 004 - 2023/09/06
 
@@ -25,7 +25,7 @@ Today, I learned how to list items. There are two types of lists: ordered (ol) a
 
 ## Day 005 - 2023/09/07
 
-Today, I learned how to link to external and internal web pages. To include a link, use the <a> tag and specify in the href attribute the destination webpage.
+Today, I learned how to link to external and internal web pages. To include a link, use the "a" tag and specify in the href attribute the destination webpage.
 
 ## Day 006 - 2023/09/08
 
@@ -50,3 +50,7 @@ Today I learned to mix Inline, Internal, and External CSS Styles. The resolution
 ## Day 011 - 2023/09/13
 
 Today I learned CSS classes, which are used to group HTML elements, regardless of their type, to apply unique styling and formatting to those elements.
+
+## Day 012 - 2023/09/14
+
+Today I learned CSS ID selectors, which are similar to classes in the sense that they allow applying unique styling to an element. Still, IDs can be applied just to a single element.
