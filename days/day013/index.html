@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Box Model</title>
+    <style>
+        *{
+            border: 1px solid red;
+        }
+        html{
+            border: 5px solid blue
+        }
+        body{
+            border: 3px solid green;
+        }
+    </style>
+</head>
+<body>
+    <h1>The Box Model (This is a box)</h1>
+    <p>Every HTML element in a web page is contained in a box. The outer blue box contains the html element, the parent element. Within this blue box is the body element, colored green. Following these two boxes, all the other elements make the web page, contained in red boxes.</p>
+    <ul>
+        <li>By default, boxes expand to match the width of the parent.</li>
+        <li>And their height shrinks to their content.</li>
+    </ul>
+    <p>Links and images are also contained in boxes: <a href="http://www.google.com"> A link to Google is a box</a> </p>.
+    <img src="star.png" alt="A cartoon star">
+    <p>Knowing how the elements are positioned to improve the page's visuals is essential.</p>
+</body>
+</html>
