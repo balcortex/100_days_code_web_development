@@ -58,3 +58,7 @@ Today I learned CSS ID selectors, which are similar to classes in the sense that
 ## Day 013 - 2023/09/15
 
 Today I learned about the Box Model. Every element in HTML has a box around it. By default, block boxes match the parent's width, whereas inline boxes shrink their size to the content.
+
+## Day 014 - 2023/09/16
+
+Today I learned the CSS display property, which allows to change the default positioning of the element on the same line (inline) or in a new line (block).
