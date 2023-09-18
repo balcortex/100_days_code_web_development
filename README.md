@@ -62,3 +62,7 @@ Today I learned about the Box Model. Every element in HTML has a box around it. 
 ## Day 014 - 2023/09/16
 
 Today I learned the CSS display property, which allows to change the default positioning of the element on the same line (inline) or in a new line (block).
+
+## Day 015 - 2023/09/17
+
+Today I learned the parts of the CSS Box Model: margin, border, padding, and content. These properties allow us to fine-control the elements' position on the page.

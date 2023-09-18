@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Parts of the Box Model</title>
+    <style>
+        body{margin: 0px;}
+        div{
+            font-size: 24px;
+            background-color: cadetblue;
+        }
+        .box-1{
+            border: 10px solid slateblue;
+        }
+        .box-2{
+            background-clip: content-box, padding-box;
+            border: 30px solid slateblue;
+            padding: 20px;
+            margin-top: 10px;
+            margin-left: 20px;
+            margin-right: 50px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Parts of the Box Model</h1>
+    <p>The box model has four elements:
+        <ul>
+            <li>Margin: distance between boxes (has no color).</li>
+            <li>Border: the visual limits of the box (i.e., the frame - can have a color). </li>
+            <li>Padding: distance between the content and the border (can have a color).</li>
+            <li>Content: the actual content of the box.</li>
+        </ul>
+    </p>
+    <img src="box_model.png" alt="The box model">
+    <p>For example, consider the following HTML elements:</p>
+    <div class="box-1">10-pixel border, no margin (default value), no padding (default value)</div>
+    <div class="box-2">30-pixel border, different margins, 20-pixel padding.</div>
+</body>
+</html>
