@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Standard vs. Alternative Box Model</title>
+    <style>
+        div{
+            height: 120px;
+            width: 200px;
+            padding: 25px;
+            border: 5px solid slateblue;
+            margin: 10px;
+            background-color: coral;
+            background-clip: content-box, padding-box;
+        }
+        .standard-box-model{box-sizing: content-box;}
+        .alternative-box-model{box-sizing: border-box;}
+    </style>
+</head>
+<body>
+    <h1>Standard vs. Alternative Box Model</h1>
+    <p>To add (even) more complexity to the Box Model, there are two types of models (i.e., how the box size is calculated):</p>
+    <ul>
+        <li><strong>Standard Box Model:</strong> Used by default by all browsers, the width and height of the block only account for the content box. For example, if we define a Standard Box Model of 350px by 150px with a padding of 25px and a border of 5px, the actual size of the box would be 260px wide (200 + 25 + 25 + 5 + 5) and 180px high (120 + 25 + 25 + 5 + 5) </li>
+        <div class="standard-box-model">Standard Box Model (default) Size 260px by 180px</div>
+        <li><strong>Alternative Box Model:</strong> The content, the padding, and the border add up to the total size of the box. Following the previous example, the actual size of the box would be 200px wide (60 padding and border + 120 content width) and 120px high (60 padding and border + 60 content height).</li>
+        <div class="alternative-box-model">Alternate Box Model Size 200px by 120px</div>
+    </ul>
+    <p>Note: the margin doesn't add up space for the box.</p>
+    <p>The Alternative Box Model is easier to work with, and most developers commonly use it.</p>
+</body>
+</html>

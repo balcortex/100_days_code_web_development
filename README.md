@@ -66,3 +66,7 @@ Today I learned the CSS display property, which allows to change the default pos
 ## Day 015 - 2023/09/17
 
 Today I learned the parts of the CSS Box Model: margin, border, padding, and content. These properties allow us to fine-control the elements' position on the page.
+
+## Day 016 - 2023/09/18
+
+Today I learned the two types of Box Model that CSS uses. The size calculations are more complex in the standard model (default); in contrast, in the alternative model (preferred) the actual size is the declared one.
