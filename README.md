@@ -70,3 +70,7 @@ Today I learned the parts of the CSS Box Model: margin, border, padding, and con
 ## Day 016 - 2023/09/18
 
 Today I learned the two types of Box Model that CSS uses. The size calculations are more complex in the standard model (default); in contrast, in the alternative model (preferred) the actual size is the declared one.
+
+## Day 017 - 2023/09/19
+
+Today I learned about positive and negative margins. Use positive margins to create space between elements and negative margins to narrow the distance between elements.
