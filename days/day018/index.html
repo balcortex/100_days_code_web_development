@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Margin Collapsing</title>
+    <style>
+        div{border: 2px solid black; width: 150px; padding: 5px;}
+        .pos{background-color: chartreuse;}
+        .neg{background-color: violet; margin-left: 5px;}
+    </style>
+</head>
+<body>
+    <h1>Margin Collapsing</h1>
+    <p>There is an interesting property that acts on <strong>vertical margins:</strong></p>
+    <ul>
+        <li><strong>If two adjacent margins are both positive</strong>, only the greatest one is kept. For example, suppose the bottom margin of one element is 10px, and the top margin of the below element is 9px. In that case, <strong>the resulting margin is not 19px but 10px.</strong></li>
+        <div class="pos" style="margin-bottom: 10px;">10px margin-bottom</div>
+        <div class="pos" style="margin-top: 9px; margin-bottom: 10px;">9px margin-top</div>
+        <li><strong>If two adjacent margins are both negative,</strong> they collapse into the smallest one (the one that is the farthest from zero). For example, if the bottom margin of one element is -1px and the top margin of the below element is -5px, <strong>the resulting margin is -5px.</strong> </li>
+        <div class="neg" style="margin-bottom: -1px; margin-left: 0px;">-1px margin-bottom</div>
+        <div class="neg" style="margin-top: -5px; margin-bottom: 10px;">-5px margin-top</div>
+        <li><strong>If one margin is positive and the other is negative</strong>, the resulting margin would be the sum of both (considering the magnitude and sign). For example, if the bottom margin of one element is 100px and the top margin of the below element is -105px, <strong>the resulting margin is -5px</strong> (same result as above).</li>
+        <div class="pos" style="margin-bottom: 100px;">100px margin-bottom</div>
+        <div class="neg" style="margin-top: -105px; margin-bottom: 50px;">-105px margin-top</div>
+    </ul>
+    <p style="color: red"><strong>Note: horizontal margins do not collapse!</strong></p>
+</body>
+</html>

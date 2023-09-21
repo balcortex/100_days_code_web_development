@@ -74,3 +74,7 @@ Today I learned the two types of Box Model that CSS uses. The size calculations 
 ## Day 017 - 2023/09/19
 
 Today I learned about positive and negative margins. Use positive margins to create space between elements and negative margins to narrow the distance between elements.
+
+## Day 018 - 2023/09/20
+
+Today I learned about collapsing margins. Two adjacent margins with the same sign are combined into the greatest one (the farthest from zero). This property only applies to vertical margins.
