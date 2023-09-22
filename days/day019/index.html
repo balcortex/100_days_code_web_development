@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Borders</title>
+    <link rel="stylesheet" href="style.css">
+    <style>        
+        .simple-border{
+            border: 2px solid black;
+        }
+        .complex-border{
+            border-top-style: double;
+            border-right-style: dotted;
+            border-left-style: dashed;
+            border-bottom-style: double;
+        }
+        .round-border{
+            border: 3px solid black;
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Borders</h1>
+    <p>Borders are straightforward. To make a simple border, you just need to specify the border width, the line style, and the color.</p>
+    <div class="simple-border"> A simple border</div>
+    <p>There are several line styles, like dotted, dashed, solid, double, etc. You can make any combination using the property <em>border-POSITION-style</em>.</p>
+    <div class="complex-border"> A complex border</div>
+    <p>Also, you can make round borders using the property <em>border-radius.</em></p>
+    <div class="round-border"> A round border</div>
+</body>
+</html>

@@ -78,3 +78,7 @@ Today I learned about positive and negative margins. Use positive margins to cre
 ## Day 018 - 2023/09/20
 
 Today I learned about collapsing margins. Two adjacent margins with the same sign are combined into the greatest one (the farthest from zero). This property only applies to vertical margins.
+
+## Day 019 - 2023/09/21
+
+Today I learned how to customize borders. To style a border, you need to specify the width, line style, and color values. You can use any combination of values for each border on the element.
