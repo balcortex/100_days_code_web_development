@@ -82,3 +82,7 @@ Today I learned about collapsing margins. Two adjacent margins with the same sig
 ## Day 019 - 2023/09/21
 
 Today I learned how to customize borders. To style a border, you need to specify the width, line style, and color values. You can use any combination of values for each border on the element.
+
+## Day 020 - 2023/09/22
+
+Today I learned about the padding property, which changes the space between the border and the content. Contrary to the margin property, padding does not accept negative values.
