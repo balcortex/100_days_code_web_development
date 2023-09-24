@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Inline-Block Display Value</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        div{height: 40px; width: 180px;}
+        .block{display: block;}
+        .inline{display: inline;}
+        .inline-block{display: inline-block;}
+    </style>
+</head>
+<body>
+    <h1>The <em>Inline-Block</em> Display Value</h1>
+    <p>First, let's remember the fundamental values of the display property:</p>
+    <ul>
+        <li><strong>Block:</strong> sets the element in a new line
+        <div class="block"><em>display: block</em></div>
+        <div class="block"><em>display: block</em></div></li>
+        <li><strong>Inline</strong>: puts one element next to another element. Both must share the inline value.
+        <div class="inline"><em>display: inline</em></div>
+        <div class="inline"><em>display: inline</em></div>
+        </li>
+    </ul>
+    <p>If you look at the page code, both the block and inline elements must be 230px wide and 40px high, but only the block element follows these properties. The inline element always wraps the content, which means its width and height cannot be specified with the <em>width</em> and <em>height</em> properties.</p>
+    <p>Now, let's introduce the <strong>inline-block</strong> value, which behaves like an inline element, but their size can be adjusted via the <em>width</em> and <em>height</em> properties:</p>
+    <div class="inline-block"><em>display: inline-block</em></div>
+    <div class="inline"><em>display: inline</em></div>
+    <div class="inline-block"><em>display: inline-block</em></div>
+</body>
+</html>

@@ -86,3 +86,7 @@ Today I learned how to customize borders. To style a border, you need to specify
 ## Day 020 - 2023/09/22
 
 Today I learned about the padding property, which changes the space between the border and the content. Contrary to the margin property, padding does not accept negative values.
+
+## Day 021 - 2023/09/23
+
+Today I learned the inline-block value for the display property. The inline-block behaves like an inline element, but its size can be changed.
