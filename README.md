@@ -90,3 +90,7 @@ Today I learned about the padding property, which changes the space between the 
 ## Day 021 - 2023/09/23
 
 Today I learned the inline-block value for the display property. The inline-block behaves like an inline element, but its size can be changed.
+
+## Day 022 - 2023/09/24
+
+Today I learned about the Normal Flow, the standard way to put elements on the page (top to bottom and right to left). This mode only allows us to create very basic web pages
