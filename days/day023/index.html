@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .flex-container{display: flex;}
+        .flex-container div{flex: 1;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox</h1>
+
+    <p>There are many ways to move elements around on a web page.</p>
+    <p>Flexbox (flexible box layout mode) is a relatively new way of manipulating elements in CSS, and its debut was revolutionary. Many modern web pages use flexbox to re-arrange elements, mostly on navigation links (headers and footers).</p>
+    <p>Flexbox arranges elements into a single row by default. The elements within this row will flex (i.e., grow or shrink) based on the rules you define.</p>
+    <p>For example, suppose we have three div elements (with the default block display property). Without using flexbox, the items will be shown like this:</p>
+
+    <p>Without flexbox:</p>
+    <div>(1) Item</div>
+    <div>(2) Item</div>
+    <div>(3) Item</div>
+
+    <p>By using the flexbox layout, the result is the following:</p>
+    <div class="flex-container">
+        <div>(1) Flex-item</div>
+        <div>(2) Flex-item</div>
+        <div>(3) Flex-item</div>
+    </div>
+
+    <p>To use the flexbox layout mode, use the display property with the flex value.</p>
+    <p>In flexbox, the element that uses the display: flex property is called the flex-container (the pink rectangle), and the elements within the flex-container (blue rectangles) are called the flex-items.</p>
+</body>
+</html>

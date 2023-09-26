@@ -94,3 +94,7 @@ Today I learned the inline-block value for the display property. The inline-bloc
 ## Day 022 - 2023/09/24
 
 Today I learned about the Normal Flow, the standard way to put elements on the page (top to bottom and right to left). This mode only allows us to create very basic web pages
+
+## Day 023 - 2023/09/25
+
+Today I learned about the flexbox layout mode, which is a mode that re-arranges a group of elements into rows or columns that can grow or shrink based on the available space.
