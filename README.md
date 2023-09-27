@@ -98,3 +98,7 @@ Today I learned about the Normal Flow, the standard way to put elements on the p
 ## Day 023 - 2023/09/25
 
 Today I learned about the flexbox layout mode, which is a mode that re-arranges a group of elements into rows or columns that can grow or shrink based on the available space.
+
+## Day 024 - 2023/09/26
+
+Today I learned how to grow items in the flexbox layout mode, which is done using the property flex-grow. If all items have the same value, they will have the same width.

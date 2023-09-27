@@ -1,0 +1,12 @@
+div{
+    background-color: aqua;
+    border: 2px solid black;
+    box-sizing: border-box;
+    padding: 1px;
+}
+
+.flex-container{
+    background-color: violet;
+    padding: 5px;
+    gap: 2px;
+}

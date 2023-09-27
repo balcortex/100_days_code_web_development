@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Growing</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .flex-container{display: flex;}
+        .grow div{flex-grow: 1;}
+        .grow .triple-size{flex-grow: 3;}
+        .grow .half-size{flex-grow: 0.2;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Growing</h1>
+    <p>The default behavior of the flex-items is to inherit the size properties of their element. For example, by turning the container into a flex-container, the flex-items are set next to each other, wrapping their content, and without growing: </p>
+    <div class="flex-container">
+        <div>Item 1</div>
+        <div>Item 2</div>
+        <div>Item 3</div>
+    </div>
+    <p>To make the flex-items grow to absorb any extra space in the flex-container, use the flex-grow property with a value of 1. This rule will make all the items grow and have the same width:</p>
+    <div class="flex-container grow" >
+        <div>Item 1 (grow: 1)</div>
+        <div>Item 2 (grow: 1)</div>
+        <div>Item 3 (grow: 1)</div>
+    </div>
+    <p>Other values different from 1 can be used, too. For example, item 2 below has a flex-grow value of 3, meaning it will grow faster than the rest of the items in the flex-container. The exact ratio of their widths is 1/5, 3/5, and 1/5 (because items 1 and 3 have a flex-grow value of 1, so the total width is divided by the sum of all values, that is 5, and multiplied by the item's value):</p>
+    <div class="flex-container grow">
+        <div>Item 1 (grow: 1)</div>
+        <div class="triple-size">Item 2 (grow: 3)</div>
+        <div>Item 3 (grow: 1)</div>
+    </div>
+    <p>You can use decimal values to make that item smaller than the others:</p>
+    <div class="flex-container grow">
+        <div>Item 1 (grow: 1)</div>
+        <div class="half-size">Item 2 (grow: 0.2)</div>
+        <div>Item 3 (grow: 1)</div>
+    </div>
+    <p style="margin-top: 40px;"><strong>Note:</strong> in these examples, the items will start growing until space is available. When there's no space to grow, the items will be the same size (that's the beauty of flexbox).</p>
+</body>
+</html>
