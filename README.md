@@ -102,3 +102,8 @@ Today I learned about the flexbox layout mode, which is a mode that re-arranges 
 ## Day 024 - 2023/09/26
 
 Today I learned how to grow items in the flexbox layout mode, which is done using the property flex-grow. If all items have the same value, they will have the same width.
+
+## Day 025 - 2023/09/27
+
+Today I learned how to shrink items in the flexbox layout, which is controlled by the property flex-shrink. You can prevent a particular item from shrinking by setting a value of 0.
+

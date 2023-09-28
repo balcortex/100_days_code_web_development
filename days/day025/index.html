@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Shrinking</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .flex-container{display: flex;}
+        .flex-container div{width: 220px;}
+        .no-shrink{flex-shrink: 0;}
+        .custom-shrink{flex-shrink: 2;}
+        .custom-shrink-2{flex-shrink: 0.5;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Shrinking</h1>
+    <p>Another property of the flexbox layout, apart from growing, is the ability to shrink the items to fit the container. The CSS property that controls the shrinking is <em>flex-shrink</em>, a property of the flex-items. Let's explore an example.</p>
+    <p>Suppose you have a flex-container with three flex-items, each with a fixed width of 220px. The default behavior of the flex-items is to shrink to fit the container width. That is, the default value of the <em>flex-shrink</em> property is 1:</p>
+    <div class="flex-container">
+        <div>Item 1 (shrink: 1)</div>
+        <div>Item 2 (shrink: 1)</div>
+        <div>Item 3 (shrink: 1)</div>
+    </div>
+    <p>If we set the value 0 to all the flex-items, these items are not allowed to shrink. In this example, the items cannot fit into the container, and overflows occur.</p>
+    <div class="flex-container">
+        <div class="no-shrink">Item 1  (shrink: 0)</div>
+        <div class="no-shrink">Item 2  (shrink: 0)</div>
+        <div class="no-shrink">Item 3  (shrink: 0)</div>
+    </div>
+    <p>Finally, we can combine items that don't shrink with items that shrink more (setting a value greater than 1) or shrink less (assigning a value between 0 and 1):</p>
+    <div class="flex-container">
+        <div class="no-shrink">Item 1 (shrink: 0)</div>
+        <div class="custom-shrink">Item 2  (shrink: 2)</div>
+        <div class="custom-shrink-2">Item 3 (shrink: 0.5)</div>
+    </div>
+    <p>Note: negatives values are invalid.</p>
+</body>
+</html>
