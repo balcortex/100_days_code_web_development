@@ -107,3 +107,7 @@ Today I learned how to grow items in the flexbox layout mode, which is done usin
 
 Today I learned how to shrink items in the flexbox layout, which is controlled by the property flex-shrink. You can prevent a particular item from shrinking by setting a value of 0.
 
+## Day 026 - 2023/09/28
+
+Today I learned the flex-basis property, which defines the item's size before the extra space is distributed. It behaves similarly to the width property (almost always).
+

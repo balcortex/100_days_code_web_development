@@ -1,0 +1,49 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <title>Flexbox Basis</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .flex-container{display: flex;}
+        .grow{flex-grow: 1;}
+        .no-grow{flex-grow: 0;}
+        .shrink{flex-shrink: 1;}
+        .no-shrink{flex-shrink: 0;}
+        .basis-0{flex-basis: 0px;}
+        .basis-180{flex-basis: 180px;}
+        .width-0{width: 0px;}
+        .width-180{width: 180px;}
+    </style>
+ </head>
+ <body>
+    <h1>Flexbox Basis</h1>
+    <p>The property flex-basis is used along with flex-grow and flex-shrink to define the width of the flex items. This property is the hardest (and a little tricky) of the three.</p>
+    <p>Flex-basis is defined as the default size of an element before the extra space is distributed. It behaves similarly to the width property when the items are not allowed to grow or shrink. The default value for flex-basis is auto, which inherits whatever the width value is. However, one difference exists when both properties have the value of 0, as we explore in the following examples.</p>
+    <p>In the first example, the items cannot grow or shrink. With flex-basis: 0px, the width of Item 1 is reduced to the maximum, allowing the content to display; while setting the width: 0px on Item 2, the box's width is 0px, which makes the content disappear. There's no difference with values greater than the content width, as Item 3 and Item 4 behave the same.</p>
+    <div class="flex-container">
+        <div class="no-grow no-shrink basis-0">Item 1</div>
+        <div class="no-grow no-shrink width-0">Item 2</div>
+        <div class="no-grow no-shrink basis-180">Item 3</div>
+        <div class="no-grow no-shrink width-180">Item 4</div>
+    </div>
+    <p>In the second example, items are not allowed to grow or shrink, as above. Item 1 and Item 3 have the same values, while Item 2 has the default value for the flex-basis property, which is auto. This value allows the item to wrap the content.</p>
+    <div class="flex-container">
+        <div class="no-grow no-shrink basis-0">Item 1</div>
+        <div class="no-grow no-shrink">Item 2</div>
+        <div class="no-grow no-shrink basis-180">Item 3</div>
+    </div>
+    <p>In the third example, items are allowed to grow but cannot shrink. All items have the property flex-basis: 180px. If there is not enough space to fit the items, there is overflow; if the container has extra space, the items will grow equally.</p>
+    <div class="flex-container">
+        <div class="grow no-shrink basis-180">Item 1</div>
+        <div class="grow no-shrink basis-180">Item 2</div>
+        <div class="grow no-shrink basis-180">Item 3</div>
+    </div>
+    <p>Finally, items are allowed to grow and shrink in the last example. Item 1 has a value of 0px for flex-basis, while items 2 and 3 have values of 180px and auto, respectively. In this configuration, Item 2 will grow until its width is 180px, then Item 3 will start to grow until its width matches the content, and finally, the extra space will be divided equally between the three items.</p>
+    <div class="flex-container">
+        <div class="grow shrink basis-0">Item 1</div>
+        <div class="grow shrink basis-180">Item 2</div>
+        <div class="grow shrink">Item 3</div>
+    </div>
+ </body>
+ </html>
