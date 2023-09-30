@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Direction</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .flex-container{display: flex;}
+        .item{flex-grow: 1;}
+        .column{ flex-direction: column;}
+        .mod-height{height: 20vh;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Direction</h1>
+    <p>Until now, we have worked only with the properties of the flex items, but the containers have their properties too. The flex-direction is the most important property for a flex container (apart from display: flex).</p>
+    <p>The default value for flex-direction is row, where the items are set one right to the other. By using the row value (and allowing the items to grow), the result is the following:</p>
+    <div class="flex-container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <p>Using the same configuration, but with flex-direction: column, the items are set one below each other. But, they are not growing.</p>
+    <div class="flex-container column">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <p>This is because height and width behave differently. The width of the elements stretches to match the page width (by default) while their height is adjusted to match the content. If we change the default height of the flex container, the items can grow:</p>
+    <div class="flex-container column mod-height">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+    </div>
+    <p>The flex-direction allows us to place the items in a row (default) or in a column (like a list, but fancier).</p>
+</body>
+</html>

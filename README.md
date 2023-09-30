@@ -111,3 +111,6 @@ Today I learned how to shrink items in the flexbox layout, which is controlled b
 
 Today I learned the flex-basis property, which defines the item's size before the extra space is distributed. It behaves similarly to the width property (almost always).
 
+## Day 027 - 2023/09/29
+
+Today I learned the flex-direction property, which places the items in a row (default) or in a column (like a list, but fancier).
