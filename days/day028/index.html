@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Justify-Content</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{display: flex;}
+        .default{justify-content: flex-start;}
+        .flex-end{justify-content: flex-end;}
+        .space-around{justify-content: space-around;}
+        .space-between{justify-content: space-between;}
+        .space-evenly{justify-content: space-evenly;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Justify-Content</h1>
+    <p>The justify-content property sets the alignment of the items within the flex container (when the items are not allowed to grow). There are several values, and their behavior is the following:</p>
+    <p><em>justify-content: flex-start</em> (default). Set the items on the left.</p>
+    <div class="container default">
+        <div>Item 1</div>     <div>Item 2</div>      <div>Item 3</div>
+    </div>
+    <p><em>justify-content: flex-end</em>. Set the items on the right.</p>
+    <div class="container flex-end">
+        <div>Item 1</div>     <div>Item 2</div>      <div>Item 3</div>
+    </div>
+    <p><em>justify-content: space-around</em>. Distribute items along the container. Each item has the same gap on the right and left (the gap between items is the sum of both).</p>
+    <div class="container space-around">
+        <div>Item 1</div>     <div>Item 2</div>      <div>Item 3</div>
+    </div>
+    <p><em>justify-content: space-between</em>. Sets the first item to the left and the last to the right, and evenly distributes the available space.</p>
+    <div class="container space-between">
+        <div>Item 1</div>     <div>Item 2</div>      <div>Item 3</div>
+    </div>
+    <p><em>justify-content: space-evenly</em>. Distribute the items evenly. Each item has the same gap on the left and right.</p>
+    <div class="container space-evenly">
+        <div>Item 1</div>     <div>Item 2</div>      <div>Item 3</div>
+    </div>
+</body>
+</html>

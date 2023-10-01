@@ -114,3 +114,7 @@ Today I learned the flex-basis property, which defines the item's size before th
 ## Day 027 - 2023/09/29
 
 Today I learned the flex-direction property, which places the items in a row (default) or in a column (like a list, but fancier).
+
+## Day 028 - 2023/09/30
+
+Today I learned the justify-content property, which controls the items' position when they are not allowed to grow. The default value is flex-start, which places the items at the left.
