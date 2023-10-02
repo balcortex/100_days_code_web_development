@@ -118,3 +118,7 @@ Today I learned the flex-direction property, which places the items in a row (de
 ## Day 028 - 2023/09/30
 
 Today I learned the justify-content property, which controls the items' position when they are not allowed to grow. The default value is flex-start, which places the items at the left.
+
+## Day 029 - 2023/10/01
+
+Today I learned the justify-content property applied when the flex-direction is set to column, which sets the position of the items along the y-axis (instead of the x-axis for row direction).

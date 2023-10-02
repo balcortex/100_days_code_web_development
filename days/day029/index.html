@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Justify-Content (Column)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{display: flex; height: 10vh; flex-direction: column;}
+        .default{justify-content: flex-start;}
+        .flex-end{justify-content: flex-end;}
+        .space-around{justify-content: space-around;}
+        .space-between{justify-content: space-between;}
+        .space-evenly{justify-content: space-evenly;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Justify-Content (Column)</h1>
+    <p>If the direction of the flex container is set to column, the <em>justify-content</em> behaves differently. When the value of <em>flex-direction</em> is <em>row</em>, <em>justify-content</em> acts on the x-axis (horizontally); if the value is <em>column</em>, this property acts on the y-axis (vertically). Next are examples of different values for the <em>justify-content</em> property when the direction is <em>column</em>.</p>
+    <p><em>justify-content: flex-start (default)</em>. Set the items on the top.</p>
+    <div class="container default">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div>
+    </div>
+    <p><em>justify-content: flex-end.</em> Set the items on the bottom.</p>
+    <div class="container flex-end">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div>
+    </div>
+    <p><em>justify-content: space-around.</em> Distribute items along the container. Each item has the same gap on the above and below (the gap between items is the sum of both).</p>
+    <div class="container space-around">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div>
+    </div>
+    <p><em>justify-content: space-between.</em> Sets the first item on the top and the last on the bottom, and evenly distributes the available space.</p>
+    <div class="container space-between">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div>
+    </div>
+    <p><em>justify-content: space-evenly.</em>  Distribute the items evenly. Each item has the same gap above and below.</p>
+    <div class="container space-evenly">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div>
+    </div>
+</body>
+</html>
