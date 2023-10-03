@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Align-Content</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{display: flex; height: 8vh;}
+        .big{font-size: 24px;}
+        .small{font-size: 10px;}
+        .default{align-items: stretch;}
+        .start{align-items: flex-start;}
+        .end{align-items: flex-end;}
+        .center{align-items: center;}
+        .baseline{align-items: baseline;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Align-Content</h1>
+    <p>If the flex-direction is set to row, the justify-content property controls the position of the items on the x-axis. You can use the align-content property to move the items on the y-axis.</p>
+    <p>Next are some examples of the different values of the align-content property. The configuration is the same for all cases; the items are not allowed to grow (on the x-axis), and Item 2 and Item 4 have different font sizes to modify their height.</p>
+    <p>align-content: stretch (default). Change the items' height to match the container.</p>
+    <div class="container default">
+        <div>Item 1</div> <div class="big">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+    <p>align-content: flex-start. Sets the items on the top while respecting their size.</p>
+    <div class="container start">
+        <div>Item 1</div> <div class="big">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+    <p>align-content: flex-end. Sets the items on the bottom while respecting their size.</p>
+    <div class="container end">
+        <div>Item 1</div> <div class="big">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+    <p>align-content: center. Center the items while respecting their size.</p>
+    <div class="container center">
+        <div>Item 1</div> <div class="big">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+    <p>align-content: baseline. It is similar to flex-start but aligns the bottom of the items with each other.</p>
+    <div class="container baseline">
+        <div>Item 1</div> <div class="big">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+</body>
+</html>

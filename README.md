@@ -122,3 +122,7 @@ Today I learned the justify-content property, which controls the items' position
 ## Day 029 - 2023/10/01
 
 Today I learned the justify-content property applied when the flex-direction is set to column, which sets the position of the items along the y-axis (instead of the x-axis for row direction).
+
+## Day 030 - 2023/10/02
+
+Today I learned the align-content property applied when the flex-direction is set to row, which moves the items along the y-axis (the position on the x-axis is set with justify-content).
