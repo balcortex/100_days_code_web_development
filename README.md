@@ -125,4 +125,8 @@ Today I learned the justify-content property applied when the flex-direction is 
 
 ## Day 030 - 2023/10/02
 
-Today I learned the align-content property applied when the flex-direction is set to row, which moves the items along the y-axis (the position on the x-axis is set with justify-content).
+Today I learned the align-items property applied when the flex-direction is set to row, which moves the items along the y-axis (the position on the x-axis is set with justify-content).
+
+## Day 031 - 2023/10/03
+
+Today I learned the align-items property applied when the flex-direction is set to column, which moves the items along the x-axis (the position on the y-axis is set with justify-content).

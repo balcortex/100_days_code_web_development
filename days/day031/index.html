@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Align-Items (Column)</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{display: flex; flex-direction: column;}
+        .big{font-size: 24px;}
+        .small{font-size: 10px;}
+        .default{align-items: stretch;}
+        .start{align-items: flex-start;}
+        .end{align-items: flex-end;}
+        .center{align-items: center;}
+        .baseline{align-items: baseline;}
+        .margin{margin-left: 20px;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Align-Items (Column)</h1>
+    <p>If the flex-direction is set to column, the justify-content property controls the position of the items on the y-axis. You can use the align-items property to move the items on the x-axis.</p>
+    <p>Next are some examples of the different values of the align-items property. The configuration is the same for all cases (except the last one, which it is explained there). Item 2 and Item 4 have different font sizes to modify their size.</p>
+    <p>align-items: stretch (default). Change the items' width to match the container.</p>
+    <div class="container default">
+        <div>Item 1</div> <div class="big">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+    <p>align-items: flex-start. Sets the items on the left while respecting their size.</p>
+    <div class="container start">
+        <div>Item 1</div> <div class="big">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+    <p>align-items: flex-end. Sets the items on the right while respecting their size.</p>
+    <div class="container end">
+        <div>Item 1</div> <div class="big">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+    <p>align-items: center. Center the items while respecting their size.</p>
+    <div class="container center">
+        <div>Item 1</div> <div class="big">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+    <p>align-items: baseline. It is similar to flex-start but aligns the items so all the left sides coincide. In this example, Item 2 has a margin on the left of 10px (if the value were center, the items would behave exactly as in the second example, regardless of the margin)</p>
+    <div class="container baseline">
+        <div>Item 1</div> <div class="big margin">Item 2</div> <div>Item 3</div> <div class="small">Item 4</div>
+    </div>
+</body>
+</html>
