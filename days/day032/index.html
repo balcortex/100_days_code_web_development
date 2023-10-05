@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox: Main Axis and Cross Axis</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Flexbox: Main Axis and Cross Axis</h1>
+    <p>The reason <em>justify-content</em> and <em>align-items</em> behave differently when the value of <em>flex-direction</em> is <em>row</em> or <em>column</em> is that the flexbox container is designed to have a main axis and a cross axis. The <em>flex-direction</em> property defines the main axis, and the cross axis runs perpendicular to it.</p>
+
+    <p>Everything on flexbox refers to these axes, so it is worth understanding how they work.</p>
+
+    <p>When the value of <em>flex-direction</em> is <em>row</em>, the main axis runs from left to right (for most languages) and the cross axis from top to bottom:</p>
+
+    <img src="img/row.png" alt="The main and cross axis on a row flex container">
+
+    <p>When the value of <em>flex-direction</em> is <em>column</em>, the main axis runs from top to bottom and the cross axis from left to right (again, language dependant):</p>
+
+    <img src="img/column.png" alt="The main and cross axis on a column flex container">
+
+    <p>So, the two properties we've already covered act on:</p>
+    <ul>
+        <li><em>justify-content</em>: main axis</li>
+        <li><em>align-items</em>: cross axis</li>
+    </ul>
+
+    <p>Images from <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_flexible_box_layout/Basic_concepts_of_flexbox">MDN Web Docs - Basic concepts of flexbox</a></p>
+</body>
+</html>
