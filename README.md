@@ -134,3 +134,7 @@ Today I learned the align-items property applied when the flex-direction is set 
 ## Day 032 - 2023/10/04
 
 Today I learned about flex container main and cross axis, which is why justify-content behaves differently when the value of flex-direction is row or column.
+
+## Day 033 - 2023/10/05
+
+Today I learned about the flex-wrap property, which controls whether the items can span multiple lines if they don't fit the container.

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Wrap</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{
+            display: flex;
+            height: 120px;
+        }
+        .default{flex-wrap: nowrap;}
+        .wrap{flex-wrap: wrap;}
+        .reverse{flex-wrap: wrap-reverse;}
+        .container div{width: 130px;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Wrap</h1>
+
+    <p>Until now, we've seen that flex containers set elements in a single dimension (a row or a column). However, we can allow flex items to wrap onto multiple lines (by adjusting the items' width or height, depending on the direction). This behavior is controlled by the value of the property <em>flex-wrap</em>, whose default value is <em>nowrap</em>, which, you guessed right, doesn't allow wrapping:</p>
+    <div class="container default">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+
+    <p>If we set the value of <em>flex-wrap</em> to <em>wrap</em>, the items can span multiple lines if they don't fit the container.</p>
+    <div class="container wrap">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+
+    <p>There's another value for the <em>flex-wrap</em> property: <em>wrap-reverse</em>, which behaves exactly like wrap, but the last items stack on the top instead of the bottom:</p>
+    <div class="container reverse">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+</body>
+</html>
