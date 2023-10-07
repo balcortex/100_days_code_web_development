@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Align Content</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{display: flex; height: 90px; flex-wrap: wrap;}
+        .default{align-content: stretch;}
+        .flex-start{align-content: flex-start;}
+        .center{align-content: center;}
+        .flex-end{align-content: flex-end;}
+        .space-evenly{align-content: space-evenly;}
+        .container div{width: 130px; flex: auto;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Align-Content</h1>
+    <p>There's (yet) another property that controls the position on the cross axis: <em>align-content</em>. This property behaves similarly to <em>align-item</em>s and can take the same values. Still, <em>align-content</em> only works when <em>flex-wrap</em> is set to <em>wrap</em> (i.e., if <em>flex-wrap</em> is set to <em>nowrap</em>, this property has no effect.)</p>
+    <p><em>align-content: stretch</em> (default). Stretch the items to match the container's height.</p>
+    <div class="container default">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+    <p><em>align-content: flex-start</em>. Set the items at the start of the container.</p>
+    <div class="container flex-start">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+    <p><em>align-content: center</em>. Center the items.</p>
+    <div class="container center">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+    <p>a<em>lign-content: flex-end</em>. Set the items at the start of the container.</p>
+    <div class="container flex-end">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+    <p><em>align-content: space-evenly</em>. Distribute the space between the lines of items evenly.</p>
+    <div class="container space-evenly">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+</body>
+</html>

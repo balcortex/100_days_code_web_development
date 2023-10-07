@@ -138,3 +138,7 @@ Today I learned about flex container main and cross axis, which is why justify-c
 ## Day 033 - 2023/10/05
 
 Today I learned about the flex-wrap property, which controls whether the items can span multiple lines if they don't fit the container.
+
+## Day 034 - 2023/10/06
+
+Today I learned the align-content property, which, as the align-items property, controls the items' position on the cross axis. Still, this property needs the container to allow wrapping.
