@@ -143,6 +143,6 @@ Today I learned about the flex-wrap property, which controls whether the items c
 
 Today I learned the align-content property, which, as the align-items property, controls the items' position on the cross axis. Still, this property needs the container to allow wrapping.
 
-## Day 035 - 2023/10/06
+## Day 035 - 2023/10/07
 
-Today I learned the gap property on the flexbox layout, which sets the space between items. The gap space is inmutable (i.e., does not grow or shrink).
+Today I learned the gap property on the flexbox layout, which sets the space between items. The gap space is immutable (i.e., does not grow or shrink).
