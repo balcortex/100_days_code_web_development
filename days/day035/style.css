@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(241, 243, 255);
+}
+
+h1{
+    text-align: center;
+}
+
+em{
+    font-weight: 900;
+}
+
+div{
+    background-color: lightskyblue;
+    border: 2px solid midnightblue;
+    box-sizing: border-box;
+    border-radius: 4px;
+}
+
+.container div{
+    padding: 0px 2px;
+}
+
+.container{
+    background-color: rgb(188, 178, 249);
+    border-radius: 4px;
+    padding: 1px 1px;
+}

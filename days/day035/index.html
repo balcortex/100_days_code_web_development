@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flexbox Align Content</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .container{display: flex}
+        .container div{width: 80px;}
+        .wrap{flex-wrap: wrap;}
+        .justify-right{justify-content: flex-end;}
+        .center{justify-content: center;}
+        .no-gap{gap: 0px}
+        .gap-2px{gap: 2px;}
+        .gap-10px{gap: 10px;}
+        .gap-custom{row-gap: 80px; column-gap: 40px;}
+    </style>
+</head>
+<body>
+    <h1>Flexbox Gap</h1>
+
+    <p>The <em>gap</em> property is one of the most recent properties of flexbox, and it is widely used. This property sets the space between items, regardless of the <em>flex-direction</em> and the alignment in either the main or cross-axis. The gap space remains constant (i.e., does not shrink or grow).</p>
+
+    <p>The default value is no gap (i.e., the elements are right next to each other):</p>
+    <div class="container no-gap">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+    
+    <p>You can align the items to the right and set a gap of 2px:</p>
+    <div class="container justify-right gap-2px">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+
+    <p>You can also center the items and space them with a gap of 10px:</p>
+    <div class="container center gap-10px">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+
+    <p>There is also the option to indicate different gaps for columns and rows, with the properties <em>column-gap</em> and <em>row-gap</em>, respectively:</p>
+    <div class="container wrap gap-custom">
+        <div>Item 1</div> <div>Item 2</div> <div>Item 3</div> <div>Item 4</div> <div>Item 5</div>
+    </div>
+
+    <p><strong>Again, it is essential to note that the gap space does not change regardless of the change in the items' size.</strong></p>
+</body>
+</html>
