@@ -1,0 +1,7 @@
+
+/* Visually identify the borders of the sections
+This code is not required in the final version */
+body > div{
+    border: 2px solid black;
+    margin: 2px;
+}

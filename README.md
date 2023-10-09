@@ -146,3 +146,7 @@ Today I learned the align-content property, which, as the align-items property, 
 ## Day 035 - 2023/10/07
 
 Today I learned the gap property on the flexbox layout, which sets the space between items. The gap space is immutable (i.e., does not grow or shrink).
+
+## Day 036 - 2023/10/08
+
+Apparently, I already know the basics to build my first web page, so I was given my first major task: designing (by imitation) a web page. My first approach was to define the main sections.
