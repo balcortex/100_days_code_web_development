@@ -150,3 +150,7 @@ Today I learned the gap property on the flexbox layout, which sets the space bet
 ## Day 036 - 2023/10/08
 
 Apparently, I already know the basics to build my first web page, so I was given my first major task: designing (by imitation) a web page. My first approach was to define the main sections.
+
+## Day 037 - 2023/10/09
+
+Today I worked on the header section of the webpage. I used an unordered list (without bullets) with the flexbox layout and set the margin-left to auto on the header-logo item to separate it from the links

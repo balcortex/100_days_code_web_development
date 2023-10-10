@@ -1,0 +1,48 @@
+/* Visually identify the borders of the sections
+This code is not required in the final version */
+body > div {
+  border: 2px solid black;
+  margin: 2px;
+}
+
+/* Overall style */
+body {
+  margin: 0px;
+  font-size: 16px;
+  font-family: Roboto, sans-serif;
+}
+
+/* This section applies style to the header (logo and navigation bar) */
+.header {
+  display: flex;
+  align-items: baseline;
+  background-color: #1f2937;
+  margin: 0px;
+  gap: 18px;
+  padding: 10px 30px 20px 50px;
+}
+
+ul {
+  list-style: none;
+}
+
+#header-logo {
+  font-size: 24px;
+  color: #f9faf8;
+  margin-right: auto;
+}
+
+a:link {
+  color: #e5e7eb;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #b3b3b3;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #808080;
+  text-decoration: underline;
+}
