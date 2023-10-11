@@ -154,3 +154,7 @@ Apparently, I already know the basics to build my first web page, so I was given
 ## Day 037 - 2023/10/09
 
 Today I worked on the header section of the webpage. I used an unordered list (without bullets) with the flexbox layout and set the margin-left to auto on the header-logo item to separate it from the links
+
+## Day 038 - 2023/10/10
+
+Today I worked on the hero section (title, button, and image). I used a div container with the flexbox layout to separate the text and the image. For the text, I used h1, p, and button tags.
