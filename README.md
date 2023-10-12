@@ -158,3 +158,7 @@ Today I worked on the header section of the webpage. I used an unordered list (w
 ## Day 038 - 2023/10/10
 
 Today I worked on the hero section (title, button, and image). I used a div container with the flexbox layout to separate the text and the image. For the text, I used h1, p, and button tags.
+
+## Day 039 - 2023/10/11
+
+Today I worked on the information section. This section uses an h2 and a div (flexbox container) as the main elements. Inside the container are four divs, each with a p and img tags.
