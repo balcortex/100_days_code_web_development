@@ -162,3 +162,7 @@ Today I worked on the hero section (title, button, and image). I used a div cont
 ## Day 039 - 2023/10/11
 
 Today I worked on the information section. This section uses an h2 and a div (flexbox container) as the main elements. Inside the container are four divs, each with a p and img tags.
+
+## Day 040 - 2023/10/12
+
+Today I worked on the quote section. This section was the simplest of all, containing only two p tags. I added a little CSS animation to make it more fun.
