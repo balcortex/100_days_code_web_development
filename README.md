@@ -170,3 +170,7 @@ Today I worked on the quote section. This section was the simplest of all, conta
 ## Day 041 - 2023/10/13
 
 Today I worked on the action section. This section is a flex container with two elements. The first is a div containing an h4 and p tags; the other is a button.
+
+## Day 042 - 2023/10/14
+
+Today I worked on the final section, the footer. This section was more straightforward than the quote section, containing a p and an a tag. It was fun working on a large project
