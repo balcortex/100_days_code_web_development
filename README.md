@@ -175,7 +175,10 @@ Today I worked on the action section. This section is a flex container with two 
 
 Today I worked on the final section, the footer. This section was more straightforward than the quote section, containing a p and an a tag. It was fun working on a large project
 
-
 ## Day 043 - 2023/10/15
 
 Today I started learning JavaScript, the third layer of the current standard web technologies. JavaScript is a programming language that "makes pages alive."
+
+## Day 044 - 2023/10/16
+
+Today I made my first JavaScript program, which prints "Hello World!" to the console. This is done by the function console.log().
