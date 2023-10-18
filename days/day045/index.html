@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript: Hello World! Pt. 2</title>
+  </head>
+  <body>
+    <h1>JavaScript: Hello World! Pt. 2</h1>
+    <p>The second, more advanced way to make a "Hello World!" program in JavaScript is using the <em>document.querySelector()</em> and the <em>textContent</em> property in the returned element.</p>
+    <p>The <em>document.querySelector()</em> returns the first element within the document that matches the specified selector (or group of selectors). If no matches are found, null is returned.</p>
+    <p>On the other hand, the <em>textContent</em> property of an element represents the text content of the element and its descendants.</p>
+    <p>Suppose we have an <em>h2</em> element displaying the text: "This is the original text." To dynamically change its content, we can insert the following code in the HTML after declaring the <em>h2</em> element (if you put the code before the <em>h2</em> tag, the text set by JavaScript will be overwritten by the <em>h2</em>):</p>
+
+    <p><code>
+      const myHeading = document.querySelector("h2"); <br />
+      myHeading.textContent = "Hello world!";
+    </code></p>
+
+    <p>Remember that the code must be within a <em>script</em> tag.</p>
+
+    <h2>This is the original text</h2>
+
+    <script>
+      const myHeading = document.querySelector("h2");
+      myHeading.textContent = "Hello world!";
+    </script>
+
+    <p>As soon as we load the page, the text will change from "This is the original text" to "Hello World!". This change happens instantly, so you will no be able to see the original text.</p>
+    <p> In this manner, you can dynamically change any document text using JavaScript.</p>
+  </body>
+</html>

@@ -182,3 +182,7 @@ Today I started learning JavaScript, the third layer of the current standard web
 ## Day 044 - 2023/10/16
 
 Today I made my first JavaScript program, which prints "Hello World!" to the console. This is done by the function console.log().
+
+## Day 045 - 2023/10/17
+
+Today I learned how to dynamically change text using JavaScript. First, use the document.querySelector() method, and then use the textContent property on the returned element.
