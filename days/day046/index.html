@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript: Hello World! Pt. 3</title>
+  </head>
+  <body>
+    <h1>JavaScript: Hello World! Pt. 3</h1>
+    <p>The third way to make a "Hello World!" program in JavaScript is using the alert() method (the window.alert() method does the same).</p>
+    <p>The alert() method displays an alert box with a message and an OK button. It is used when you want to show information to the user and don't expect an answer.</p>
+    <p>The following code will show the text "Hello World!" on an alert box as soon as the page is loaded (don't forget to include the script tag):</p>
+
+    <code>alert('Hello World!')</code>
+
+    <script>
+      alert('Hello World!')
+    </script>
+
+    <p>Furthermore, you can use a button to display this alert box using the button's onclick event. To do this, you need to define a function to be called:</p>
+
+    <script>
+      function greet() {
+        alert('Hello World!')
+      }
+    </script>
+
+    <code>function greet() {<br>
+      &ensp; alert('Hello World!') <br>
+    }</code>
+
+    <p>And then assign the function to the button's onclick event:</p>
+
+    <code>&lt;button onclick="greet()"&gt; Greet the world &lt;/button&gt;</code>
+
+    <p>Click the following button to greet the world:</p>
+
+    <button onclick="greet()">Greet the world</button>
+
+  </body>
+</html>

@@ -186,3 +186,7 @@ Today I made my first JavaScript program, which prints "Hello World!" to the con
 ## Day 045 - 2023/10/17
 
 Today I learned how to dynamically change text using JavaScript. First, use the document.querySelector() method, and then use the textContent property on the returned element.
+
+## Day 046 - 2023/10/18
+
+Today I learned how to display alert boxes with the alert() method and call functions when a button is pressed with the button's onclick attribute.
