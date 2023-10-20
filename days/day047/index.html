@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript: Variables</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>JavaScript: Variables</h1>
+    <p>Variables are essential to any program. They allow us to store information: numbers, letters, arrays, and many others.</p>
+    <p>The most common and flexible way to define a variable is by using the keyword let:</p>
+    <code>let myVar = 0</code>
+    <p>This line of code declares a variable called myVar and assigns the numerical value of 0 to it.</p>
+    <p>To illustrate this, let's make a function which increments the value of the variable each time a button is pressed:</p>
+
+    <code>
+      &lt;script&gt; <br>
+      &ensp;let counter = 0 <br>
+        &ensp;let text = document.querySelector("h4"); <br><br>
+        &ensp;text.textContent = `You have pressed the button ${counter} times`; <br> <br>
+        &ensp;function increment() { <br>
+          &ensp;&ensp;counter = counter + 1 <br>
+          &ensp;&ensp;text.textContent = `You have pressed the button ${counter} times`; <br>
+          &ensp;} <br>
+      &lt;/script&gt; <br>
+    </code>
+
+  <button onclick="increment()">Press me!</button>
+
+  <h4>Placeholder text</h4>
+
+  <script>
+    let counter = 0
+    let text = document.querySelector("h4");
+    text.textContent = `You have pressed the button ${counter} times`;
+    function increment() {
+      counter = counter + 1
+      text.textContent = `You have pressed the button ${counter} times`;
+    }
+  </script>
+  <p>Note: the variables are lost if we refresh the page (unless we use some persistent storage).</p>
+  </body>
+</html>

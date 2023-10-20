@@ -190,3 +190,7 @@ Today I learned how to dynamically change text using JavaScript. First, use the 
 ## Day 046 - 2023/10/18
 
 Today I learned how to display alert boxes with the alert() method and call functions when a button is pressed with the button's onclick attribute.
+
+## Day 047 - 2023/10/19
+
+Today I learned how to declare and use variables in JavaScript. I used a variable to count the times a button has been pressed.
