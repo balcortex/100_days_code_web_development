@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JavaScript: Conditionals</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>JavaScript: Conditionals</h1>
+    <p>The conditional statements in JavaScript work the same as in other languages. For example, the IF statement is declared as follows:</p>
+    <code>
+      if (condition) { <br>
+        &ensp; // Code if the condition evaluates to True <br>
+      } <br>
+      else { <br>
+        &ensp; // Code if the condition evaluates to False <br>
+      } <br>
+    </code>
+    <p>Suppose you want to check whether the user input is a specific number, you can use the following code:</p>
+    <code>
+      const THE_ANSWER = 42;<br><br>
+
+      let userGuess = document.getElementById('user-guess');<br>
+      let text = document.querySelector("h4");<br><br>
+
+      function theMeaning() {<br>
+        &ensp;num = userGuess.value;<br>
+        &ensp;if (num == THE_ANSWER) {<br>
+          &ensp;&ensp;text.textContent = `YOU'RE RIGHT! The answer to the life,<br> &ensp;&ensp;&ensp;&ensp;the universe and everything else is 42!`;<br>
+          &ensp;}<br>
+          &ensp;else {<br>
+            &ensp;&ensp;text.textContent = `Your guess: ${num}, is not correct.<br> &ensp;&ensp;&ensp;&ensp;Hint: try a number between 40 and 50`;<br>
+            &ensp;}<br>
+      }<br>
+    </code>
+    <p>(Don't forget to include the script tags)</p>
+    <p>The result is as follows:</p>
+    <label for="user-guess">What's the answer to life, the universe and everything else?<br>Enter your guess (hint: it's a number):</label>
+    <input type="number" id="user-guess" value="1">
+    <input type="button" onclick="theMeaning()" value="Submit">
+    <h4>Waiting for your answer . . .</h4>
+
+    <script>
+      const THE_ANSWER = 42;
+      let userGuess = document.getElementById('user-guess');
+      let text = document.querySelector("h4");
+      function theMeaning() {
+        num = userGuess.value;
+        if (num == THE_ANSWER) {
+          text.textContent = `YOU'RE RIGHT! The answer to the life, the universe and everything else is 42!`;
+        }
+        else {
+          text.textContent = `Your guess: ${num}, is not correct. Hint: try a number between 40 and 50`;
+        }
+      }
+    </script>
+  </body>
+</html>
