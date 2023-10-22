@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Conditionals: The Switch Statement</title>
+</head>
+<body>
+    <h1>JavaScript Conditionals: The Switch Statement</h1>
+    <p>Although the IF statement is generally the to-go option, the SWITCH statement is clearer (and faster) in situations where many conditions are provided.</p>
+    <p>For example, consider that the user has the option to choose between one of the following themes:</p>
+    <ul>
+        <li>Light</li>
+        <li>Dark</li>
+        <li>Blue</li>
+        <li>Sunset</li>
+        <li>Dusk</li>
+        <li>Springtime</li>
+    </ul>
+    <p>You could implement the conditional with a series of nested IF statements. However, with SWITCH the code is much clear.</p>
+
+    <label for="theme">Choose a theme:</label>
+    <select name="theme" id="theme" onchange="changeTheme()">
+        <option value="light" selected>Light</option>
+        <option value="dark">Dark</option>
+        <option value="blue">Blue</option>
+        <option value="sunset">Sunset</option>
+        <option value="dusk">Dusk</option>
+        <option value="springtime">Springtime</option>
+    </select>
+
+    <script>
+        let userChoice = document.getElementById('theme');
+        function changeTheme(){
+            switch(userChoice.value){
+                case "light":
+                    document.body.style.color = "black";
+                    document.body.style.background = "white";
+                    break
+                case "dark":
+                    document.body.style.color = "white";
+                    document.body.style.background = "black";
+                    break
+                case "blue":
+                    document.body.style.color = "blue";
+                    document.body.style.background = "lightblue";
+                    break
+                case "sunset":
+                    document.body.style.color = "darkred";
+                    document.body.style.background = "gold";
+                    break
+                case "dusk":
+                    document.body.style.color = "#500909";
+                    document.body.style.background = "#15012a";
+                    break
+                case "springtime":
+                    document.body.style.color = "darkgreen";
+                    document.body.style.background = "khaki";
+                    break
+            }
+        }
+    </script>
+</body>
+</html>

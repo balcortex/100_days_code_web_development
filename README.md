@@ -198,3 +198,7 @@ Today I learned how to declare and use variables in JavaScript. I used a variabl
 ## Day 048 - 2023/10/20
 
 Today I learned the syntax of the IF statement in JavaScript. I made a program that compares the user input using an IF statement.
+
+## Day 049 - 2023/10/21
+
+Today I learned the difference between the IF and the SWITCH conditionals. The SWITCH is preferred when a list of predefined options is provided.
