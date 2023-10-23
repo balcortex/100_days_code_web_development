@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript: Advanced Logging</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript: Advanced Logging</h1>
+    <p>We can display helpful information for ourselves (or other developers) using the console.log() function:</p>
+    <code>console.log("This is a simple string on the console");</code>
+    <p>Also, we can include the value of any variable, even more, an operation, using the string backtick syntax:</p>
+    <code>
+        let x = 2; <br>
+        let y = 3; <br>
+        console.log(`x=${x}, y=${y}, and x+y=${x+y}`);
+    </code>
+    <p>Other functions, besides log, display information on the console, each with a different style to establish visual cues to the user: info, warn, and error.</p>
+    <ul>
+        <li>
+            console.info(): similar to console.log(), some browsers may display a tooltip with the letter 'i' inside.<br>
+            <code>console.info("Some helpful information");</code>
+        </li>
+        <li>
+            console.warn(): displays a yellow warning icon. The text and background are also yellow. <br>
+            <code>console.warn("A warning");</code>
+        </li>
+        <li>
+            console.error(): displays a red cross icon. The text and background are also red. <br>
+            <code>console.error("An error");</code>
+        </li>
+    </ul>
+   
+
+    <script>
+        console.log("This is a simple string on the console");
+
+        let x = 2;
+        let y = 3;
+        console.log(`x=${x}, y=${y}, and x+y=${x+y}`);
+
+        console.info("Some helpful information");
+
+        console.warn("A warning");
+
+        console.error("An error");
+    </script>
+
+    <p>Depending on the severity of the logging statement, you can alternate between these methods.</p>
+</body>
+</html>

@@ -206,4 +206,4 @@ Today I learned the difference between the IF and the SWITCH conditionals. The S
 
 ## Day 050 - 2023/10/22
 
-Today I learned the difference between the IF and the SWITCH conditionals. The SWITCH is preferred when a list of predefined options is provided.
+Today I learned some advanced methods to log information in JavaScript. Besides console.log(), the info, warn, and error methods also display information on the console

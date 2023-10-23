@@ -1,0 +1,16 @@
+h1{
+    text-align: center;
+}
+
+code{
+    color: blue;
+}
+
+body{
+    background-color: #ebeefd;
+}
+
+li{
+    margin-bottom: 15px;
+    line-height: 1.3em;
+}
