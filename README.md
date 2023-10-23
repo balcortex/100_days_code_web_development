@@ -202,3 +202,8 @@ Today I learned the syntax of the IF statement in JavaScript. I made a program t
 ## Day 049 - 2023/10/21
 
 Today I learned the difference between the IF and the SWITCH conditionals. The SWITCH is preferred when a list of predefined options is provided.
+
+
+## Day 050 - 2023/10/22
+
+Today I learned the difference between the IF and the SWITCH conditionals. The SWITCH is preferred when a list of predefined options is provided.
