@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript: Data Types</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript: Data Types</h1>
+    <p>There are eight data types in JavaScript (seven are primitive):</p>
+    <ol>
+        <li>Number</li>
+        <li>String</li>
+        <li>Boolean</li>
+        <li>BigInt</li>
+        <li>Undefined</li>
+        <li>Null</li>
+        <li>Symbol</li>
+        <li>Object (non-primitive)</li>
+    </ol>
+
+    <p>The most common ones, at least for beginner developers, are number, string, and boolean.</p>
+
+    <p>To check the type of any variable, you can use the operator (not a function) typeof.</p>
+
+    <p>Let's use the typeof operator to find the type of the following variables:</p>
+    <code>
+        let n = 42; <br>
+        let text = "Hello World!"; <br>
+        let isTurnedOn = true; <br>
+    </code>
+
+    <h4 id="output1"></h4>
+    <h4 id="output2"></h4>
+    <h4 id="output3"></h4>
+
+    <script>
+        let n = 42;
+        let text = "Hello World!";
+        let isTurnedOn = true;
+
+        document.getElementById('output1').textContent = `The value of the variable "n" is: ${n}, and its type is ${typeof n}.`
+        document.getElementById('output2').textContent = `The value of the variable "text" is: ${text}, and its type is ${typeof text}.`
+        document.getElementById('output3').textContent = `The value of the variable "isTurnedOn" is: ${isTurnedOn}, and its type is ${typeof isTurnedOn}.`
+    </script>
+
+    <p>Note: typeof and typeof() are similar. The parentheses are used to group operations (like in math operations) but are not required.</p>
+</body>
+</html>

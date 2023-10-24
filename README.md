@@ -207,3 +207,7 @@ Today I learned the difference between the IF and the SWITCH conditionals. The S
 ## Day 050 - 2023/10/22
 
 Today I learned some advanced methods to log information in JavaScript. Besides console.log(), the info, warn, and error methods also display information on the console
+
+## Day 051 - 2023/10/23
+
+Today I learned about the data types in JavaScript: Number, String, Boolean, BigInt, undefined, null, Symbol, and Object. To find the type a of variable use the operator typeof.

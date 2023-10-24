@@ -1,0 +1,42 @@
+h1{
+    text-align: center;
+}
+
+label{
+    display: inline-block;
+    width: 170px;
+}
+
+button{
+    padding: 4px 20px;
+    margin-left: 40px;
+}
+
+h4{
+    font-size: 16px;
+}
+
+#output1{
+    margin-bottom: 10px;
+}
+#output2{
+    margin: 0px 0px 10px;
+}
+#output3{
+    margin: 0px 0px 50px;
+}
+
+
+input{
+    text-align: right;
+    border: 1px solid rgb(0, 0, 194);
+    width: 50px;
+}
+
+code{
+    color: blue;
+}
+
+body{
+    background-color: #ebeefd;
+}
