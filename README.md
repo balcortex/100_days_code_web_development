@@ -211,3 +211,7 @@ Today I learned some advanced methods to log information in JavaScript. Besides 
 ## Day 051 - 2023/10/23
 
 Today I learned about the data types in JavaScript: Number, String, Boolean, BigInt, undefined, null, Symbol, and Object. To find the type a of variable use the operator typeof.
+
+## Day 052 - 2023/10/24
+
+Today I learned about the plus operator in JavaScript. For numbers, it performs the sum; for strings, it performs a concatenation.
