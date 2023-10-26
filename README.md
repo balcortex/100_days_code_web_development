@@ -215,3 +215,7 @@ Today I learned about the data types in JavaScript: Number, String, Boolean, Big
 ## Day 052 - 2023/10/24
 
 Today I learned about the plus operator in JavaScript. For numbers, it performs the sum; for strings, it performs a concatenation.
+
+## Day 053 - 2023/10/25
+
+Today I learned about implicit casting using the plus operator. Use + in front of a string (numeric string) to convert it to a numeric type.

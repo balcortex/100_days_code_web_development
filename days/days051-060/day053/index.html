@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript: The + Operator, Pt. 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>JavaScript: The + Operator, Pt. 2</h1>
+    <p>The plus operator can also be used to implicit cast types.</p>
+    <h3>Number to string</h3>
+    <p>If the operands are a string and a number, the number is converted to a string. Then, the plus operator performs a concatenation.</p>
+
+    <code>
+        let x = "Hello" + 42; <span class="comment">// 42 is converted to a string</span> <br>
+        console.log(x); <span class="comment">// Hello42</span> <br>
+        console.log(typeof x); <span class="comment">// string</span> <br>
+    </code>
+
+    <h3>String to number</h3>
+    <p>To convert a string to a number, use the plus operator before the string (or variable).</p>
+
+    <code>
+        let y = 42 + "3"; <span class="comment">// 42 is converted to a string, as before</span> <br>
+        console.log(y); <span class="comment">// 423</span> <br>
+        console.log(typeof y); <span class="comment">// string</span> <br><br>
+
+        let z = 42 + +"3"; <span class="comment">// +"3" is equivalent to Number("3")</span> <br>
+        console.log(z); <span class="comment">// 45</span> <br>
+        console.log(typeof z); <span class="comment">// number</span> <br>
+    </code>
+
+    <script>
+        let x = "Hello" + 42;   // 42 is converted to a string
+        console.log(x);         // Hello42
+        console.log(typeof x);  // string
+
+        let y = 42 + "3";       // 42 is converted to a string, as before
+        console.log(y);         // 423
+        console.log(typeof y);  // string
+
+        let z = 42 + +"3";      // +"3" is equivalent to Number("3")
+        console.log(z);         // 45
+        console.log(typeof z);  // number
+    </script>
+
+    <p>It's common to use the plus operator for implicit casting, so beware of it.</p>
+</body>
+</html>
