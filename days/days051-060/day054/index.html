@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 54 - JavaScript: Debugging</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 54 - JavaScript: Debugging</h1>
+    <p>There are (many) times when the code does not work as we expect, so we must fix the bug (i.e., error). The debugger is a useful tool included in the web browser which allow us to pause the code at any time by the use of so called breakpoints. While the code is paused, we can inspect the variables, and even use the console to input JavaScript statements.</p>
+    <p>There are a few ways to set a breakpoint, the easiest one is to use the debugger keyword before the line of code we would like to inspect:</p>
+    <code>
+        result = num1 + num2; <br>
+        debugger; <span class="comment">// The program pauses here</span> <br>
+        output.textContent = `The sum is: ${result}`;<br>
+    </code>
+    <p>In the debugger, we can see that the variables num1 and num2 are strings (they are enclosed in quotes) instead of numbers, which cause the malfunction in the program. We can solve this by casting them to numbers, using the plus operator.</p>
+    <img src="img/debugger.png" alt="The debugger in action" width="70%">
+    <label for="num1">Type the first number:</label>
+    <input type="text" name="num1" id="num1" value="4">
+    <br><br>
+    <label for="num2">Type the second number:</label>
+    <input type="text" name="num2" id="num2" value="2">
+    <br><br>
+    <button onclick="sum()">Sum the numbers!</button>
+    <br>
+    <h4>The sum is: </h4>
+    <script>
+        let field1 = document.getElementById("num1");
+        let field2 = document.getElementById("num2");
+        let output = document.querySelector('h4');
+        let num1;
+        let num2;
+        let result;
+        sum();
+        function sum() {
+            num1 = field1.value;
+            num2 = field2.value;
+            result = num1 + num2;
+            debugger;
+            output.textContent = `The sum is: ${result}`;
+        }
+    </script>
+</body>
+</html>
