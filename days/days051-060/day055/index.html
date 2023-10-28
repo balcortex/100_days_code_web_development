@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 55 - JavaScript: Arrays, Pt. 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 55 - JavaScript: Arrays, Pt. 1</h1>
+    <p>An array is a special type of variable that can hold more than one value.</p>
+    <p>Imagine that you want to store the name of your pets in the code; instead of defining several, values you can use an array to store all the names in a single variable:</p>
+    <code> let pets = ["Max", "Daisy", "Lucy", "Molly", "Bella"];</code>
+    <p>The type of an array variable is <em>object</em>:</p>
+    <code>console.log(typeof pets); <span class="comment">// object</span></code>
+    <p>You can access any individual element by its index, starting at zero. For example, to access the second name, use the index 1:</p>
+    <code>console.log(pets[1]); <span class="comment">// Daisy</span></code>
+    <p>To retrieve the number of items in the array, use the <em>length</em> property:</p>
+    <code>console.log(pets.length); <span class="comment">// 5</span></code>
+    <p>This property can be useful if you want to access the last element in the array and don't know the length beforehand:</p>
+    <code>console.log(pets[pets.length - 1]); <span class="comment">// Bella</span></code>
+    <script>
+        let pets = ["Max", "Daisy", "Lucy", "Molly", "Bella"];
+        console.log(typeof pets);
+        console.log(pets[1]);
+        console.log(pets.length);
+        console.log(pets[pets.length - 1]);
+    </script>
+</body>
+</html>

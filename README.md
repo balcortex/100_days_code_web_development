@@ -223,3 +223,7 @@ Today I learned about implicit casting using the plus operator. Use + in front o
 ## Day 054 - 2023/10/26
 
 Today I learned how to use the debugger, which is a tool that allow us to pause the program and inspect the variables in real time.
+
+## Day 055 - 2023/10/27
+
+Today I learned how to declare arrays in JavaScript. To declare an array,  use square brackets and values separated by commas.
