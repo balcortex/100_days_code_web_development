@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 56 - JavaScript: Arrays, Pt. 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 56 - JavaScript: Arrays, Pt. 2</h1>
+    <p>An array can also be defined as empty, and then add the elements using the index:</p>
+    <code>
+        let myArray = []; <span class="comment">// []</span> <br>
+        console.log(myArray.length); <span class="comment">// 0</span> <br>
+        myArray[0] = 'zero'; <span class="comment">// zero</span> <br>
+        console.log(myArray.length); <span class="comment">// 1</span> <br>
+        console.log(myArray[0]); <span class="comment">// zero</span> <br>
+    </code>
+    <p>However, this could create 'holes' in the array if you use an index greater than the length:</p>
+    <code>
+        myArray[2] = 'two'; <span class="comment">// two</span> <br>
+        console.log(myArray.length); <span class="comment">// 3</span> <br>
+        console.log(myArray[2]); <span class="comment">// two</span> <br>
+        console.log(myArray[1]); <span class="comment">// undefined</span> <br>
+    </code>
+    <p>The preferred way to add an element to (the end of) an array is using the method push:</p>
+    <code>
+        myArray.push('three'); <span class="comment">// 4</span> <br>
+        console.log(myArray.length); <span class="comment">// 4</span> <br>
+        console.log(myArray[myArray.length - 1]); <span class="comment">// three</span> <br>
+    </code>
+    <p>Also, removing the last element of an array is straightforward; just use the method pop:</p>
+    <code>
+        myArray.pop(); <span class="comment">// three</span> <br>
+        console.log(myArray.length); <span class="comment">// 3</span> <br>
+        console.log(myArray[myArray.length - 1]); <span class="comment">// two</span> <br>
+    </code>
+    <script>
+        let myArray = [];               // []
+        console.log(myArray.length);    // 0
+        myArray[0] = 'zero';            // zero
+        console.log(myArray.length);    // 1
+        console.log(myArray[0]);        // zero
+
+        myArray[2] = 'two';             // two
+        console.log(myArray.length);    // 3
+        console.log(myArray[2]);        // two
+        console.log(myArray[1]);        // undefined
+
+        myArray.push('three');          // 4
+        console.log(myArray.length);    // 4
+        console.log(myArray[myArray.length - 1]); // three
+
+        myArray.pop();                  // three
+        console.log(myArray.length);    // 3
+        console.log(myArray[myArray.length - 1]); // two
+    </script>
+</body>
+</html>

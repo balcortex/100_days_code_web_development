@@ -227,3 +227,7 @@ Today I learned how to use the debugger, which is a tool that allow us to pause 
 ## Day 055 - 2023/10/27
 
 Today I learned how to declare arrays in JavaScript. To declare an array,  use square brackets and values separated by commas.
+
+## Day 056 - 2023/10/28
+
+Today, I learned how to add elements at the end of an array using the push method and remove the last element using the pop method.
