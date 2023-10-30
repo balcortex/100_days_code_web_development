@@ -231,3 +231,7 @@ Today I learned how to declare arrays in JavaScript. To declare an array,  use s
 ## Day 056 - 2023/10/28
 
 Today, I learned how to add elements at the end of an array using the push method and remove the last element using the pop method.
+
+## Day 057 - 2023/10/29
+
+Today, I learned about other array methods. The toString() and join() methods convert the array to strings, and the slice() method selects a sub-array.

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 57 - JavaScript: Arrays, Pt. 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 57 - JavaScript: Arrays, Pt. 3</h1>
+    <p>There are other useful methods of Array objects. One of them is the toString() method, which joins all the elements together:</p>
+    <code>
+        let fruits = ['Bananas', 'Grapes', 'Strawberries']; <br>
+        console.log(fruits.toString()); <span class="comment">// 'Bananas,Grapes,Strawberries'</span> <br>
+    </code>
+    <p>You can use this method to populate HTML elements. For example, the following paragraph shows my Top 3 favorite fruits:</p>
+    <p id="fruits"></p>
+    <code>
+        let fruitsField = document.getElementById('fruits'); <br>
+        fruitsField.textContent = fruits.toString(); <br>
+    </code>
+    <p>If you need some simple pre-processing of the array, use the join() method, which puts the specified string between each item:</p>
+    <p id="fruits-2"></p>
+    <code>
+        let fruitsField2 = document.getElementById('fruits-2'); <br>
+        fruitsField2.textContent = fruits.join(', '); <br>
+    </code>
+    <p>That looks better, but it still needs improvement. We need to insert the word `and` between the last one and the one before. To achieve this, we can use the slice() method to select the first two fruits but not the last. Then, the join() method, and finally, simple string concatenation with the last element of the fruits array:</p>
+    <p id="fruits-3"></p>
+    <code>
+        let fruitsField3 = document.getElementById('fruits-3'); <br>
+        fruitsField3.textContent = fruits.slice(0,2).join(', ') + ', and ' + fruits[fruits.length - 1]; <br>
+    </code>
+    <p>Note: this is only one approach to achieve this. Several other approaches (even more optimal) can be used to achieve the same result.</p>
+    <script>
+        let fruits = ['Bananas', 'Grapes', 'Strawberries'];
+        console.log(fruits.toString()); // 'Bananas,Grapes,Strawberries'
+
+        let fruitsField = document.getElementById('fruits');
+        fruitsField.textContent = fruits.toString();
+
+        let fruitsField2 = document.getElementById('fruits-2');
+        fruitsField2.textContent = fruits.join(', ');
+
+        let fruitsField3 = document.getElementById('fruits-3');
+        fruitsField3.textContent = fruits.slice(0,2).join(', ') + ', and ' + fruits[fruits.length - 1];
+    </script>
+</body>
+</html>
