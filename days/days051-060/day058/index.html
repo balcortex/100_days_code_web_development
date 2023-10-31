@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 58 - JavaScript: Arrays, Pt. 4 & The FOR Loop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 58 - JavaScript: Arrays, Pt. 4 & The FOR Loop</h1>
+    <p>First, let's define what the FOR loop does. Imagine you want to double a variable 10 times and perform other operations every time the value changes. One approach is to repeat each fragment of the code 10 times:</p>
+    <code>
+        let i = 2; <br>
+        console.log(i); <span class="comment">// 2</span> <br>
+        i = i * 2; <br>
+        console.log(i); <span class="comment">// 4 </span><br>
+        ...
+    </code>
+    <p>Of course, this approach is not sustainable. Imagine if you have to do the same thousands of times! Fortunately, the FOR loop simplifies this task:</p>
+    <code>
+        let i = 2; <br>
+        for (let k = 0; k < 10; k++){ <br>
+            &emsp;i *= 2; <br>
+            &emsp;console.log(i); <span class="comment">// 4, 8, 16, 32...</span> <br>
+        } <br>
+    </code>
+    <p>Inside the declaration of the FOR loop, the first statement is executed one time before at the start of the loop; the second statement controls whether the loop stops (when the condition evaluates to false, the loop stops), and finally, the last statement is executed at the end of each iteration (generally controls the looping variable).</p>
+    <p>The FOR loop can be used to loop over the elements of an array:</p>
+    <code>
+        let colors = ['Red', 'Blue', 'Green']; <br>
+        for (let k = 0; k < colors.length; k++){ <br>
+            &emsp;console.log(k + ' ' + colors[k]); <br>
+            &emsp;<span class="comment">// 0 Red</span> <br>
+            &emsp;<span class="comment">// 1 Blue</span> <br>
+            &emsp;<span class="comment">// 2 Green</span> <br>
+        }
+    </code>
+    <script>
+        let i = 2;
+        for (let k = 0; k < 10; k++){
+            i *= 2;
+            console.log(i);
+        }
+        
+        let colors = ['Red', 'Blue', 'Green'];
+        for (let k = 0; k < colors.length; k++){
+            console.log(k + ' ' + colors[k]);
+        }
+    </script>
+    <p>Note: This is a very simple technique for looping over the elements of an array; there are other more advanced approaches.</p>
+</body>
+</html>

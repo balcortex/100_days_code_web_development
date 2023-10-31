@@ -235,3 +235,7 @@ Today, I learned how to add elements at the end of an array using the push metho
 ## Day 057 - 2023/10/29
 
 Today, I learned about other array methods. The toString() and join() methods convert the array to strings, and the slice() method selects a sub-array.
+
+## Day 058 - 2023/10/30
+
+Today I learned about the for loop and how to use it to loop over the items of an array.
