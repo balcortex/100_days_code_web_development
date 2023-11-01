@@ -239,3 +239,7 @@ Today, I learned about other array methods. The toString() and join() methods co
 ## Day 058 - 2023/10/30
 
 Today I learned about the for loop and how to use it to loop over the items of an array.
+
+## Day 059 - 2023/10/31
+
+Today I learned how to loop over array items using the for ... of, and the for ... in loops. The first one iterates over values, while the last iterates over indices.

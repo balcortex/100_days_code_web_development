@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 59 - JavaScript: Arrays, Pt. 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 59 - JavaScript: Arrays, Pt. 5</h1>
+    <p>Other approaches exist for looping over the array's items without using the index to access them.</p>
+    <p>The first approach is to use the for ... of, which iterates over the values of an array (any iterable indeed). This method is preferred over index looping, as it is more clear, unless you also need the index to perform a calculation.</p>
+    <code>
+        let colors = ['Red', 'Blue', 'Green']; <br> <br>
+
+        for (let color of colors){ <br>
+            &emsp;console.log(color); <span class="comment">// Red, Blue, Green</span> <br>
+        } <br>
+    </code>
+    <p>Another similar statement, the for ... in, iterates over the enumerable string properties. For instance, using the for ... in the same code as before yields:</p>
+    <code>
+        for (let color in colors){ <br>
+            &emsp;console.log(color); <span class="comment">// 0, 1, 2</span> <br>
+        } <br>
+    </code>
+    <p>Of course, you can use these indices to access the items:</p>
+    <code>
+        for (let index in colors){ <br>
+            &emsp;console.log(index + ' ' + colors[index]); <span class="comment">// 0 Red, 1 Blue, 2 Green</span> <br>
+        } <br>
+    </code>
+    <p>You can also use the for ... in to obtain the indices if they are not numbers. In this case, you cannot use a simple for loop, nor a for ... of loop, because they require numerical indices:</p>
+    <code>
+        colors['noColor'] = 'Black'; <br> <br>
+
+        for (let i = 0; i < colors.length; i++){ <br>
+            &emsp;console.log(i + ' ' + colors[i]); <span class="comment">// 0 Red, 1 Blue, 2 Green</span> <br>
+            &emsp;<span class="comment">// Black is not listed</span> <br>
+        } <br> <br>
+
+        for (let color of colors){ <br>
+            console.log(color); <span class="comment">// Red, Blue, Green</span> <br>
+            &emsp;<span class="comment">// Black is not listed</span> <br>
+        } <br> <br>
+
+        for (let index in colors){ <br>
+            &emsp;console.log(index + ' ' + colors[index]); <span class="comment">// 0 Red, 1 Blue, 2 Green, noColor Black</span> <br>
+        } <br>
+    </code>
+
+    <script>
+        let colors = ['Red', 'Blue', 'Green'];
+
+        for (let color of colors){
+            console.log(color); // Red, Blue, Green
+        }
+
+        for (let color in colors){
+            console.log(color); // 0, 1, 2
+        }
+
+        for (let index in colors){
+            console.log(index + ' ' + colors[index]); // 0 Red, 1 Blue, 2 Green
+        }
+
+        colors['noColor'] = 'Black';
+
+        for (let i = 0; i < colors.length; i++){
+            console.log(i + ' ' + colors[i]); // 0 Red, 1 Blue, 2 Green
+        }
+
+        for (let color of colors){
+            console.log(color); // Red, Blue, Green
+        }
+
+        for (let index in colors){
+            console.log(index + ' ' + colors[index]); // 0 Red, 1 Blue, 2 Green, noColor Black
+        }
+
+    </script>
+</body>
+</html>
