@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 60 - JavaScript: Arrays, Pt. 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 60 - JavaScript: Arrays, Pt. 6</h1>
+    <p>Another more advanced and handy approach to looping over the elements of an array is using the forEach() method of the Array object.</p>
+    <p>This method receives a callback function as a parameter and then executes the function for each item:</p>
+    <code>
+        let colors = ['Red', 'Blue', 'Green']; <br> <br>
+
+        function myLog(element){ <br>
+            &emsp;console.log(element); <br>
+        } <br> <br>
+        colors.forEach(myLog);  <span class="comment">// Red, Blue, Green</span> <br>
+    </code>
+    <p>You can also include the index in the callback function:</p>
+    <code>
+        function myLog2(element, index){ <br>
+            &emsp;console.log(index + ' ' + element);  <br>
+        } <br> <br>
+        colors.forEach(myLog2); <span class="comment">// 0 Red, 1 Blue, 2 Green</span> <br>
+    </code>
+    <p>And you can even include a reference to the array itself:</p>
+    <code>
+        function myLog3(element, index, array){ <br>
+            &emsp;console.log(`Index ${index} of ${array.length - 1} has the value ${element}`); <br>
+        } <br> <br>
+        colors.forEach(myLog3); <br>
+        <span class="comment">
+        // Index 0 of 2 has the value Red <br>
+        // Index 1 of 2 has the value Blue <br>
+        // Index 2 of 2 has the value Green <br>
+        </span>
+    </code>
+    <p>There are several ways to loop over the elements in an array. Choose the best suited for your needs.</p>
+
+    <script>
+        let colors = ['Red', 'Blue', 'Green'];
+
+        function myLog(element){
+            console.log(element);
+        }
+        colors.forEach(myLog);  // Red, Blue, Green
+
+        function myLog2(element, index){
+            console.log(index + ' ' + element);
+        }
+        colors.forEach(myLog2); // 0 Red, 1 Blue, 2 Green
+
+        function myLog3(element, index, array){
+            console.log(`Index ${index} of ${array.length - 1} has the value ${element}`);
+        }
+        colors.forEach(myLog3);
+        // Index 0 of 2 has the value Red
+        // Index 1 of 2 has the value Blue
+        // Index 2 of 2 has the value Green
+    </script>
+</body>
+</html>

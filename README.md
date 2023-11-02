@@ -243,3 +243,7 @@ Today I learned about the for loop and how to use it to loop over the items of a
 ## Day 059 - 2023/10/31
 
 Today I learned how to loop over array items using the for ... of, and the for ... in loops. The first one iterates over values, while the last iterates over indices.
+
+## Day 060 - 2023/11/01
+
+Today I learned about the forEach method of the Array objects, which receives a callback function as a parameter and executes it for each item.
