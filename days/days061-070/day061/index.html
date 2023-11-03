@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 61 - JavaScript: Functions, Pt. 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 61 - JavaScript: Functions, Pt. 1</h1>
+    <p>In JavaScript, functions are like values but are more like special values. If we define a function and print its value, we get exactly the code used to create the function:</p>
+    <code>
+        function greetWorld(){ <br>
+            &emsp;console.log('Hello World!'); <br>
+        } <br>
+
+        console.log(greetWorld); <br>
+        <span class="comment">
+            // function greetWorld(){ <br>
+            //     &emsp;console.log('Hello World!'); <br>
+            // } <br>
+        </span>
+    </code>
+    <p>However, the type of a Function is function:</p>
+    <code>
+        console.log(typeof greetWorld); <span class="comment">// function</span>
+    </code>
+    <p>You can create a copy of the function and store it into another variable:</p>
+    <code>
+        let greetCopy = greetWorld; <br>
+        greetCopy(); <span class="comment">// Hello World!</span> <br>
+        console.log(greetWorld === greetCopy); <span class="comment">// true</span> <br>
+    </code>
+    <p>Functions can receive arguments and have a default value if one is not provided:</p>
+    <code>
+        function greetUser(user = 'Bort'){ <br>
+            &emsp;console.log('Hello' + ' ' + user); <br>
+        } <br> <br>
+
+        greetUser() <span class="comment">// Hello Bort</span> <br>
+        greetUser('Homer') <span class="comment">// Hello Homer</span> <br>
+    </code>
+    <p>And, because functions behave like values, you can pass functions as arguments to other functions to be executed within:</p>
+    <code>
+        function greet(func1, func2, user){ <br>
+            func1(); <em class="comment">// Execute here the func1</em><br>
+            func2(user); <em class="comment">// Execute here the func2</em><br>
+        }<br><br>
+
+        greet(greetWorld, greetUser, 'Elon');<br>
+        <span class="comment">// Hello World!</span><br>
+        <span class="comment">// Hello Elon</span><br>
+    </code>
+    <script>
+        function greetWorld(){
+            console.log('Hello World!');
+        }
+        console.log(greetWorld);
+        // function greetWorld(){
+        //     console.log('Hello World!');
+        // }
+        console.log(typeof greetWorld); // function
+
+        let greetCopy = greetWorld;
+        greetCopy(); // Hello World!
+        console.log(greetWorld === greetCopy); // true
+
+        function greetUser(user = 'Bort'){
+            console.log('Hello' + ' ' + user);
+        }
+
+        greetUser() // Hello Bort
+        greetUser('Homer') // Hello Homer
+
+        function greet(func1, func2, user){
+            func1(); // Execute here the func1
+            func2(user); // Execute here the func2
+        }
+
+        greet(greetWorld, greetUser, 'Elon');
+        // Hello World!
+        // Hello Elon
+
+    </script>
+</body>
+</html>

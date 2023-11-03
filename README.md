@@ -247,3 +247,7 @@ Today I learned how to loop over array items using the for ... of, and the for .
 ## Day 060 - 2023/11/01
 
 Today I learned about the forEach method of the Array objects, which receives a callback function as a parameter and executes it for each item.
+
+## Day 061 - 2023/11/02
+
+Today I learned that functions are like values in JavaScript (a special kind tho). Also, I learned how to declare default arguments in function definitions
