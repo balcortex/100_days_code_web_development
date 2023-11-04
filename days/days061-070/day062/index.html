@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 62 - JavaScript: Functions, Pt. 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 62 - JavaScript: Functions, Pt. 2</h1>
+    <p>There are two approaches to defining a function:</p>
+    <ul>
+        <li>Function definition</li>
+        <li>Function expression</li>
+    </ul>
+    <p>Using definition syntax is the most common way to create a function:</p>
+    <code>
+        function greetWorldDef(){<br>
+            &emsp;console.log('Hello World (definition)');<br>
+        }<br>
+        greetWorldDef(); <span class="comment">// Hello World (definition)</span><br>
+    </code>
+    <p>The other approach is known as a function expression, in which the function's name is declared as a variable using the keyword let. Then, the actual function is assigned next:</p>
+    <code>
+        let greetWorldExp = function(){<br>
+            &emsp;console.log('Hello World (expression)');<br>
+        };<br>
+        greetWorldExp(); <span class="comment">// Hello World (expression)</span><br>
+    </code>
+    <p>Both functions behave similarly. However, the main difference is that functions created using definition can be used before the actual code when it is defined:</p>
+    <code>
+        functionBeforeDef(); <span class="comment">// This works</span><br>
+        function functionBeforeDef(){<br>
+            &emsp;console.log('This works');<br>
+        }<br>
+    </code>
+    <p>Trying the same with function expressions does not work:</p>
+    <code>
+        functionBeforeExp(); <span class="comment">// ReferenceError</span><br>
+        let functionBeforeExp = function(){<br>
+            &emsp;console.log('This code will not be executed anyway');<br>
+        };<br>
+    </code>
+    <p>As a rule of thumb, you should always use function definition to create functions. However, function expressions have one advantage over definitions, and we will discover it tomorrow.</p>
+    <script>
+        function greetWorldDef(){
+            console.log('Hello World (definition)');
+        }
+        greetWorldDef(); // Hello World (definition)
+
+        let greetWorldExp = function(){
+            console.log('Hello World (expression)');
+        };
+        greetWorldExp(); // Hello World (expression)
+
+        functionBeforeDef(); // This works
+        function functionBeforeDef(){
+            console.log('This works');
+        }
+
+        functionBeforeExp(); // ReferenceError
+        let functionBeforeExp = function(){
+            console.log('This code will not be executed anyway');
+        };
+    </script>
+</body>
+</html>

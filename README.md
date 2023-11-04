@@ -251,3 +251,7 @@ Today I learned about the forEach method of the Array objects, which receives a 
 ## Day 061 - 2023/11/02
 
 Today I learned that functions are like values in JavaScript (a special kind tho). Also, I learned how to declare default arguments in function definitions
+
+## Day 062 - 2023/11/02
+
+Today I learned how to create functions using the definition and the expression syntax. You should almost always use function definition tho.
