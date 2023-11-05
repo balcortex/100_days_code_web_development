@@ -259,3 +259,7 @@ Today I learned how to create functions using the definition and the expression 
 ## Day 063 - 2023/11/04
 
 Today, I learned the advantages of function expressions over function definitions: they can be unnamed and immediately invoked after creation.
+
+## Day 064 - 2023/11/05
+
+Today I learned another feature of function expressions: arrow functions. This type of function syntax is concise and clear and often preferred for simple functions

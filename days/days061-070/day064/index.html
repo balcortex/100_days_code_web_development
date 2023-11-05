@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 64 - JavaScript: Functions, Pt. 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 64 - JavaScript: Functions, Pt. 4</h1>
+    <p>There is yet another feature of function expressions: arrow functions. These functions are a straightforward and concise way of creating functions.</p>
+    <p>First, let's remember how function expressions are declared:</p>
+    <code>
+        let mySum = function (a, b) {<br>
+            &emsp;return a + b;<br>
+        }<br>
+        console.log(mySum(1, 2)); <span class="comment">// 3</span><br>
+    </code>
+    <p>Using the arrow syntax, the previous function is expressed as:</p>
+    <code>
+        let mySum2 = (a, b) => {<br>
+            &emsp;let result = a + b;<br>
+            &emsp;return result;<br>
+        };<br>
+        console.log(mySum2(1, 2)); <span class="comment">// 3</span><br>
+    </code>
+    <p>This code could look very similar, but the intermediate variable result was solely used to explain what a multiline arrow function looks like. If the function is concise and can be expressed in one line, the function would look like this:</p>
+    <code>
+        let mySum3 = (a, b) => a + b;<br>
+        console.log(mySum3(1, 2)); <span class="comment">// 3</span><br>
+    </code>
+    <p>Even more, if the function only receives one argument, the parentheses can be omitted:</p>
+    <code>
+        let mySquare = a => a * a;<br>
+        console.log(mySquare(3)); <span class="comment">// 9</span><br>
+    </code>
+    <p>If the function receives no arguments, the parentheses are left blank but must be included:</p>
+    <code>
+        let greet = () => console.log('Hello');<br>
+        greet(); <span class="comment">// Hello</span><br>
+    </code>
+    <p>Arrow functions are clear and concise and often are the best choice if the function is simple. However, if the function is rather complex, use function declaration instead.</p>
+    <script>
+        let mySum = function (a, b) {
+            return a + b;
+        }
+        console.log(mySum(1, 2)); // 3
+
+        let mySum2 = (a, b) => {
+            let result = a + b;
+            return result;
+        };
+        console.log(mySum2(1, 2)); // 3
+
+        let mySum3 = (a, b) => a + b;
+        console.log(mySum3(1, 2)); // 3
+
+        let mySquare = a => a * a;
+        console.log(mySquare(3)); // 9
+
+        let greet = () => console.log('Hello');
+        greet(); // Hello
+    </script>
+</body>
+</html>
