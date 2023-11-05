@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 63 - JavaScript: Functions, Pt. 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 63 - JavaScript: Functions, Pt. 3</h1>
+    <p>Function definitions should always be used over function expressions, as the code is more explicit, and the function could be used even before the place of definition.</p>
+    <p>However, function definition must have a name, while function expressions can be unnamed:</p>
+    <code>
+        let x = function named() {<br>
+            &emsp;console.log('Named function');<br>
+        };<br>
+        x(); <span class="comment">// Named function</span><br><br>
+
+        let y = function () {<br>
+            &emsp;console.log('Unnamed function');<br>
+        };<br>
+        y(); <span class="comment">// Unnamed function</span><br>
+    </code>
+    <p>This characteristic is also known as an anonymous function. Anonymous functions are helpful to pass functions as an argument, and the sole use of this function is to be used there and not anywhere else in the code:</p>
+    <code>
+        function greet(func) {<br>
+            &emsp;func();<br>
+        }<br>
+        greet(function () {<br>
+            &emsp;console.log('Hello World!');<br>
+        }); // 'Hello World!'<br>
+    </code>
+    <p>Also, another interesting feature of function expressions is that they can be used immediately upon creation, which is known as IIFE ( Immediately Invoked Function Expression):</p>
+    <code>
+        (function () {<br>
+            &emsp;console.log('IIFE'); <span class="comment">// IIFE</span><br>
+        })();<br>
+    </code>
+    <p>Function expression has some interesting characteristics, but when in doubt, use function definition.</p>
+    <script>
+        let x = function named() {
+            console.log('Named function');
+        }
+        x(); // Named function
+
+        let y = function () {
+            console.log('Unnamed function')
+        }
+        y(); // Unnamed function
+
+        function greet(func) {
+            func();
+        }
+        greet(function () {
+            console.log('Hello World!');
+        }); // 'Hello World!'
+
+        (function () {
+            console.log('IIFE'); // IIFE
+        })();
+    </script>
+</body>
+</html>

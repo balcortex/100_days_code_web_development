@@ -252,6 +252,10 @@ Today I learned about the forEach method of the Array objects, which receives a 
 
 Today I learned that functions are like values in JavaScript (a special kind tho). Also, I learned how to declare default arguments in function definitions
 
-## Day 062 - 2023/11/02
+## Day 062 - 2023/11/03
 
 Today I learned how to create functions using the definition and the expression syntax. You should almost always use function definition tho.
+
+## Day 063 - 2023/11/04
+
+Today, I learned the advantages of function expressions over function definitions: they can be unnamed and immediately invoked after creation.
