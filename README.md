@@ -263,3 +263,7 @@ Today, I learned the advantages of function expressions over function definition
 ## Day 064 - 2023/11/05
 
 Today I learned another feature of function expressions: arrow functions. This type of function syntax is concise and clear and often preferred for simple functions
+
+## Day 064 - 2023/11/06
+
+Today I learned about the DOM and how to target elements on the DOM using the document.querySelector() method.

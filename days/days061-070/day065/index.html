@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 65 - JavaScript: DOM Manipulation, Pt. 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 65 - JavaScript: DOM Manipulation, Pt. 1</h1>
+    <p>One of the most valuable abilities of JavaScript is the ability to manipulate the DOM (Document Object Model), which is a tree-like representation of the contents of a webpage. The DOM models the relationship of elements depending on how they're arranged in the HTML document.</p>
+    <p>Suppose you have the following HTML document:</p>
+    <code>
+        &lt;div id="container"&gt;<br> 
+        &emsp;&lt;div class="header"&gt;&lt;/div&gt;<br>
+        &emsp;&lt;div class="main"&gt;&lt;/div&gt;<br>
+        &emsp;&lt;div class="footer"&gt;&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </code>
+    <p>The `container` element has three children. Thus, `container` is a parent of `header`, main is child of `container`; and `footer`, `main` and `header` are siblings. Graphically, siblings have the same indentation level, while children are separated by one indentation from their parents.</p>
+    <code>
+        <div id="container"> container
+            <div class="header">&emsp;header</div>
+            <div class="main">&emsp;main</div>
+            <div class="footer">&emsp;footer</div>
+        </div>
+    </code>
+    <p>There are several ways to target (i.e., refer) an element on JavaScript. One approach to target an element is to use the document.querySelector() method, which returns a reference (or an array of references) of the match. Once the reference is obtained, you can use several methods to manipulate the element. For example, let's target the `container` and investigate how many children and what his children are:</p>
+    <code>
+        const container = document.querySelector("#container");<br>
+        console.log(container.childElementCount); <span class="comment">// 3</span><br>
+        console.log(container.children);<br><span class="comment">// HTMLCollection(3) [div.header, div.main, div.footer]</span><br>
+    </code>
+    <p>You can select any child using its corresponding index:</p>
+    <code>
+        console.log(container.children[0]); <span class="comment">// div.header</span><br>
+        console.log(container.children[1]); <span class="comment">// div.main</span><br>
+        console.log(container.children[2]); <span class="comment">// div.footer</span><br>
+    </code>
+    <p>After targeting the element, you can modify its attributes, including its content and style. We will see how in the following days.</p>
+</body>
+</html>

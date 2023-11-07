@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"> Container
+        <div class="header">&emsp;Header</div>
+        <div class="main">&emsp;Main</div>
+        <div class="footer">&emsp;Footer</div>
+    </div>
+    <script>
+        const container = document.querySelector("#container");
+        console.log(container.childElementCount); // 3
+        console.log(container.children); // HTMLCollection(3) [div.header, div.main, div.footer]
+
+        console.log(container.children[0]); // div.header
+        console.log(container.children[1]); // div.main
+        console.log(container.children[2]); // div.footer
+    </script>
+</body>
+
+</html>
