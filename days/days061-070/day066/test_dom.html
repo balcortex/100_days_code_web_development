@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="container"> Container
+        <div class="header">Header</div>
+        <div class="main">Main</div>
+        <div class="footer">Footer</div>
+    </div>
+    <script>
+        console.clear();
+
+        console.log(document.querySelector("#container").children[1]); // div.main
+
+        console.log(document.querySelector("#container").firstElementChild.nextElementSibling); // div.main
+
+        console.log(document.querySelector("#container").lastElementChild.previousElementSibling); // div.main
+
+        const mainField = document.querySelector(".main");
+        console.log(mainField); // div.main
+
+        mainField.textContent = 'This is the new content for the main section';
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 66 - JavaScript: DOM Manipulation, Pt. 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 66 - JavaScript: DOM Manipulation, Pt. 2</h1>
+    <p>Again, suppose you have the following HTML document:</p>
+    <code>
+        &lt;div id="container"&gt;Container<br>
+        &emsp;&lt;div class="header"&gt;Header&lt;/div&gt;<br>
+        &emsp;&lt;div class="main"&gt;Main&lt;/div&gt;<br>
+        &emsp;&lt;div class="footer"&gt;Footer&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </code>
+    <p>A web browser would render the previous HTML code as:</p>
+    <code>
+        <div id="container"> Container
+            <div class="header">Header</div>
+            <div class="main">Main</div>
+            <div class="footer">Footer</div>
+        </div>
+    </code>
+    <p>Now, let's change the content of the `main` div using JavaScript. First, we need to target the element. There are several ways to do this; let's review some.</p>
+    <p>1. Target the `container`, obtain its children, and select the index that corresponds to the `main` div:</p>
+    <code>
+        console.log(document.querySelector("#container").children[1]); <span class="comment">// div.main</span><br>
+    </code>
+    <p>2. Target the `container`, select the first child using the firstElementChild property, and move to the next sibling using the nextElementSibling property:</p>
+    <code>
+        console.log(document.querySelector("#container").firstElementChild.nextElementSibling);<br><span class="comment">// div.main</span><br>
+    </code>
+    <p>3. Target the `container`, select the last child using the lastElementChild property, and move to the previous sibling using the previousElementSibling property:</p>
+    <code>
+        console.log(document.querySelector("#container").lastElementChild.previousElementSibling);<br><span class="comment">// div.main</span><br>
+    </code>
+    <p>4. Target the `main` class directly, which returns the first element it finds. This approach is the most straightforward, so let's choose this method and save it to a variable to use next:</p>
+    <code>
+        const mainField = document.querySelector(".main");<br>
+        console.log(mainField); <span class="comment">// div.main</span><br>
+    </code>
+    <p>Once you have targeted the element, use the textContent property to store the new text that the element should display:</p>
+    <code>
+        mainField.textContent = 'This is the new content for the main section';
+    </code>
+    <p>Now, the web browser should render the web page as:</p>
+    <code>
+        <div id="container"> Container
+            <div class="header">Header</div>
+            <div class="main">This is the new content for the main section</div>
+            <div class="footer">Footer</div>
+        </div>
+    </code>
+    <p>And that is all for modifying the content of elements on the DOM.</p>
+
+</body>
+</html>
