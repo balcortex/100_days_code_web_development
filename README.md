@@ -271,3 +271,7 @@ Today I learned about the DOM and how to target elements on the DOM using the do
 ## Day 066 - 2023/11/07
 
 Today I learned how to change the text content of elements on the DOM using the textContent property.
+
+## Day 067 - 2023/11/08
+
+Today I learned how to add inline style to elements using JavaScript, which is done using the element's style property.

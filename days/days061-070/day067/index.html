@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 67 - JavaScript: DOM Manipulation, Pt. 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 67 - JavaScript: DOM Manipulation, Pt. 3</h1>
+    <p>In addition to changing the content of the elements, you can also add inline style using JavaScript.</p>
+    <p>Suppose you have the following HTML document:</p>
+    <code>
+        &lt;h1&gt;Title&lt;/h1&gt;<br>
+        &lt;p&gt;Some text&lt;/p&gt;<br>
+    </code>
+    <p>That should render as:</p>
+    <div style="background-color: #c2c7ff;">
+        <h1 style="text-align: left;">Title</h1>
+        <p>Some text</p>
+    </div>
+    <p>To add inline style, you must target the element and specify the property. For example, to center the title, convert it to uppercase, and change its color to red, use the following code:</p>
+    <code>
+        const title = document.querySelector('h1');<br>
+        title.style.textAlign = 'center';<br>
+        title.style.textTransform = 'uppercase';<br>
+        title.style.color = 'red';<br>
+    </code>
+    <p>Similarly, to change the font size of the paragraph and its font style to italics, use the following code:</p>
+    <code>
+        const par = document.querySelector('p');<br>
+        para.style.fontSize = '12px';<br>
+        para.style.fontStyle = 'italic';<br>
+    </code>
+    <p>The result will be rendered as:</p>
+    <code>
+        <div style="background-color: #c2c7ff;">
+            <h1 style="text-align: center; text-transform: uppercase; color: red;">Title</h1>
+            <p style="font-size: 12px; font-style: italic;">Some text</p>
+        </div>
+    </code>
+    <p>The new HTML document would be:</p>
+    <code>
+        &lt;h1 style="text-align: center; text-transform: uppercase; color: red;"&gt;Title&lt;/h1&gt;<br>
+        &lt;p style="font-size: 12px; font-style: italic;"&gt;Some text&lt;/p&gt;<br>
+    </code>
+    <p>JavaScript can add inline style, but this approach is seldom used because it can get messy. There are other approaches to apply style that will be covered next.</p>
+</body>
+</html>
