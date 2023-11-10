@@ -275,3 +275,7 @@ Today I learned how to change the text content of elements on the DOM using the 
 ## Day 067 - 2023/11/08
 
 Today I learned how to add inline style to elements using JavaScript, which is done using the element's style property.
+
+## Day 068 - 2023/11/09
+
+Today I learned how to change all the elements of a specific selector using the document.querySelectorAll() and a for loop.

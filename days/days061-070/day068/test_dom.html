@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="p1">This the 1st paragraph.</p>
+    <p id="p2">This the 2nd paragraph.</p>
+    <p id="p3">This the 3rd paragraph.</p>
+    <script>
+        console.clear();
+
+        const p = document.querySelector('p');
+        p.style.color = 'blue';
+
+        const p2 = document.querySelector('#p2');
+        p2.style.color = 'red';
+
+        const paras = document.querySelectorAll('p');
+        for (para of paras){
+            para.style.color = 'green';
+        }
+    </script>
+</body>
+
+</html>

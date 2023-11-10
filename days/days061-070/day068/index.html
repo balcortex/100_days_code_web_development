@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 68 - JavaScript: DOM Manipulation, Pt. 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 68 - JavaScript: DOM Manipulation, Pt. 4</h1>
+    <p>We should be aware of some caveats when using the document.querySelector() method.  For example, suppose you have the following HTML document, which is composed of three paragraphs:</p>
+    <code>
+        &lt;p id="p1"&gt;This the 1st paragraph.&lt;/p&gt;<br>
+        &lt;p id="p2"&gt;This the 2nd paragraph.&lt;/p&gt;<br>
+        &lt;p id="p3"&gt;This the 3rd paragraph.&lt;/p&gt;<br>
+    </code>
+    <p>This HTML document should be rendered like this:</p>
+    <div class="blue-background">
+        <p class="no-space">This the 1st paragraph.</p>
+        <p class="no-space">This the 2nd paragraph.</p>
+        <p class="no-space">This the 3rd paragraph.</p>
+    </div>
+    <p>Suppose you want to add inline style to all the paragraphs. The following approach will not work because the querySelector() returns the first match only:</p>
+    <code>
+        const p = document.querySelector('p');<br>
+        p.style.color = 'blue';<br>
+    </code>
+    <p>The result would be:</p>
+    <div class="blue-background">
+        <p class="no-space" style="color: blue;">This the 1st paragraph.</p>
+        <p class="no-space">This the 2nd paragraph.</p>
+        <p class="no-space">This the 3rd paragraph.</p>
+    </div>
+    <p>As all the paragraphs have an ID, you could use this selector to target each one. But if you had 100 paragraphs, something else would be needed.</p>
+    <code>
+        const p2 = document.querySelector('#p2');<br>
+        p2.style.color = 'red';<br>
+    </code>
+    <p>The result of running the two previous code fragments would be:</p>
+    <div class="blue-background">
+        <p class="no-space" style="color: blue;">This the 1st paragraph.</p>
+        <p class="no-space" style="color: red;">This the 2nd paragraph.</p>
+        <p class="no-space">This the 3rd paragraph.</p>
+    </div>
+    <p>Finally, the best option is to use the document.querySelectorAll(), which returns an array of elements. Then, you can use a for loop to iterate over the elements:</p>
+    <code>
+        const paras = document.querySelectorAll('p');<br>
+        for (para of paras){<br>
+            &emsp;para.style.color = 'green';<br>
+        }<br>
+    </code>
+    <p>The final result should be:</p>
+    <div class="blue-background">
+        <p class="no-space" style="color: green;">This the 1st paragraph.</p>
+        <p class="no-space" style="color: green;">This the 2nd paragraph.</p>
+        <p class="no-space" style="color: green;">This the 3rd paragraph.</p>
+    </div>
+</body>
+</html>
