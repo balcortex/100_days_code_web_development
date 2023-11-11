@@ -279,3 +279,7 @@ Today I learned how to add inline style to elements using JavaScript, which is d
 ## Day 068 - 2023/11/09
 
 Today I learned how to change all the elements of a specific selector using the document.querySelectorAll() and a for loop.
+
+## Day 069 - 2023/11/10
+
+Today I learned to add, remove, and toggle classes to elements using the classList's add(), remove(), and toggle() methods. This approach is cleaner than adding inline style.

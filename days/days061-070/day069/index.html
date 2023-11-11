@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 69 - JavaScript: DOM Manipulation, Pt. 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 69 - JavaScript: DOM Manipulation, Pt. 5</h1>
+    <p>Apart from adding and removing inline style, there is another approach to modifying the elements' style using JavaScript: adding and removing classes. This approach is cleaner because all the styling is separated from the HTML document, and if you have to apply several lines of style to many elements using inline style, the code can quickly become messy.</p>
+    <p>Suppose you have the following HTML document (and another CSS document that I'll omit here because of limited space):</p>
+    <code>
+        &lt;p id="p1"&gt;This is the 1st paragraph.&lt;/p&gt;<br>
+        &lt;p class="big-red" id="p2"&gt;This is the 2nd paragraph.&lt;/p&gt;<br>
+        &lt;p id="p3"&gt;This is the 3rd paragraph.&lt;/p&gt;<br>
+    </code>
+    <p>That should render like this:</p>
+    <div class="blue-background">
+        <p class="no-space" id="p1">This is the 1st paragraph.</p>
+        <p class="big-red no-space" id="p2">This is the 2nd paragraph.</p>
+        <p class="no-space" id="p3">This is the 3rd paragraph.</p>
+    </div>
+    <p>You can use the classList.add() and classList.remove() methods on the targeted elements to add and remove the style class, respectively:</p>
+    <code>
+        const p1 = document.querySelector("#p1");<br>
+        p1.classList.add('fancy'); <span class="comment">// Add the `fancy` class to the 1st paragraph.</span><br><br>
+
+        const p2 = document.querySelector('#p2');<br>
+        p2.classList.remove('big-red'); <span class="comment">// Remove the `big-red` class from the 2nd paragraph.<br>
+    </code>
+    <p>Also, there is the classList.toggle() method that will add the class (i.e., activate the style) to the element if the class is not active and will remove (i.e., deactivate the style) if the class is inactive:</p>
+    <code>
+        const p3 = document.querySelector('#p3');<br>
+        p3.classList.toggle('high-contrast'); <span class="comment">// Add the `high-contrast` class to the 3rd paragraph (because it is not active at the moment).<br>
+    </code>
+    <p>The final result should look like this:</p>
+    <div class="blue-background">
+        <p class="no-space fancy" id="p1">This is the 1st paragraph.</p>
+        <p class="no-space big-red" id="p2">This is the 2nd paragraph.</p>
+        <p class="no-space high-contrast" id="p3">This is the 3rd paragraph.</p>
+    </div>
+    <p>The DOM will look much cleaner because it will only contain the classes and not the full inline style in each element:</p>
+    <code>
+        &lt;p class="fancy" id="p1"&gt;This is the 1st paragraph.&lt;/p&gt;<br>
+        &lt;p class="big-red" id="p2"&gt;This is the 2nd paragraph.&lt;/p&gt;<br>
+        &lt;p class="high-contrast" id="p3"&gt;This is the 3rd paragraph.&lt;/p&gt;<br>
+    </code>
+</body>
+</html>

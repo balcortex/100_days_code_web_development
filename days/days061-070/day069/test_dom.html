@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style_test.css">
+</head>
+
+<body>
+    <p id="p1">This is the 1st paragraph.</p>
+    <p class="big-red" id="p2">This is the 2nd paragraph.</p>
+    <p id="p3">This is the 3rd paragraph.</p>
+    <script>
+        console.clear();
+
+        const p1 = document.querySelector("#p1");
+        p1.classList.add('fancy');
+
+        const p2 = document.querySelector('#p2');
+        p2.classList.remove('big-red');
+
+        const p3 = document.querySelector('#p3');
+        p3.classList.toggle('high-contrast');
+
+    </script>
+</body>
+
+</html>
