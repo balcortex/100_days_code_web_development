@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 70 - JavaScript: DOM Manipulation, Pt. 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 70 - JavaScript: DOM Manipulation, Pt. 6</h1>
+    <h2>Element creation</h2>
+    <p>JavaScript also allows us to use a script to place new elements on the DOM. It is important to note that the actual HTML is not modified; just the elements are added to the DOM when the script is executed.</p>
+    <p>There are two steps to add new elements to the DOM. First, you need to create them using the document.createElement() method. In this phase, you can style the element before adding it to the DOM. Second, use the parentNode.appendChild() to add the element into the parent element.</p>
+    <p>Suppose you have the following HTML document:</p>
+    <code>
+        &lt;h1&gt;The title&lt;/h1&gt;<br>
+        &lt;div id="container"&gt;<br>
+        &emsp;&lt;div class="content"&gt;This is the first paragraph.<br>
+        &emsp;This content and the title exist in the HTML document.&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+    </code>
+    <p>That should render like this:</p>
+    <div class="no-space blue-background">
+        <h1 style="margin: 4px; text-align: left;">The title</h1>
+        <div id="container">
+            <div class="content">This is the first paragraph. This content and the title exist in the HTML document.</div>
+        </div>
+    </div>
+    <p>You can add another paragraph using the following code:</p>
+    <code>
+        const container = document.querySelector('#container'); <span class="comment">// The parent node</span><br><br>
+
+        const p = document.createElement('p'); <span class="comment">// Create the new element in memory</span><br>
+        p.textContent = "This is the second paragraph."; <span class="comment">// Add the content</span><br>
+        p.style.color = 'blue'; <span class="comment">// Style the element</span><br>
+        container.appendChild(p); <span class="comment">// Add the new element to the parent node</span><br>
+    </code>
+    <p>The result should be rendered as:</p>
+    <div class="no-space blue-background">
+        <h1 style="margin: 4px; text-align: left;">The title</h1>
+        <div id="container">
+            <div class="content" style="margin: 4px;">This is the first paragraph. This content and the title exist in the HTML document.</div>
+            <p style="color: blue; margin: 4px;">This is the second paragraph.</p>
+        </div>
+    </div>
+    <p>You can create any element, even nested elements. But remember that this content is not added to the HTML document, just to the DOM.</p>
+</body>
+</html>

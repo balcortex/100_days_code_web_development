@@ -283,3 +283,7 @@ Today I learned how to change all the elements of a specific selector using the 
 ## Day 069 - 2023/11/10
 
 Today I learned to add, remove, and toggle classes to elements using the classList's add(), remove(), and toggle() methods. This approach is cleaner than adding inline style.
+
+## Day 070 - 2023/11/11
+
+Today I learned to create and add new elements to the DOM using the document.createElement() and the [parentNode].appendChild() methods.
