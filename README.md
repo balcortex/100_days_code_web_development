@@ -287,3 +287,7 @@ Today I learned to add, remove, and toggle classes to elements using the classLi
 ## Day 070 - 2023/11/11
 
 Today I learned to create and add new elements to the DOM using the document.createElement() and the [parentNode].appendChild() methods.
+
+## Day 071 - 2023/11/12
+
+Today I learned to remove elements from the DOM and attributes (id, class, style) from specific elements, using the parentNode.removeChild() and the node.removeAttribute() methods.
