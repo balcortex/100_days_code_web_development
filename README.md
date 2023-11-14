@@ -291,3 +291,7 @@ Today I learned to create and add new elements to the DOM using the document.cre
 ## Day 071 - 2023/11/12
 
 Today I learned to remove elements from the DOM and attributes (id, class, style) from specific elements, using the parentNode.removeChild() and the node.removeAttribute() methods.
+
+## Day 072 - 2023/11/13
+
+Today I learned how to perform actions (i.e., execute functions) using an element's on[action] attribute.

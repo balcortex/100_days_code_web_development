@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 72 - JavaScript: Events - Pt. 1</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 72 - JavaScript: Events - Pt. 1</h1>
+    <p>Now that we have learned how to manipulate the DOM with JavaScript, it's time to learn how to trigger these changes dynamically using events. Events are actions on the webpage, such as clicks or key presses.</p>
+    <p>There are several ways to "listen" to events. The first and simpler one is to specify function attributes on the HTML elements.</p>
+    <p>Suppose you have a button on your webpage, and you want to increment a counter every time the user clicks the button. First, define the JavaScript function that will make the processing:</p>
+    <code>
+        let counter = 0; <span class="comment">// Variable to store the number of clicks</span><br>
+        const counterField = document.querySelector('#counter'); <span class="comment">// Reference to the element that shows the count.</span><br><br>
+
+        function logClick(){<br>
+            &emsp;counter += 1; <span class="comment">// One new click</span><br>
+            &emsp;counterField.textContent = `Clicks count: ${counter}`; <span class="comment">// Update the text</span><br>
+        }<br>
+    </code>
+    <p>There is a function called `logClick` in the script. This function will be called every time the button is pressed. To bind the function and the button, use the button's onclick attribute specifying the function to be executed as the argument:</p>
+    <code>
+        &lt;button onclick="logClick()"&gt;Click me!&lt;/button&gt;<br>
+    </code>
+    <p>Finally, add the element that will show the counter:</p>
+    <code>
+        &lt;p id="counter"&gt;Clicks count: 0&lt;/p&gt;<br>
+    </code>
+    <button style="margin-top: 50px;" onclick="logClick()">Click me!</button>
+    <p id="counter">Clicks count: 0</p>
+
+    <script>
+        let counter = 0; // // Variable to store the number of clicks
+        const counterField = document.querySelector('#counter'); // Reference to the element that shows the count.
+
+        function logClick(){
+            counter += 1; // One new click
+            counterField.textContent = `Clicks count: ${counter}`; // Update the text
+        }
+    </script>
+</body>
+</html>
