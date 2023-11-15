@@ -295,3 +295,7 @@ Today I learned to remove elements from the DOM and attributes (id, class, style
 ## Day 072 - 2023/11/13
 
 Today I learned how to perform actions (i.e., execute functions) using an element's on[action] attribute.
+
+## Day 073 - 2023/11/14
+
+Today, I learned how to add event listeners using JavaScript by setting the onclick property of a node element. This approach is preferred over using the element attribute on the DOM.

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 73 - JavaScript: Events - Pt. 2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 73 - JavaScript: Events - Pt. 2</h1>
+    <p>The second approach to handling events is, instead of cluttering the HTML document setting the onclick attribute on the DOM element, to use JavaScript to set the onclick property.</p>
+    <p>In this way, the HTML document is straightforward:</p>
+    <code>
+        &lt;button&gt;Click me!&lt;/button&gt;<br>
+        &lt;p id="counter"&gt;Clicks count: 0&lt;/p&gt;<br>
+    </code>
+    <p>And the script does all the work:</p>
+    <code>
+        let counter = 0; <span class="comment">// Variable to store the number of clicks</span><br><br>
+        const counterField = document.querySelector('#counter');<br>
+        const button = document.querySelector('button'); <span class="comment">// Reference to the button</span><br><br>
+
+        button.onclick = logClick; <span class="comment">// Bind the function to the onclick event</span><br><br>
+
+        function logClick(){<br>
+            &emsp;counter += 1; <span class="comment">// One new click</span><br>
+            &emsp;counterField.textContent = `Clicks count: ${counter}`; <span class="comment">// Update the text</span><br>
+        }<br>
+    </code>
+    <p>This approach is preferred over setting the onclick attribute on the DOM element, as it separates the concerns of design and operation.</p>
+
+    
+    <button style="margin-top: 50px;">Click me!</button>
+    <p id="counter">Clicks count: 0</p>
+
+    <script>
+        let counter = 0; // Variable to store the number of clicks
+        const counterField = document.querySelector('#counter'); // Reference to the element that shows the count
+        const button = document.querySelector('button');
+        button.onclick = logClick; // Bind the function to the onclick event.
+
+        function logClick(){
+            counter += 1; // One new click
+            counterField.textContent = `Clicks count: ${counter}`; // Update the text
+        }
+    </script>
+</body>
+</html>
