@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 74 - JavaScript: Events - Pt. 3</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 74 - JavaScript: Events - Pt. 3</h1>
+    <p>The third approach to handling events is to attach an event listener to the element using JavaScript. This approach is similar to setting the element's property on[event], with a main difference: you can add several listeners (i.e., several functions) to the same event.</p>
+    <p>Suppose that, besides counting the clicks, you want to move the button every time it is pressed. You can accomplish this task using two different functions, one that counts the clicks and the other that pushes the button.</p>
+    <code>
+        let counter = 0; <span class="comment">// Variable to store the number of clicks</span><br><br>
+
+        const counterField = document.querySelector('#counter');<br>
+        const button = document.querySelector('button');<br><br>
+
+        <span class="comment">// Attach both listeners</span><br>
+        button.addEventListener('click', countClick)<br>
+        button.addEventListener('click', incrementMarginLeft)<br><br>
+
+        function countClick(){<br>
+            &emsp;counter += 1; <span class="comment">// One new click</span><br>
+            &emsp;counterField.textContent = `Clicks count: ${counter}`; <span class="comment">// Update the text</span><br>
+        }<br><br>
+        
+        function incrementMarginLeft(){<br>
+            &emsp;button.style.marginLeft = counter * 10 + "px"; <span class="comment">// Move the button every click</span><br>
+        }<br>
+    </code>
+    <p>The HTML is straightforward:</p>
+    <code>
+        &lt;button&gt;Click me!&lt;/button&gt;<br>
+        &lt;p id="counter"&gt;Clicks count: 0&lt;/p&gt;<br>
+    </code>
+    <p>Now, the button has two listeners attached to click events, one for counting the clicks and the other for moving the button to the right side 10 pixels every click.</p>
+
+    
+    <button style="margin-top: 50px;">Click me!</button>
+    <p id="counter">Clicks count: 0</p>
+
+    <script>
+        let counter = 0; // Variable to store the number of clicks
+
+        const counterField = document.querySelector('#counter');
+        const button = document.querySelector('button');
+
+        // Attach both listeners
+        button.addEventListener('click', countClick)
+        button.addEventListener('click', incrementMarginLeft)
+
+        function countClick(){
+            counter += 1; // One new click
+            counterField.textContent = `Clicks count: ${counter}`; // Update the text
+        }
+        
+        function incrementMarginLeft(){
+            button.style.marginLeft = counter * 10 + "px"; // Move the button every click
+        }
+    </script>
+</body>
+</html>

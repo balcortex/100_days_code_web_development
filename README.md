@@ -299,3 +299,7 @@ Today I learned how to perform actions (i.e., execute functions) using an elemen
 ## Day 073 - 2023/11/14
 
 Today, I learned how to add event listeners using JavaScript by setting the onclick property of a node element. This approach is preferred over using the element attribute on the DOM.
+
+## Day 074 - 2023/11/15
+
+Today I learned to add event listeners to handle events using JavaScript. One advantage of this approach is that multiple listeners can be attached to the same event
