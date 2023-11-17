@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 75 - JavaScript: Events - Pt. 4</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 75 - JavaScript: Events - Pt. 4</h1>
+    <p>Another advantage of using event listeners is that the callback function receives an `event` variable as an argument. This variable contains the information about the event itself, for example, the kind of event (e.g., click, key press, change).</p>
+    <p>In click events, this variable also contains the location of the click:</p>
+    <code>
+        const loc = document.querySelector('#location');<br>
+        const button = document.querySelector('button');<br><br>
+
+        button.addEventListener('click', logClick);<br><br>
+
+        function logClick(e){<br>
+            &emsp;<span class="comment">// e is a reference to the event itself</span><br>
+            &emsp;loc.textContent = `Location - x: ${e.x}, y: ${e.y}`;<br>
+        }<br>
+    </code>
+    <p>Furthermore, you can access the element that triggered the event to manipulate it:</p>
+    <code>
+        function logClick(e){<br>
+            &emsp;... <br>
+            &emsp;counter += 1;<br>
+            &emsp;<span class="comment">// access the button throughout the event variable</span><br>
+            &emsp;e.srcElement.textContent = `Clicked ${counter} times`;<br>
+        }<br>
+    </code>
+
+    <button style="margin-top: 50px;">Click me!</button>
+    <p id="location">Location - x: 0, y: 0</p>
+
+    <script>
+        const loc = document.querySelector('#location');
+        const button = document.querySelector('button');
+        let counter = 0;
+
+        button.addEventListener('click', logClick);
+
+        function logClick(e){
+            // e is a reference to the event itself
+            loc.textContent = `Location - x: ${e.x}, y: ${e.y}`;
+            counter += 1;
+            // access the button throughout the event variable
+            e.srcElement.textContent = `Clicked ${counter} times`;
+        }
+    </script>
+</body>
+</html>

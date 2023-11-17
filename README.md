@@ -303,3 +303,8 @@ Today, I learned how to add event listeners using JavaScript by setting the oncl
 ## Day 074 - 2023/11/15
 
 Today I learned to add event listeners to handle events using JavaScript. One advantage of this approach is that multiple listeners can be attached to the same event
+
+## Day 075 - 2023/11/16
+
+Today I learned that an event variable is passed to the event listener's function as an argument. This variable contains information about the event itself, such as its type and source.
+
