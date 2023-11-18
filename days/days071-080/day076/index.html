@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 76 - JavaScript: Events - Pt. 5</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 76 - JavaScript: Events - Pt. 5</h1>
+    <p>Yet another advantage of using event listeners is the ease of attaching listeners to a group of elements.</p>
+    <p>Imagine that you have 26 buttons, one for each letter of the alphabet, and you want to display which button was pressed in a text field. Setting the onclick attribute on each button in the DOM would be a burden, but this task is easy with JavaScript.</p>
+    <p>To attach an event listener to a group of elements, use the forEach() method:</p>
+    <code>
+    const buttons = document.querySelectorAll('button');<span class="comment"> // All the buttons</span><br>
+    const display = document.querySelector('#display');<br><br>
+
+    <span class="comment">// Loop to each button in the group and attach the listener to each one</span><br>
+    buttons.forEach(button => button.addEventListener("click", logClick));<br><br>
+
+    function logClick(){<br>
+        &emsp;<span class="comment">// `this` refers to the button in this context</span><br>
+        &emsp;display.textContent = `You have pressed button ${this.textContent}`;<br>
+    }<br>
+    </code>
+    <p>Note the use of the arrow function, which is equivalent to:</p>
+    <code>
+        buttons.forEach(clickButton);<br><br>
+
+        function clickButton(button){<br>
+            &emsp;button.addEventListener('click', logClick);<br>
+        }<br>
+    </code>
+    <p>For brevity, arrow functions are preferred in this type of application.</p>
+    <div style="margin-top: 60px;" id="buttonContainer">
+        <button>A</button> <button>B</button> <button>C</button> <button>D</button> <button>E</button> <button>F</button> <button>G</button> <button>H</button> <button>I</button> <button>J</button> <button>K</button> <button>L</button> <button>M</button> <button>N</button> <button>O</button> <button>P</button> <button>Q</button> <button>R</button> <button>S</button> <button>T</button> <button>U</button> <button>V</button> <button>W</button> <button>X</button> <button>Y</button> <button>Z</button>
+    </div>
+    <p id="display">No button has been clicked</p>
+
+    <script>
+        const buttons = document.querySelectorAll('button'); // All the buttons
+        const display = document.querySelector('#display');
+
+        // Loop to each button in the group and attach the listener to each one
+        buttons.forEach(button => button.addEventListener("click", logClick));
+
+        function logClick(){
+            // `this` refers to the button in this context
+            display.textContent = `You have pressed button ${this.textContent}`;
+        }
+    </script>
+</body>
+</html>

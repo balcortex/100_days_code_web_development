@@ -1,0 +1,22 @@
+body{
+    background-color: #ebeefd;
+}
+
+h1{
+    text-align: center;
+}
+
+code{
+    color: blue;
+}
+
+.comment{
+    color: green;
+    font-weight: 800;
+}
+
+button {
+    width: 100px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}

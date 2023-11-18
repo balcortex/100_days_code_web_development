@@ -308,3 +308,6 @@ Today I learned to add event listeners to handle events using JavaScript. One ad
 
 Today I learned that an event variable is passed to the event listener's function as an argument. This variable contains information about the event itself, such as its type and source.
 
+## Day 076 - 2023/11/17
+
+Today I learned how to attach an event listener to a group of nodes using the forEach() method. This task is straightforward, no matter the number of items in the group.
