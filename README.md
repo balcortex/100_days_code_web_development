@@ -311,3 +311,7 @@ Today I learned that an event variable is passed to the event listener's functio
 ## Day 076 - 2023/11/17
 
 Today I learned how to attach an event listener to a group of nodes using the forEach() method. This task is straightforward, no matter the number of items in the group.
+
+## Day 077 - 2023/11/18
+
+Today I learned about event bubbling. If there are nested elements with listeners attached, triggering the event in the child will also start the event in the parent.

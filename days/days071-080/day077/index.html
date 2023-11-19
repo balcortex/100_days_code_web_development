@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 77 - JavaScript: Events - Pt. 6</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 77 - JavaScript: Events - Pt. 6</h1>
+    <h2>Introduction to event bubbling</h2>
+    <p>Suppose there are nested elements that have registered an event listener, and the child event is triggered. In that case, the event in the parent is triggered as well. This behavior is known as event bubbling.</p>
+    <p>As this topic is rather complex, first, we will demonstrate how the event on a child also triggers the event on its parent (if the parent has an event listener attached).</p>
+    <p>Suppose that you have three divs nested, the outer, the middle, and the inner div:</p>
+    <code>
+    &lt;div class="outer"&gt;<br>
+    &emsp;&lt;div class="middle"&gt;<br>
+    &emsp;&emsp;&lt;div class="inner"&gt;&lt;/div&gt;<br>
+    &emsp;&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+    </code>
+    <p>Each div has a listener attached with a function that increments a counter every time the div is clicked:</p>
+    <code>
+        const divs = document.querySelectorAll('div');<br>
+        divs.forEach(div => div.addEventListener('click', logClick));<br>
+        ...<br>
+
+        function logClick(e){<br>
+            &emsp;switch (this.className) {<br>
+                &emsp;&emsp;case 'outer':<br>
+                    &emsp;&emsp;&emsp;outerCounter += 1;<br>
+                    &emsp;&emsp;&emsp;break;<br>
+                &emsp;&emsp;case 'middle':<br>
+                    &emsp;&emsp;&emsp;middleCounter += 1;<br>
+                    &emsp;&emsp;&emsp;break;<br>
+                    &emsp;&emsp;&emsp;...<br>
+        }<br>
+    </code>
+    <p>If you click the innermost, all the counters will increase by one. If you click the middle one, only the middle and the outer counter will increase. And, if you click the outermost, only this counter will increase.</p>
+
+    <div class="outer">
+        <div class="middle">
+            <div class="inner"></div>
+        </div>
+    </div>
+    <p id="outer-counter">Outer clicks: 0</p>
+    <p id="middle-counter">Middle clicks: 0</p>
+    <p id="inner-counter">Inner clicks: 0</p>
+
+    <script>
+        const divs = document.querySelectorAll('div');
+        const outClick = document.querySelector('#outer-counter');
+        const midClick = document.querySelector('#middle-counter');
+        const inClick = document.querySelector('#inner-counter');
+        let outerCounter = 0;
+        let middleCounter = 0;
+        let innerCounter = 0;
+
+        divs.forEach(div => div.addEventListener('click', logClick));
+
+        function logClick(e){
+            switch (this.className) {
+                case 'outer':
+                    outerCounter += 1;
+                    break;
+                case 'middle':
+                    middleCounter += 1;
+                    break;
+                case 'inner':
+                    innerCounter += 1;
+                    break;
+            }
+            outClick.textContent = `Outer clicks: ${outerCounter}`;
+            midClick.textContent = `Middle clicks: ${middleCounter}`;
+            inClick.textContent = `Inner clicks: ${innerCounter}`;
+        }
+    </script>
+</body>
+</html>
