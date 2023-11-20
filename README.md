@@ -315,3 +315,7 @@ Today I learned how to attach an event listener to a group of nodes using the fo
 ## Day 077 - 2023/11/18
 
 Today I learned about event bubbling. If there are nested elements with listeners attached, triggering the event in the child will also start the event in the parent.
+
+## Day 078 - 2023/11/19
+
+Today I learned about capture and trigger events. By default, events are captured from the parents to the children and triggered in reverse, from the children to the parents.

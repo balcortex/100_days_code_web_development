@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 78 - JavaScript: Events - Pt. 7</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 78 - JavaScript: Events - Pt. 7</h1>
+    <h2>Introduction to event bubbling - Pt. 2</h2>
+    <p>We've seen that events in nested elements trigger when the innermost event is triggered, but what event triggers first?</p>
+    <p>There are two phases related to event bubbling: the capture and the triggering. Capture happens from the outermost element until the innermost element is reached. At this point, no event has been triggered yet. Once the innermost element is reached, the events trigger backward, from the innermost to the outermost.</p>
+    <p>In this example, if the event is captured in the innermost rectangle, the capture happens from top to bottom:</p>
+    <ol><li>Outer</li><li>Middle</li><li>Inner</li></ol>
+    <p>The execution of the events is reversed, from the bottom to the top:</p>
+    <ol><li>Inner</li><li>Middle</li><li>Outer</li></ol>
+
+    <div class="outer">
+        <div class="middle">
+            <div class="inner"></div>
+        </div>
+    </div>
+    <p>The trigger order is:</p>
+    <ol id="list"></ol>
+    <button id="clear">Clear</button>
+
+    <script>
+        const divs = document.querySelectorAll('div');
+        const list = document.querySelector('#list');
+        const clearBtn = document.querySelector('#clear');
+
+        divs.forEach(div => div.addEventListener('click', logClick));
+        clearBtn.addEventListener('click', clearList);
+
+        function logClick(e){
+            let item = document.createElement('li');
+            item.textContent = this.className;
+            list.appendChild(item);
+        }
+
+        function clearList(){
+            Array.from(list.childNodes).forEach(child => child.remove());
+        }
+    </script>
+</body>
+</html>
