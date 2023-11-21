@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 79 - JavaScript: Events - Pt. 8</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 79 - JavaScript: Events - Pt. 8</h1>
+    <h2>Introduction to event bubbling - Pt. 3</h2>
+    <p>You can change the execution of the events to happen in the capturing phase, that is from, the outermost to the innermost element, by setting the useCapture parameter to true on the event listener (the third parameter, after the function listener itself):</p>
+    <code>
+        divs.forEach(div => div.addEventListener('click', logClick, true));<br>
+        <span class="comment">// true triggers event on the way down (on the capture phase)</span>
+    </code>
+    <p>Also, you can use an equivalent, more verbose code:</p>
+    <code>
+        divs.forEach(div => div.addEventListener('click', logClick, {capture: true}));<br>
+        <span class="comment">// true triggers event on the way down (on the capture phase)</span>
+    </code>
+    <p>In this manner, the capture and the execution phase will be the same:</p>
+    <ol><li>Outer</li><li>Middle</li><li>Inner</li></ol>
+
+    <div class="outer">
+        <div class="middle">
+            <div class="inner"></div>
+        </div>
+    </div>
+    <p>The trigger order is:</p>
+    <ol id="list"></ol>
+    <button id="clear">Clear</button>
+
+    <script>
+        const divs = document.querySelectorAll('div');
+        const list = document.querySelector('#list');
+        const clearBtn = document.querySelector('#clear');
+
+        divs.forEach(div => div.addEventListener('click', logClick, {capture: true}));
+        clearBtn.addEventListener('click', clearList);
+
+        function logClick(e){
+            let item = document.createElement('li');
+            item.textContent = this.className;
+            list.appendChild(item);
+        }
+
+        function clearList(){
+            Array.from(list.childNodes).forEach(child => child.remove());
+        }
+    </script>
+</body>
+</html>

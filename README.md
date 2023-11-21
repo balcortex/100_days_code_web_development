@@ -319,3 +319,8 @@ Today I learned about event bubbling. If there are nested elements with listener
 ## Day 078 - 2023/11/19
 
 Today I learned about capture and trigger events. By default, events are captured from the parents to the children and triggered in reverse, from the children to the parents.
+
+## Day 079 - 2023/11/20
+
+Today I learned how to change the trigger order of nested events to match the capture order. To do this, pass `true` as the third argument while adding the event listener.
+
