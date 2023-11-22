@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 80 - JavaScript: Events - Pt. 9</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Day 80 - JavaScript: Events - Pt. 9</h1>
+    <h2>Introduction to event bubbling - Pt. 4</h2>
+    <p>What if we don't want the events to propagate? To avoid event propagation within the listener's function, use the reference to the event itself (passed as the `e` argument) and call the method stopPropagation(). This method will ensure that the event is handled only once.</p>
+    <p>Suppose you only want to listen (i.e., handle) to events in the innermost element. Thus, you have to clear the `useCapture` argument (it isn't set by default, so that you may leave it like this) to allow the triggering on the bubbling phase and use the stopPropagation() method in the listener's function:</p>
+    <code>
+        divs.forEach(div => div.addEventListener('click', logClick));<br><br>
+
+        function logClick(e){<br>
+            &emsp;e.stopPropagation();<br>
+            &emsp;...<br>
+        }
+    </code>
+    <p>In this way, only one handling will happen per event, and within the innermost element:</p>
+
+    <div class="outer">
+        <div class="middle">
+            <div class="inner"></div>
+        </div>
+    </div>
+    <p>The trigger order is:</p>
+    <ol id="list"></ol>
+    <button id="clear">Clear</button>
+
+    <script>
+        const divs = document.querySelectorAll('div');
+        const list = document.querySelector('#list');
+        const clearBtn = document.querySelector('#clear');
+
+        divs.forEach(div => div.addEventListener('click', logClick));
+        clearBtn.addEventListener('click', clearList);
+
+        function logClick(e){
+            e.stopPropagation();
+            let item = document.createElement('li');
+            item.textContent = this.className;
+            list.appendChild(item);
+        }
+
+        function clearList(){
+            Array.from(list.childNodes).forEach(child => child.remove());
+        }
+    </script>
+</body>
+</html>

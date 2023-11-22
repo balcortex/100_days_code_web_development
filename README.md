@@ -324,3 +324,7 @@ Today I learned about capture and trigger events. By default, events are capture
 
 Today I learned how to change the trigger order of nested events to match the capture order. To do this, pass `true` as the third argument while adding the event listener.
 
+## Day 080 - 2023/11/21
+
+Today I learned how to stop event propagation in nested elements using the reference to the event itself in the listener's function and calling the method event.stopPropagation().
+
