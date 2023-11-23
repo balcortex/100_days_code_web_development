@@ -328,3 +328,6 @@ Today I learned how to change the trigger order of nested events to match the ca
 
 Today I learned how to stop event propagation in nested elements using the reference to the event itself in the listener's function and calling the method event.stopPropagation().
 
+## Day 081 - 2023/11/22
+
+Today, I started a little project of a 'Rock, Paper, Scissors' webpage, allowing you to play the game against the computer. On the first day, I made the basic UI.
