@@ -1,0 +1,16 @@
+body{
+    background-color: #ebeefd;
+}
+
+h1{
+    text-align: center;
+}
+
+code{
+    color: blue;
+}
+
+.comment{
+    color: green;
+    font-weight: 800;
+}

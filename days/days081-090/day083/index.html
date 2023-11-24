@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 83 - Project: Rock, Paper, Scissors - Pt. 3</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 83 - Project: Rock, Paper, Scissors - Pt. 3</h1>
+    <p>We have the player's and the computer's choices whenever a button is pressed. Now, it's time to make the game logic, which will be handled by the playRound() function.</p>
+    <p>To simplify things, we define a variable that indicates that the player won, and we will change it only in the contrary case.</p>
+    <code>let playerWins = true;</code>
+    <p>Also, we need to check if there's a draw so we can exit the function right away:</p>
+    <code>
+        if (playerChoice == computerChoice) {<br>
+            &emsp;roundResultField.textContent = 'Round result: draw';<br>
+            &emsp;return;<br>
+        }<br>
+    </code>
+    <p>If there's no draw, we check the possible combinations that make the player lose the round and update the variable accordingly:</p>
+    <code>
+        if ( playerChoice == 'rock' & computerChoice == 'paper' |<br>
+        &emsp;&emsp;&emsp;playerChoice == 'paper' & computerChoice == 'scissors' |<br>
+        &emsp;&emsp;&emsp;playerChoice == 'scissors' & computerChoice == 'rock') {<br>
+            &emsp;&emsp;&emsp;&emsp;playerWins = false;<br>
+        }<br>
+    </code>
+    <p>And finally, the code updates a field on the webpage that displays who won the round:</p>
+    <code>
+    if (playerWins) roundResultField.textContent = 'Round result: you win';<br>
+    else roundResultField.textContent = 'Round result: you lose';
+    </code>
+    <p>The webpage should render something like this:</p>
+    <div id="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <p id="player-choice">You chose: </p>
+    <p id="computer-choice">Computer chose: </p>
+    <p id="round-result">Round result: </p>
+</body>
+</html>

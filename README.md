@@ -335,3 +335,7 @@ Today, I started a little project of a 'Rock, Paper, Scissors' webpage, allowing
 ## Day 082 - 2023/11/23
 
 Today, I made the function that plays the role of the computer enemy, which randomly selects a choice every time the user clicks a button.
+
+## Day 083 - 2023/11/24
+
+Today, I made the actual game logic, which checks whether the player wins or loses, or whether there's a draw, based on the player's and computer's selections.
