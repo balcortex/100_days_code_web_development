@@ -331,3 +331,7 @@ Today I learned how to stop event propagation in nested elements using the refer
 ## Day 081 - 2023/11/22
 
 Today, I started a little project of a 'Rock, Paper, Scissors' webpage, allowing you to play the game against the computer. On the first day, I made the basic UI.
+
+## Day 082 - 2023/11/23
+
+Today, I made the function that plays the role of the computer enemy, which randomly selects a choice every time the user clicks a button.

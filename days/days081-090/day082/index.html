@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 82 - Project: Rock, Paper, Scissors - Pt. 2</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 82 - Project: Rock, Paper, Scissors - Pt. 2</h1>
+    <p>On day 81, I made the basic UI respond correctly to the user input; the next step is to make the computer choose its option. The computer has to randomly select between the three possibilities whenever the user clicks a button.</p>
+    <p>The approach I chose makes use of an array of available options:</p>
+    <code>
+        const AVAILABLE_CHOICES = ['rock', 'paper', 'scissors'];
+    </code>
+    <p>Then, using the Math module, we generate a random number and multiply it by three since the random() method produces a number between 0 and 1. Finally, we round down the number to the nearest integer, thus having the numbers 0, 1, and 2. We use this number as the index of the choices array.</p>
+    <code>
+    function getComputerChoice() {<br>
+    &emsp;return AVAILABLE_CHOICES[Math.floor(Math.random() * 3)];<br>
+    }<br>
+    </code>
+    <p>Every time a button is clicked, a function named `playRound` is called, which gets both the player and the computer choices and updates the UI:</p>
+    <code>
+    function playRound() {<br>
+    &emsp;let playerChoice = this.id;<br>
+    &emsp;let computerChoice = getComputerChoice();<br><br>
+
+    &emsp;playerChoiceField.textContent = `You chose: ${playerChoice}`;<br>
+    &emsp;computerChoiceField.textContent = `Computer chose: ${computerChoice}`;<br>
+    }<br>
+    </code>
+
+    <p>Now, the webpage should look something like this:</p>
+
+    <div id="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <p id="player-choice">You chose: </p>
+    <p id="computer-choice">Computer chose: </p>
+</body>
+</html>
