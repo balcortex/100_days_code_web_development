@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 84 - Project: Rock, Paper, Scissors - Pt. 4</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 84 - Project: Rock, Paper, Scissors - Pt. 4</h1>
+    <p>We have the game logic functioning correctly. Let's implement the code that keeps track of both players' scores and announces the game's winner after five rounds of wins.</p>
+    <p>The first thing is to declare the variables that will keep the count of each player's score:</p>
+    <code>
+    let playerScore = 0;<br>
+    let computerScore = 0;<br>
+    </code>
+    <p>Within the playRound() function, we increment the player's score who won the round. Note that the function returns early in case of a draw, and the score is not updated.</p>
+    <code>
+        if (playerWins) {<br>
+        &emsp;roundResultField.textContent = 'Round result: you win';<br>
+        &emsp;playerScore++;<br>
+        }<br>
+        ...<br>
+        if (playerScore >= 5 | computerScore >= 5) {<br>
+        &emsp;let winner = playerScore > computerScore ? ' - YOU WIN' : " - YOU LOSE";<br>
+        &emsp;gameScoreField.textContent += winner;<br>
+        &emsp;for (btn of buttons) {<br>
+        &emsp;&emsp;btn.disabled = true; <span class="comment">// disable all the buttons</span><br>
+        &emsp;}<br>
+        }<br>
+    </code>
+    <p>The last part of this code turns off the buttons because the game has ended.</p>
+    <p>The result should render something like this:</p>
+    <div id="buttons">
+        <button id="rock">Rock</button>
+        <button id="paper">Paper</button>
+        <button id="scissors">Scissors</button>
+    </div>
+    <p id="player-choice">You chose: </p>
+    <p id="computer-choice">Computer chose: </p>
+    <p id="round-result">Round result: </p>
+    <p id="game-score">Game score: Player (0) - Computer (0)</p>
+</body>
+</html>

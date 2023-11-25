@@ -339,3 +339,7 @@ Today, I made the function that plays the role of the computer enemy, which rand
 ## Day 083 - 2023/11/24
 
 Today, I made the actual game logic, which checks whether the player wins or loses, or whether there's a draw, based on the player's and computer's selections.
+
+## Day 084 - 2023/11/25
+
+Today I wrote the code that keeps track of the score, announces the winner after five won rounds, and finally disables the button once the game ends.
