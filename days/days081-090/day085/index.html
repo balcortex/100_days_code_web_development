@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 85 - Project: Rock, Paper, Scissors - Pt. 5</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 85 - Project: Rock, Paper, Scissors - Pt. 5</h1>
+    <p>All the logic is (almost) done. Now, it's time to enhance the visuals.</p>
+    <p>The first thing I thought of doing was to replace the text buttons with image buttons, which look better. For this purpose, I browsed for some descriptive images (the source is in the code) and downloaded them to a folder named `image` in the root directory.</p>
+    <p>There are several ways to make a clickable image, and I chose the approach of putting the image inside the button itself to avoid changing the logic code:</p>
+    <code>
+        &lt;div id="buttons"&gt;<br>
+            &emsp;&lt;button id="rock"&gt;&lt;img src="img/rock.png" alt=""&gt;&lt;/button&gt;<br>
+            &emsp;&lt;button id="paper"&gt;&lt;img src="img/paper.png" alt=""&gt;&lt;/button&gt;<br>
+            &emsp;&lt;button id="scissors"&gt;&lt;img src="img/scissors.png" alt=""&gt;&lt;/button&gt;<br>
+        &lt;/div&gt;<br>
+    </code><br>
+    <p>Also, I added some CSS code to the buttons to shrink the images and make them look more appealing:</p>
+    <code>
+        img{
+            height: 180px;
+        }<br>
+        
+        button{
+            background-color: white;
+            border-radius: 10px;
+            margin-right: 10px;
+        }<br>
+        button:hover{
+            background-color: #e6e6e6;
+        }<br>
+        button:active{
+            background-color: #c0c0c0;
+        }<br>
+        button:disabled{
+            opacity: 0.5;
+            background-color: #c0c0c0;
+        }<br>
+    </code>
+    <p>The final result should look something like this:</p>
+    <div id="buttons">
+        <button id="rock"><img src="img/rock.png" alt=""></button>
+        <button id="paper"><img src="img/paper.png" alt=""></button>
+        <button id="scissors"><img src="img/scissors.png" alt=""></button>
+    </div>
+    <p id="player-choice">You chose: </p>
+    <p id="computer-choice">Computer chose: </p>
+    <p id="round-result">Round result: </p>
+    <p id="game-score">Game score: Player (0) - Computer (0)</p>
+
+    <!-- <a href="https://www.vectorstock.com/royalty-free-vector/rock-paper-scissors-hand-gesture-vector-25169737">Vector image by VectorStock / vectorstock</a> -->
+</body>
+</html>

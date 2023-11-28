@@ -343,3 +343,8 @@ Today, I made the actual game logic, which checks whether the player wins or los
 ## Day 084 - 2023/11/25
 
 Today I wrote the code that keeps track of the score, announces the winner after five won rounds, and finally disables the button once the game ends.
+
+## Day 085 - 2023/11/27
+
+Today I changed the text buttons for image buttons to enhance the visuals. The buttons have round corners and change color on hover and active actions.
+
