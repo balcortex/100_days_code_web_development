@@ -348,3 +348,6 @@ Today I wrote the code that keeps track of the score, announces the winner after
 
 Today I changed the text buttons for image buttons to enhance the visuals. The buttons have round corners and change color on hover and active actions.
 
+## Day 086 - 2023/11/28
+
+Today, I changed the UI to display the selection as an image, not just text. I only wrote the HTML this day, so the image is fixed for now.

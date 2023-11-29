@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 86 - Project: Rock, Paper, Scissors - Pt. 6</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 86 - Project: Rock, Paper, Scissors - Pt. 6</h1>
+    <p>Next, it occurred to me to display the image of both the player's and the computer's selection instead of just the text. Also, the image can change the color, whether the choice is the winner or the loser.</p>
+    <p>TThe first thing to do to complete this task is to reserve the space for the images on the screen. There are plentiful ways to achieve this; I chose one div to contain both images and, within this container, another div to display the player's name below the image. The outer div is set as a flex-container, which allows easy centering of the content:</p>
+    <code>
+        &lt;div id="display"&gt;<br>
+            &emsp;&lt;div class="item-container"&gt;<br>
+            &emsp;&emsp;&lt;img src="img/rock.png" alt=""&gt;<br>
+            &emsp;&emsp;&lt;p&gt;Player&lt;/p&gt;<br>
+            &emsp;&lt;/div&gt;<br>
+            &emsp;&lt;span id="versus"&gt;vs.&lt;/span&gt;<br>
+            &emsp;&lt;div class="item-container"&gt;<br>
+            &emsp;&emsp;&lt;img src="img/rock.png" alt=""&gt;<br>
+            &emsp;&emsp;&lt;p&gt;Computer&lt;/p&gt;<br>
+            &emsp;&lt;/div&gt;<br>
+        &lt;/div&gt;<br>
+    </code><br>
+    <p>Later, we will write the code that changes the image according to the selection.</p>
+    <div id="buttons">
+        <button id="rock"><img src="img/rock.png" alt=""></button>
+        <button id="paper"><img src="img/paper.png" alt=""></button>
+        <button id="scissors"><img src="img/scissors.png" alt=""></button>
+    </div>
+    <div id="display">
+        <div class="item-container">
+            <img src="img/rock.png" alt="">
+            <p>Player</p>
+        </div>
+        <span id="versus">vs.</span>
+        <div class="item-container">
+            <img src="img/rock.png" alt="">
+            <p>Computer</p>
+        </div>
+    </div>
+    <p id="player-choice">You chose: </p>
+    <p id="computer-choice">Computer chose: </p>
+    <p id="round-result">Round result: </p>
+    <p id="game-score">Game score: Player (0) - Computer (0)</p>
+
+    <!-- <a href="https://www.vectorstock.com/royalty-free-vector/rock-paper-scissors-hand-gesture-vector-25169737">Vector image by VectorStock / vectorstock</a> -->
+</body>
+</html>
