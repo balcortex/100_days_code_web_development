@@ -351,3 +351,7 @@ Today I changed the text buttons for image buttons to enhance the visuals. The b
 ## Day 086 - 2023/11/28
 
 Today, I changed the UI to display the selection as an image, not just text. I only wrote the HTML this day, so the image is fixed for now.
+
+## Day 087 - 2023/11/29
+
+Today I wrote the code that displays the image of both players' selections. Also, the loser image has less opacity to identify the round winner quickly.
