@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 87 - Project: Rock, Paper, Scissors - Pt. 7</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 87 - Project: Rock, Paper, Scissors - Pt. 7</h1>
+    <p>Now, it's time for wiring the UI and the JavaScript code. I first added a blank image with the text `Choose Your Weapon` as a placeholder for the actual image, which will be replaced when the selection is made.</p>
+    <p>To allow easy access to both image fields, I added an ID for them: ' img-player` and `img-computer`.</p>
+    <code>
+        &lt;img id="img-player" src="img/blank.png" alt=""&gt;<br>
+        ... <br>
+        &lt;img id="img-computer" src="img/blank.png" alt=""&gt;<br>
+    </code>
+    <p>In the JavaScript file, first query both selectors (for now on, I will include one to save screen space):</p>
+    <code>
+        const imgPlayerField = document.querySelector('#img-player');<br>
+    </code>
+    <p>Within the playRound() function, we set the attribute `src` to match the correct file, the same as the button ID. Also, we set the opacity to 1.0 (more on this later):</p>
+    <code>
+        imgPlayerField.setAttribute('src', `img/${playerChoice}.png`);<br>
+        imgPlayerField.style.opacity = 1.0;<br>
+    </code>
+    <p>To make the winner stand up, we set the opacity of the loser (or both if there's a draw) to 0.4:</p>
+    <code>
+        imgComputerField.style.opacity = 0.4;<br>
+        playerScore++;<br>
+    </code>
+    <p>And finally, update the score in the middle of the board (note the use of inner html required to render the text correctly):</p>
+    <code>
+        gameScoreField.innerHTML = `Score&lt;br&gt;${playerScore} &amp;dash; ${computerScore}`;<br>
+    </code>
+    <p>Also, we can add an element at the end of the body to indicate the winner. The code is straightforward and no longer fits here so that I will omit it.</p>
+    <div id="buttons">
+        <button id="rock"><img src="img/rock.png" alt=""></button>
+        <button id="paper"><img src="img/paper.png" alt=""></button>
+        <button id="scissors"><img src="img/scissors.png" alt=""></button>
+    </div>
+    <div id="display">
+        <div class="item-container">
+            <img id="img-player" src="img/blank.png" alt="">
+            <p>Player</p>
+        </div>
+        <span id="game-score">Score<br>0 &dash; 0</span>
+        <div class="item-container">
+            <img id="img-computer" src="img/blank.png" alt="">
+            <p>Computer</p>
+        </div>
+    </div>
+
+    <!-- <a href="https://www.vectorstock.com/royalty-free-vector/rock-paper-scissors-hand-gesture-vector-25169737">Vector image by VectorStock / vectorstock</a> -->
+</body>
+</html>
