@@ -355,3 +355,7 @@ Today, I changed the UI to display the selection as an image, not just text. I o
 ## Day 087 - 2023/11/29
 
 Today I wrote the code that displays the image of both players' selections. Also, the loser image has less opacity to identify the round winner quickly.
+
+## Day 088 - 2023/12/01
+
+Today I finished the `Rock, paper, scissors` project by adding CSS code. I mainly used flexbox to center the divs and buttons.
