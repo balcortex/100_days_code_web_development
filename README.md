@@ -359,3 +359,7 @@ Today I wrote the code that displays the image of both players' selections. Also
 ## Day 088 - 2023/12/01
 
 Today I finished the `Rock, paper, scissors` project by adding CSS code. I mainly used flexbox to center the divs and buttons.
+
+## Day 089 - 2023/12/05
+
+Today I started a new project, a simple webpage that allows the creation of a shopping list. On the first day, I worked on the UI and the logic of the adding process.

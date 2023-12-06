@@ -10,12 +10,39 @@
 
 <body>
   <h1>Day 089 - Project: Shopping list</h1>
-  <div>
+  <p>In the coming days, I will design a web page that allows the user to make a shopping list. My bottom-up approach starts with a basic functioning page and adds features without breaking the code.</p>
+  <p>The first task is to design a straightforward UI: a field to allow the user to input text and a button to add the item to the list.</p>
+  <code>
+    &lt;div&gt;<br>
+      &emsp;&lt;label for="item"&gt;Enter a new item:&lt;/label&gt;<br>
+      &emsp;&lt;input type="text" name="item" id="item"&gt;<br>
+      &emsp;&lt;button id="add-btn"&gt;Add item&lt;/button&gt;<br>
+    &lt;/div&gt;<br>
+  </code>
+  <p>The JavaScript code is also straightforward. First, we query the selectors to work with by using their ID. Second, add an event listener to the button. Third, create a new element using the user input and add it to the list.</p>
+  <code>
+    const itemsList = document.querySelector('#list');<br>
+    const newItemField = document.querySelector('#item');<br>
+    const addBtn = document.querySelector('#add-btn');<br><br>
+
+    addBtn.addEventListener('click', addToList);<br><br>
+
+    function addToList() {<br>
+        &emsp;const item = document.createElement('li');<br>
+        &emsp;item.textContent = newItemField.value<br>
+        &emsp;itemsList.appendChild(item);<br>
+    }<br>
+  </code>
+  <p>The app should work like this:</p>
+
+  <div id="app">
     <label for="item">Enter a new item:</label>
     <input type="text" name="item" id="item">
     <button id="add-btn">Add item</button>
+
+    <h3>My shopping list</h3>
+    <ul id="list"></ul>
   </div>
-  <ul id="list"></ul>
 </body>
 
 </html>
