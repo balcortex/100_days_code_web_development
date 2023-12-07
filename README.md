@@ -363,3 +363,7 @@ Today I finished the `Rock, paper, scissors` project by adding CSS code. I mainl
 ## Day 089 - 2023/12/05
 
 Today I started a new project, a simple webpage that allows the creation of a shopping list. On the first day, I worked on the UI and the logic of the adding process.
+
+## Day 090 - 2023/12/06
+
+Today I made a few changes to the shopping list webpage that enhance the user experience, like allowing the use of the enter key and clearing the typing box when an item is added.

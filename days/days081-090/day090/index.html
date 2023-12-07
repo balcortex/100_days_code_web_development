@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Day 090 - Project: Shopping list - Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 090 - Project: Shopping list - Pt. 2</h1>
+  <p>Several features can enhance the user experience while using the web page.</p>
+  <p>1. Clear the typing box when an item is correctly added to the list, which is done by setting the value to an empty string:</p>
+  <code>newItemField.value = '';<br></code>
+  <p>2. When an item is added, return the focus to the typing box so the user can start writing again without dragging the mouse to make a click in the box. Also, this can be done when the page is loaded the first time. To achieve this, use the element.focus() method:</p>
+  <code>newItemField.focus();<br></code>
+  <p>3. The user can also want to use the `enter` key on the keyboard to add the item instead of pressing the button on the screen. This task can be completed in several ways. I chose to add an event listener to the typing box that checks whether the pressed key is `enter`, and when it is, perform a click on the `add button` programmatically:</p>
+  <code>
+    newItemField.addEventListener('keypress', e => {<br>
+      &emsp;if (e.key == 'Enter') addBtn.click();<br>
+  });<br>
+  </code>
+  <p>4. Perform input validation, as we don't want to add empty items to the list:</p>
+  <code>
+    if (newItemField.value == '') return; <span class="comment">// do not add empty items</span>
+  </code>
+  <p>Now, the user should feel more comfortable using the webpage.</p>
+
+  <div id="app">
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item">
+    <button id="add-btn">Add item</button>
+
+    <h3>My shopping list</h3>
+    <ul id="list"></ul>
+  </div>
+</body>
+
+</html>
