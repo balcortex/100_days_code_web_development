@@ -7,7 +7,7 @@ newItemField.addEventListener('keypress', e => {
     if (e.key == 'Enter') addBtn.click();
 });
 
-// newItemField.focus();
+newItemField.focus();
 
 function addToList() {
     newItemField.focus();
