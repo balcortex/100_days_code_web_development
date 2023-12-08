@@ -367,3 +367,7 @@ Today I started a new project, a simple webpage that allows the creation of a sh
 ## Day 090 - 2023/12/06
 
 Today I made a few changes to the shopping list webpage that enhance the user experience, like allowing the use of the enter key and clearing the typing box when an item is added.
+
+## Day 091 - 2023/12/07
+
+Today I added two more features to the shopping list webpage: marking items as completed and deleting items.

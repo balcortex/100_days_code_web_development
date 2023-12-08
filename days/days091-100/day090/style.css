@@ -1,0 +1,39 @@
+h3 {
+  margin: 50px 0px 0px;
+}
+
+body{
+  background-color: #ebeefd;
+}
+
+h1{
+  text-align: center;
+}
+
+code{
+  color: blue;
+}
+
+.comment{
+  color: green;
+  font-weight: 800;
+}
+
+#app{
+  padding: 10px;
+  background-color: #d5d5d5;
+  border: 2px solid black;
+  border-radius: 8px;
+  height: 500px;
+}
+
+li button {
+  font-size: 10px;
+  margin: 0px 0px 0px 10px;
+  color: #666;
+}
+
+.items-done{  
+  text-decoration: line-through;
+  color: #7c7c7c;
+}

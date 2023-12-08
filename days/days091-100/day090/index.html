@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Day 091 - Project: Shopping list - Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 091 - Project: Shopping list - Pt. 3</h1>
+  <p>There are two features to add to the shopping list webpage: the ability to mark items as completed and delete items that are no longer required.</p>
+  <p>Let's start with the easiest one, which is to delete items. For this matter, I chose to include a button on each item, created when the item is added to the list. The event listener is straightforward; we get the event's target, next get the parent, and finally remove the parent (which will delete the text and the button itself).</p>
+  <code>
+    const delBtn = document.createElement('button');<br>
+    delBtn.textContent = 'Delete';<br>
+    delBtn.addEventListener('click', e => e.target.parentNode.remove())<br>
+  </code>
+  <p>Regarding marking the items as completed, I chose a checkbox (for now, as I wouldn't say I like the result very much). Like the delete button, we add an event listener to look for changes in the checkbox. As we are toggling classes, we don't need to check whether the checkbox is checked or not:</p>
+  <code>
+    const checkBox = document.createElement('input');<br>
+    checkBox.type = 'checkbox';<br>
+    checkBox.addEventListener('change', e => e.target.parentNode.classList.toggle('items-done'));<br>
+  </code>
+  <p>The CSS rule to identify the item as `done` sets a line through the text and changes its color to a dark gray:</p>
+  <code>
+    .items-done{<br>
+      &emsp;text-decoration: line-through;<br>
+      &emsp;color: #7c7c7c;<br>
+    }<br>
+  </code>
+  <p>As of now, the webpage should look like this:</p>
+
+  <div id="app">
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item">
+    <button id="add-btn">Add item</button>
+
+    <h3>My shopping list</h3>
+    <ul id="list"></ul>
+  </div>
+</body>
+
+</html>
