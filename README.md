@@ -371,3 +371,7 @@ Today I made a few changes to the shopping list webpage that enhance the user ex
 ## Day 091 - 2023/12/07
 
 Today I added two more features to the shopping list webpage: marking items as completed and deleting items.
+
+## Day 092 - 2023/12/09
+
+Today, I added a new functionality to the list: when the items are marked as done, they are moved to the end (and vice versa).

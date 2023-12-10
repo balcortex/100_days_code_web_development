@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Day 092 - Project: Shopping list - Pt. 4</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 092 - Project: Shopping list - Pt. 4</h1>
+  <p>The user can mark items as done, but currently, the items stay in the same place, whether marked as done or not. Let's make the marked items appear at the bottom of the list so the remaining to-do items stay at the top.</p>
+  <p>First, we modify the checkbox's event listener to add a separate function, which will do all the placing work:</p>
+  <code>
+  checkBox.addEventListener('change', toggleMark);<br>
+  </code>
+  <p>Within the function, we define three variables that refer to the item itself, the text in the item, and the list. We will use the item and the list variables to remove the item from its current position and add it to the top/end of the list, and the text variable to add or remove the CSS class that puts a line-through:</p>
+  <code>
+  function toggleMark(e) {<br>
+  &emsp;let item = this.parentNode; <span class="comment">// `this` refers to the checkbox</span><br>
+  &emsp;let text = item.querySelector('span');<br>
+  &emsp;let list = item.parentNode;<br>
+  &emsp;...<br>
+  </code>
+  <p>Next, we toggle the class that styles the text and define a new variable that indicates whether the item is marked as done or not:</p>
+  <code>
+    &emsp;text.classList.toggle('items-done');<br>
+    &emsp;let isDone = text.classList.contains('items-done');<br>
+  </code>
+  <p>Finally, the item is moved. If the item is marked as done, we move it to the end of the list. Otherwise (if the mark is removed), we move it to the top of the list.</p>
+  <code>
+    &emsp;if (isDone) {<br>
+      &emsp;&emsp;item.remove();<br>
+      &emsp;&emsp;list.appendChild(item);<br>
+      &emsp;}<br>
+      &emsp;else {<br>
+        &emsp;&emsp;item.remove();<br>
+        &emsp;&emsp;list.insertBefore(item, list.firstChild);<br>
+        &emsp;}<br>
+      }<br>
+  </code>
+  <div id="app">
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item" value="Eggs">
+    <button id="add-btn">Add item</button>
+
+    <h3>My shopping list</h3>
+    <ul id="list"></ul>
+  </div>
+</body>
+
+</html>
