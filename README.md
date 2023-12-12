@@ -375,3 +375,7 @@ Today I added two more features to the shopping list webpage: marking items as c
 ## Day 092 - 2023/12/09
 
 Today, I added a new functionality to the list: when the items are marked as done, they are moved to the end (and vice versa).
+
+## Day 093 - 2023/12/11
+
+Today I added two buttons that allow the user to move up/down any item in the list.

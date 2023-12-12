@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Day 093 - Project: Shopping list - Pt. 5</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 093 - Project: Shopping list - Pt. 5</h1>
+  <p>Another functionality that the user may need is the ability to move the items up and down on the list.</p>
+  <p>Let's start with the down movement. First, we must add a button when the item is created with its correspondent event listener. Note the use of the `innerHTML` property instead of the textContent, because we are using HTML syntax instead of plain text.</p>
+  <code>
+    const downBtn = document.createElement('button');<br>
+    downBtn.innerHTML = '&darr;'<br>
+    downBtn.addEventListener('click', moveItemDown)<br>
+  </code>
+  <p>Next, we define the function that will perform the actual movement of the item:</p>
+  <code>
+    function moveItemDown(e) {<br>
+      &emsp;let item = this.parentNode; <span class="comment">// `this` refers to button down</span><br>
+      &emsp;let list = item.parentNode;<br><br>
+  
+      &emsp;if (item === list.lastElementChild) return; <span class="comment">// If last item, do nothing</span><br><br>
+  
+      &emsp;let itemRef = item.nextElementSibling.nextElementSibling;<br>
+      &emsp;list.insertBefore(item, itemRef); <span class="comment">// Move one place down</span><br>
+  }<br>
+  </code>
+  <p>Note that the reference item is placed two places after the current item because there is no insertAfter() function, so if we use the insertBefore() on the next element, the current element would be placed in the same spot.</p>
+  <p>Regarding the up movement, the code is more straightforward. We need a reference to the item before, and use the insertBefore() on this item:</p>
+  <code>
+    ...<br>
+    if (item === list.firstElementChild) return; <span class="comment">// If first item, do nothing</span><br><br>
+
+    let itemRef = item.previousElementSibling;<br>
+    list.insertBefore(item, itemRef); <span class="comment">// Move one place up</span><br>
+    ...<br>
+  </code>
+  <p>The webpage should look like this:</p>
+  <div id="app">
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item" value="Eggs">
+    <button id="add-btn">Add item</button>
+
+    <h3>My shopping list</h3>
+    <ul id="list"></ul>
+  </div>
+</body>
+
+</html>
