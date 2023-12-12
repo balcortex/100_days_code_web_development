@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>Day 094 - Project: Shopping list - Pt. 6</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 094 - Project: Shopping list - Pt. 6</h1>
+  <p>Currently, the application does not allow editing the items on the list. Let's fix that.</p>
+  <p>First, we need to add an event listener to the item text. We do this while adding the item to the list.</p>
+  <code>
+    ...<br>
+    text.addEventListener('click', renameItem);<br>
+    ...<br>
+  </code>
+  <p>The callback function is called `renameItem`. This function will create an input text box to allow the user to edit the text and then update the content of the item with this information:/p>
+  <code>
+    function renameItem(e) {<br>
+      &emsp;...<br>  
+      &emsp;text.textContent = ''; <span class="comment">// hide the `item`</span><br><br>
+  
+      &emsp;const newNameInput = document.createElement('input')<br>
+      &emsp;newNameInput.type = 'text';<br>
+      &emsp;newNameInput.value = prevText;<br><br>
+      &emsp;item.insertBefore(newNameInput, text.nextElementSibling); <span class="comment">// input box</span><br>
+      &emsp;newNameInput.select(); <span class="comment">// select the text of the input box for easy editing</span><br><br>
+  
+      &emsp;newNameInput.addEventListener('keypress', e => {<br>
+          &emsp;&emsp;if (e.key == 'Enter') execRename();<br>
+          &emsp;});<br><br>
+  
+      &emsp;newNameInput.addEventListener('blur', e => execRename());<br><br>
+  
+      &emsp;function execRename() {<br>
+        &emsp;&emsp;text.textContent = newNameInput.value; <span class="comment">// set the new text</span><br>
+        &emsp;&emsp;newNameInput.remove(); <span class="comment">// remove the input text box</span><br>
+      &emsp;}<br>
+  }<br>
+  </code>
+  <p>Note the use of two event listeners. One listens to the `Enter` key, and the other is executed when the input box loses focus (i.e., the user clicks outside the input text).</p>
+  <p>The webpage should look like this:</p>
+  <div id="app">
+    <label for="item">Enter a new item:</label>
+    <input type="text" name="item" id="item" value="12 Eggs">
+    <button id="add-btn">Add item</button>
+
+    <h3>My shopping list</h3>
+    <ul id="list"></ul>
+  </div>
+</body>
+
+</html>

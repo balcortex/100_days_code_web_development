@@ -379,3 +379,7 @@ Today, I added a new functionality to the list: when the items are marked as don
 ## Day 093 - 2023/12/11
 
 Today I added two buttons that allow the user to move up/down any item in the list.
+
+## Day 094 - 2023/12/12
+
+Today, I added the functionality for editing the items on the list. I used an input text box and two event listeners: keypress and blur. The last one is executed when the element loses focus.
