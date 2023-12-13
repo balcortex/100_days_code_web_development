@@ -383,3 +383,7 @@ Today I added two buttons that allow the user to move up/down any item in the li
 ## Day 094 - 2023/12/12
 
 Today, I added the functionality for editing the items on the list. I used an input text box and two event listeners: keypress and blur. The last one is executed when the element loses focus.
+
+## Day 095 - 2023/12/13
+
+Today was the final day of the shopping list project; I worked on the visuals and replaced the buttons with custom icons.
