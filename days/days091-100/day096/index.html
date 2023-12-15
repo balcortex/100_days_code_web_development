@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 96 - JavaScript Objects - Pt. 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">  <!-- Ignore favicon request -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 96 - JavaScript Objects - Pt. 1</h1>
+    <p>Objects are the eighth data types, and the more complex one. The first seventh data types (i.e., primitives) can only store a single thing in their values, whatever it is a number or a string. In contrast, objects can store keyed collections of data.</p>
+    <p>Objects are widely used in JavaScript, so let's explore the basics first.</p>
+    <p>An (empty) object can be created with curly brackets (i.e., the object literal syntax) or through the object constructor:</p>
+    <code>
+        let user = {}; <span class="comment">// "object literal" syntax, most common</span><br>
+        let user = new Object(); <span class="comment">// "object constructor" syntax</span><br><br>
+
+        console.log(user); <span class="comment">// Object {  }</span><br>
+    </code>
+    <p>The object properties can also be included at creation time:</p>
+    <code>
+        let user = {<br>
+            &emsp;name: "John",  <span class="comment">// key `name` stores value "John"</span><br>
+            &emsp;age: 30, <span class="comment">// key `age` stores value 30</span><br>
+        };<br><br>
+
+        console.log(user); <span class="comment">// Object { name: "John", age: 30 }</span>
+    </code>
+    <p>The properties are accessible using the dot notation:</p>
+    <code>
+        console.log(user.name) <span class="comment">// John</span><br>
+        console.log(user.age) <span class="comment">// 30</span><br>
+    </code>
+    <p>After creation, new properties can be added using the same dot notation:</p>
+    <code>
+        user.isAdmin = true;<br><br>
+
+        console.log(user); <span class="comment">// Object { name: "John", age: 30, isAdmin: true }</span><br>
+    </code>
+    <p>To delete properties, use the `delete` operator:</p>
+    <code>
+        delete user.age;<br><br>
+
+        console.log(user); <span class="comment">// Object { name: "John", isAdmin: true }</span><br>
+    </code>
+</body>
+</html>
