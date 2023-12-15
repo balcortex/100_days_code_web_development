@@ -387,3 +387,7 @@ Today, I added the functionality for editing the items on the list. I used an in
 ## Day 095 - 2023/12/13
 
 Today was the final day of the shopping list project; I worked on the visuals and replaced the buttons with custom icons.
+
+## Day 096 - 2023/12/15
+
+Today I started learning JavaScript objects. Objects are a keyed collection of data; that is, objects can store many things, which are retrieved by their key (name).
