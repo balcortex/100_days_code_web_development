@@ -1,0 +1,18 @@
+body{
+    background-color: #ebeefd;
+}
+
+h1{
+    text-align: center;
+}
+
+code{
+    color: blue;
+    display: block;
+    margin-bottom: 30px;
+}
+
+.comment{
+    color: green;
+    font-weight: 800;
+}
