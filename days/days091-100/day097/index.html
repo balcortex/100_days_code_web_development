@@ -9,6 +9,41 @@
 </head>
 <body>
     <h1>Day 97 - JavaScript Objects - Pt. 2</h1>
-    
+    <h3>Square bracket notation</h3>
+    <p>You can also define multi-word keys by using quotes at creation time, but rather than use the dot notation to access the value, the square bracket notation has to be used instead:</p>
+    <code>
+        let user = {<br>
+            &emsp;name: "John",           <span class="comment">// key `name` stores value "John"</span><br>
+            &emsp;age: 30,                <span class="comment">// key `age` stores value 30</span><br>
+            &emsp;"likes dogs": true,     <span class="comment">// key `likes dogs` stores true</span><br>
+        };<br>
+        console.log(user["likes dogs"]); <span class="comment">// true</span><br>
+    </code>
+    <p>The square bracket notation is similar to the dot notation but is more flexible. With the former, you can define a variable that contains the key as its value and use the variable itself to provide the key to the object:</p>
+    <code>
+        let key = 'name';<br>
+        console.log(user[key]); <span class="comment">// John</span><br>
+    </code>
+    <p>But this doesn't work with the dot notation:</p>
+    <code>
+        console.log(user.key);  <span class="comment">// undefined</span><br>
+    </code>
+    <p>The square brackets can also be used in the object's keys at creation time, which is known as `computed properties`. For instance, you want to use the value of a variable as the key of the object:</p>
+    <code>
+        let fruit = 'apple';<br>
+        let shoppingList = {<br>
+            &emsp;fruit: 5,<br>
+        };<br>
+        console.log(shoppingList); <span class="comment">// Object { fruit: 5 }</span><br>
+    </code>
+    <p>That didn't work. We wanted to use `apple` as the key, but instead, we got `fruit` as the key. Let's fix that using the square brackets in the key:</p>
+    <code>
+        let newShoppingList = {<br>
+            &emsp;[fruit]: 5,<br>
+        };<br>
+        console.log(newShoppingList); <span class="comment">// Object { apple: 5 }</span><br>
+    </code>
+    <p>Square brackets are much more powerful than dot notation. They allow any property names and variables. But they are also more cumbersome to write.</p>
+    <p>So most of the time, when property names are known and simple, the dot is used. And if we need something more complex, we switch to square brackets.</p>
 </body>
 </html>

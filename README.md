@@ -391,3 +391,7 @@ Today was the final day of the shopping list project; I worked on the visuals an
 ## Day 096 - 2023/12/15
 
 Today I started learning JavaScript objects. Objects are a keyed collection of data; that is, objects can store many things, which are retrieved by their key (name).
+
+## Day 097 - 2023/12/17
+
+Today I learned the difference between dot and square bracket notation regarding JavaScript objects. The latter is more powerful but complex and cumbersome to write.

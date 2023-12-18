@@ -20,21 +20,3 @@ let newShoppingList = {
     [fruit]: 5,
 };
 console.log(newShoppingList); // Object { apple: 5 }
-
-function makeUser(name, age) {
-    return {
-        name: name,
-        age: age,
-    };
-}
-let john = makeUser('John', 30);
-console.log(john)
-
-function makeUserShorthand(name, age) {
-    return {
-        name,   // same as name: name
-        age,    // same as age, age
-    };
-}
-let alex = makeUserShorthand('Alex', 25);
-console.log(alex)
