@@ -395,3 +395,7 @@ Today I started learning JavaScript objects. Objects are a keyed collection of d
 ## Day 097 - 2023/12/17
 
 Today I learned the difference between dot and square bracket notation regarding JavaScript objects. The latter is more powerful but complex and cumbersome to write.
+
+## Day 098 - 2023/12/18
+
+Today I learned the property value shorthand functionality and that all property names are converted to strings regardless their type.

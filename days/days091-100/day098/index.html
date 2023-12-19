@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 98 - JavaScript Objects - Pt. 3</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">  <!-- Ignore favicon request -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 98 - JavaScript Objects - Pt. 3</h1>
+    <h3>Property value shorthand</h3>
+    <p>Often, we want to use variable names as the property names (i.e., keys), for instance:</p>
+    <code>
+        function makeUser(name, age) {<br>
+            &emsp;return {<br>
+                &emsp;&emsp;name: name,<br>
+                &emsp;&emsp;age: age,<br>
+            &emsp;};<br>
+        }<br><br>
+        let john = makeUser('John', 30);<br>
+        console.log(john); <span class="comment">// Object { name: "John", age: 30 }</span><br>
+    </code>
+    <p>In the example above, properties have the same name as variables. The same can also be written as:</p>
+    <code>
+        function makeUserShorthand(name, age) {<br>
+            &emsp;return {<br>
+                &emsp;&emsp;name,   // same as name: name<br>
+                &emsp;&emsp;age,    // same as age, age<br>
+            &emsp;};<br>
+        }<br><br>
+        let alex = makeUserShorthand('Alex', 25);<br>
+        console.log(alex); <span class="comment">// Object { name: "Alex", age: 25 }</span><br>
+    </code>
+    <p>Note: a mixture of standard and shorthand properties can be used.</p>
+    <h3>Property names limitations</h3>
+    <p>Apart from valid variable names (i.e., valid combinations of text, numbers and symbols), property names can also use language-reserved words like `for`, `let`, `return`, etc.</p>
+    <code>
+        <span class="comment">// these properties are all right</span><br>
+        let obj = {<br>
+            &emsp;for: 1,<br>
+            &emsp;let: 2,<br>
+            &emsp;return: 3,<br>
+            &emsp;_$3: 4,<br>
+        };<br><br>
+
+        console.log(obj.for + obj.let + obj.return + obj._$3);  <span class="comment">// 10</span><br>
+    </code>
+    <p>This functionality is allowed because all the keys are converted to strings:</p>
+    <code>
+        let obj2 = {<br>
+            &emsp;0: 'Zero', <span class="comment">// same as '0': 'Zero'</span><br>
+        };<br><br>
+        
+        console.log(obj2[0]); <span class="comment">// Zero</span><br>
+        console.log(obj2['0']); <span class="comment">// Zero</span><br>
+    </code>
+    <p>Note: you cannot access properties that start with digits through dot notation.</p>
+</body>
+</html>
