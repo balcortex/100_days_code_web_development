@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 99 - JavaScript Objects - Pt. 4</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">  <!-- Suppress favicon warning -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 99 - JavaScript Objects - Pt. 4</h1>
+    <h3>Test for existence</h3>
+    <p>Unlike other programming languages, JavaScript allows access to non-existing object properties without throwing any error. If the property doesn't exist, the return will be `undefined`:</p>
+    <code>
+        let user = {<br>
+            &emsp;forename: 'John',<br>
+        };<br><br>
+        
+        console.log(user.surname); <span class="comment">// undefined</span><br>
+    </code>
+    <p>Then, to check for existence, you can compare the property's value with `undefined`:</p>
+    <code>
+        console.log(user.forename === undefined); <span class="comment">// false (it does exist)</span><br>
+        console.log(user.address === undefined); <span class="comment">// true (it doesn't exist)</span><br>
+    </code>
+    <p>Also, you can use the `in` operator to check for existence:</p>
+    <code>
+        let key = 'address';<br><br>
+        console.log('forename' in user) <span class="comment">// true (it does exist)</span><br>
+        console.log(key in user) <span class="comment">// false (it doesn't exist)</span><br>
+    </code>
+    <p>There is a particular case when checking for equality with `undefined` will return true despite the existence of the property. You can avoid this issue by using the `in` operator instead:</p>
+    <code>
+        user.address = undefined;<br><br>
+
+    console.log(user.address === undefined) <span class="comment">// true (but the key does exist)</span><br>
+    console.log('address' in user) <span class="comment">// true (it does exist, but it's undefined)</span><br>
+    </code>
+    <p>Note: you should never assign `undefined` explicitly to avoid this type of edge case.</p>
+    <h3>Loop over the keys</h3>
+    <p>To loop over all the keys in the object, use the `for ... in` loop:</p>
+    <code>
+        for (key in object) {<br>
+            &emsp;<span class="comment">// executes the body for each key among object properties</span><br>
+          }<br>
+    </code>
+    <p>Following the previous example:</p>
+    <code>
+        for (let key in user) {<br>
+            &emsp;console.log(key); <span class="comment">// forename, address</span><br>
+            &emsp;console.log(user[key]); <span class="comment">// John, undefined</span><br>
+        }<br>
+    </code>
+</body>
+</html>

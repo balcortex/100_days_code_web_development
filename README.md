@@ -399,3 +399,8 @@ Today I learned the difference between dot and square bracket notation regarding
 ## Day 098 - 2023/12/18
 
 Today I learned the property value shorthand functionality and that all property names are converted to strings regardless their type.
+
+## Day 099 - 2023/12/20
+
+Today I learned how to test for properties existence using the `in` operator and the comparison to `undefined`. Also, I learned how to loop over all the keys and properties using a for...in loop.
+
