@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Day 100 - JavaScript Objects - Pt. 5</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="data:,">  <!-- Suppress favicon warning -->
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Day 100 - JavaScript Objects - Pt. 5</h1>
+    <h3>Order in Objects</h3>
+    <p>Object properties are semi-ordered: integer properties are sorted, while the rest appear in order of creation.</p>
+    <p>For instance, integer keys will be ordered:</p>
+    <code>
+        let objInt = {<br>
+            &emsp;2: 'two',<br>
+            &emsp;3: 'three',<br>
+            &emsp;1: 'one',<br>
+        };<br><br>
+        
+        for (let key in objInt) {<br>
+            &emsp;console.log(key); <span class="comment">// 1, 2, 3</span><br>
+            &emsp;console.log(objInt[key]); <span class="comment">// one, two, three</span><br>
+        }<br>
+    </code>
+    <p> But non-integer keys will appear in the same order as the creation:</p>
+    <code>
+        let objStr = {<br>
+            &emsp;two: 2,<br>
+            &emsp;three: 3,<br>
+            &emsp;one: 1,<br>
+        };<br><br>
+        
+        for (let key in objStr) {<br>
+            &emsp;console.log(key); <span class="comment">// two, three, one</span><br>
+            &emsp;console.log(objStr[key]); <span class="comment">// 2, 3, 1</span><br>
+        }<br>
+    </code>
+</body>
+<p>You can use a combination of both; the integers keys will appear sorted at the top, and then the rest of the keys in creation order:</p>
+<code>
+    let objMix = {<br>
+        &emsp;three: 3,<br>
+        &emsp;two: 2,<br>
+        &emsp;1: 'one',<br>
+        &emsp;0: 'zero',<br>
+    };<br><br>
+    
+    for (let key in objMix) {<br>
+        &emsp;console.log(key); <span class="comment">// 0, 1, three, two</span><br>
+        &emsp;console.log(objMix[key]); <span class="comment">// zero, one, 3, 2</span><br>
+    }<br>
+</code>
+</html>

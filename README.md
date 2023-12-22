@@ -404,3 +404,6 @@ Today I learned the property value shorthand functionality and that all property
 
 Today I learned how to test for properties existence using the `in` operator and the comparison to `undefined`. Also, I learned how to loop over all the keys and properties using a for...in loop.
 
+## Day 100 - 2023/12/21
+
+Today, I learned how the object keys are sorted: integer keys will appear at the top in ascending order, and the rest will appear next in creation order.
