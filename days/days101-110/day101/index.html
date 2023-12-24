@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 101 - JavaScript Objects - Pt. 6</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 101 - JavaScript Objects - Pt. 6</h1>
+  <h3>Objects within objects</h3>
+  <p>Object properties can be anything, even objects. To access an object property within an object, you have to chain
+    the dot notation (or square bracket notation). For instance:</p>
+  <code>
+    const user = {<br>
+      &emsp;name: {<br>
+        &emsp;&emsp;first: 'John',<br>
+        &emsp;&emsp;last: 'Smith',<br>
+      &emsp;},<br>
+      &emsp;age: 32,<br>
+    };<br><br>
+
+    console.log(user.name.first) <span class="comment">// John</span>
+  </code>
+  <h3>Object methods</h3>
+  <p>You can also define functions as object properties, which are called object methods:</p>
+  <code>
+    const user = {<br>
+      &emsp;hello: function () {<br>
+      &emsp;&emsp;  console.log('Hello');<br>
+      &emsp;},<br>
+    };<br><br>
+
+    user.hello(); <span class="comment">// Hello</span><br>
+  </code>
+  <p>There's also a simplified notation to define methods, in which the function name is taken as the property name:</p>
+  <code>
+    const user = {<br>
+      &emsp;goodbye () {<br>
+      &emsp;&emsp;  console.log('Bye');<br>
+      &emsp;},<br>
+    };<br><br>
+
+    user.goodbye(); <span class="comment">// Bye</span><br>
+  </code>
+  <h3>Using object properties within the methods (this)</h3>
+  <p>To refer to the object itself within the methods, use the keyword `this`. For instance:</p>
+  <code>
+    const user = {<br>
+      &emsp;name: {<br>
+      &emsp;&emsp;first: 'John',<br>
+      &emsp;&emsp;last: 'Smith',<br>
+      &emsp;},<br>
+      &emsp;age: 32,<br>
+      &emsp;info: function () {<br>
+      &emsp;&emsp;console.log(`${this.name.first} ${this.name.last} is ${this.age} years old`);<br>
+      &emsp;},<br>
+      &emsp;greet() {<br>
+      &emsp;&emsp;console.log(`Hi! I'm ${this.name.first}`);<br>
+      &emsp;},<br>
+    };<br><br>
+    user.info(); <span class="comment">// John Smith is 32 years old</span><br>
+    user.greet(); <span class="comment">// Hi! I'm John</span><br>
+  </code>
+  <p>In this case `this` refers to `user`, so you could use the later instead. But, if for some reason you rename the
+    variable `user`, the code will not work without rename the variables inside too. Furthermore, when using object
+    constructors, the use of `this` is (almost) mandatory.</p>
+</body>
+
+</html>

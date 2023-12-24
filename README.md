@@ -407,3 +407,7 @@ Today I learned how to test for properties existence using the `in` operator and
 ## Day 100 - 2023/12/21
 
 Today, I learned how the object keys are sorted: integer keys will appear at the top in ascending order, and the rest will appear next in creation order.
+
+## Day 101 - 2023/12/23
+
+Today I learned how to declare object methods and the use of `this` to refer to the object itself within the object code.
