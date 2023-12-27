@@ -411,3 +411,7 @@ Today, I learned how the object keys are sorted: integer keys will appear at the
 ## Day 101 - 2023/12/23
 
 Today I learned how to declare object methods and the use of `this` to refer to the object itself within the object code.
+
+## Day 102 - 2023/12/26
+
+Today, I learned about constructors, which are functions used to create, instantiate, and return objects. To call a function as a constructor, use the keyword `new`.

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 102 - JavaScript Objects - Pt. 7</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 102 - JavaScript Objects - Pt. 7</h1>
+  <h3>Constructors</h3>
+  <p>Using object literals is fine when you only need to create one object. Still, when you need to create multiple ones of the same type, they are inadequate because you must repeat the same code and remember to update the values.</p>
+  <p>For instance, imagine that you need to create different users with the same set of methods and properties, differing in the properties values. The first option that would come to your mind is to write a function that instantiates and returns the object:</p>
+  <code>
+    function createPerson(name) {<br>
+      &emsp;let person = {<br>
+      &emsp;&emsp;name,<br>
+      &emsp;&emsp;greet() {<br>
+      &emsp;&emsp;&emsp;console.log(`Hi! I'm ${this.name}`);<br>
+      &emsp;&emsp;},<br>
+      &emsp;};<br>
+      &emsp;return person;<br>
+    }<br>
+  </code>
+  <p>Then, you can call the function with different arguments to create different users:</p>
+  <code>
+    const john = createPerson('John');<br>
+    john.greet(); <span class="comment">// Hi! I'm John</span><br><br>
+
+    const alex = createPerson('Alex');<br>
+    alex.greet(); <span class="comment">// Hi! I'm Alex</span><br>
+  </code>
+  <p>This code works fine, but we can do better by using a constructor. A constructor is a function that:</p>
+  <ol>
+    <li>Create a new object</li>
+    <li>Bind `this` to the new object</li>
+    <li>Run the code in the constructor</li>
+    <li>Return the object</li>
+  </ol>
+  <p>Steps 1, 2, and 4 happen implicitly, so you only need to worry about the object's behavior (i.e., the code in the constructor).</p>
+  <p>By convention, constructors start with a capital letter and are named for the type of object they create. To call a function as a constructor, use the keyword `new`:</p>
+  <code>
+    function Person(name) {<br>
+      &emsp;this.name = name;<br>
+      &emsp;this.greet = function () {<br>
+      &emsp;&emsp;console.log(`Hi! I'm ${this.name}`);<br>
+      &emsp;};<br>
+    }<br><br>
+    
+    const jacob = new Person('Jacob');<br>
+    jacob.greet(); <span class="comment">// Hi! I'm Jacob</span><br>
+  </code>
+  <p>Constructors are briefer and more straightforward to understand, so they're preferred over functions.</p>
+  </body>
+</html>
