@@ -415,3 +415,8 @@ Today I learned how to declare object methods and the use of `this` to refer to 
 ## Day 102 - 2023/12/26
 
 Today, I learned about constructors, which are functions used to create, instantiate, and return objects. To call a function as a constructor, use the keyword `new`.
+
+## Day 103 - 2023/12/27
+
+Today I started another small project: a basic calculator. The first thing I did was the placement of the buttons on the HTML document.
+

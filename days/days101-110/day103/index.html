@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 103 - Project: Calculator, Pt. 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 103 - Project: Calculator, Pt. 1</h1>
+  <p>TToday, I started a new project: a basic calculator. The first thing I thought of to start the project was the placement of the buttons and the screen (i.e., the part of the calculator that displays the numbers).</p>
+  <p>The code contains one main div: calculator, and two nested divs: screen and buttons. The last div contains all the buttons that compose the calculator.</p>
+  <code>
+    &lt;div id="calculator"&gt;<br>
+      &emsp;&lt;div id="screen"&gt;<br>
+      &emsp;&emsp;Output<br>
+      &emsp;&lt;/div&gt;<br>
+      &emsp;&lt;div id="buttons"&gt;<br>
+        &emsp;&emsp;&lt;button id="button-7"&gt;7&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-8"&gt;8&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-9"&gt;9&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-div"&gt;/&lt;/button&gt; &lt;br&gt;<br>
+        &emsp;&emsp;&lt;button id="button-4"&gt;4&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-5"&gt;5&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-6"&gt;6&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-mul"&gt;*&lt;/button&gt; &lt;br&gt;<br>
+        &emsp;&emsp;&lt;button id="button-1"&gt;1&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-2"&gt;2&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-3"&gt;3&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-dif"&gt;-&lt;/button&gt; &lt;br&gt;<br>
+        &emsp;&emsp;&lt;button id="button-dot"&gt;.&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-0"&gt;0&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-eq"&gt;=&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-sum"&gt;+&lt;/button&gt; &lt;br&gt;<br>
+      &emsp;&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+  </code>
+  <p>The document should render like this:</p>
+  <div id="calculator">
+    <div id="screen">
+      Output
+    </div>
+    <div id="buttons">
+      <button id="button-7">7</button>
+      <button id="button-8">8</button>
+      <button id="button-9">9</button>
+      <button id="button-div">/</button> <br>
+      <button id="button-4">4</button>
+      <button id="button-5">5</button>
+      <button id="button-6">6</button>
+      <button id="button-mul">*</button> <br>
+      <button id="button-1">1</button>
+      <button id="button-2">2</button>
+      <button id="button-3">3</button>
+      <button id="button-dif">-</button> <br>
+      <button id="button-dot">.</button>
+      <button id="button-0">0</button>
+      <button id="button-eq">=</button>
+      <button id="button-sum">+</button> <br>      
+    </div>
+  </div>
+</body>
+</html>
