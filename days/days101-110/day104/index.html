@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 104 - Project: Calculator, Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 104 - Project: Calculator, Pt. 2</h1>
+  <p>This day, I worked on the style, arranging the buttons, changing the font size, adding borders, etc.</p>
+  <p>First, I introduced several divs inside the `buttons` div, one for each button row. The purpose of these divs is to act like a flex container, so all the buttons will stretch to match the calculator's size:</p>
+  <code>
+    ...<br>
+    &lt;div id="buttons"&gt;<br>
+      &emsp;&lt;div class="buttons-row"&gt;<br>
+        &emsp;&emsp;&lt;button id="button-7"&gt;7&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-8"&gt;8&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-9"&gt;9&lt;/button&gt;<br>
+        &emsp;&emsp;&lt;button id="button-div"&gt;/&lt;/button&gt;<br>
+      &emsp;&lt;/div&gt;<br>
+      &emsp;...<br>
+  </code>
+  <p>In the CSS document, we define the outer `buttons` div as a flex container with column direction, which will position each row of buttons one below the other. The gap property adds little space between the rows:</p>
+  <code>
+    #buttons {<br>
+      &emsp;display: flex;<br>
+      &emsp;flex-direction: column;<br>
+      &emsp;gap: 2px;<br>
+  }<br>
+  </code>
+  <p>Next, in the `buttons-row` selector, we set the display as flex (the default direction is row), placing the buttons in the row one after the other, left to right. Also, we add some space between the buttons on the row with the gap property:</p>
+  <code>
+    .buttons-row {<br>
+      &emsp;display: flex;<br>
+      &emsp;gap: 2px;<br>
+  }<br>
+  </code>
+  <p>Finally, set the flex property to 1 on each button so it can fit the entire container (i.e., the calculator width):</p>
+  <code>
+    button {<br>
+      &emsp;flex: 1;<br>
+      &emsp;font-size: 20px;<br>
+  }<br>
+  </code>
+  <p>The document now should render like this:</p>
+  <div id="calculator">
+    <div id="screen">0</div>
+    <div id="buttons">
+      <div class="buttons-row">
+        <button id="button-7">7</button>
+        <button id="button-8">8</button>
+        <button id="button-9">9</button>
+        <button id="button-div">/</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-4">4</button>
+        <button id="button-5">5</button>
+        <button id="button-6">6</button>
+        <button id="button-mul">*</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-1">1</button>
+        <button id="button-2">2</button>
+        <button id="button-3">3</button>
+        <button id="button-dif">-</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-dot">.</button>
+        <button id="button-0">0</button>
+        <button id="button-eq">=</button>
+        <button id="button-sum">+</button>
+      </div>     
+    </div>
+  </div>
+</body>
+</html>

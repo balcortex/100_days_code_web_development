@@ -420,3 +420,6 @@ Today, I learned about constructors, which are functions used to create, instant
 
 Today I started another small project: a basic calculator. The first thing I did was the placement of the buttons on the HTML document.
 
+## Day 104 - 2023/12/28
+
+Today I worked on improving the layout using CSS. I used flex containers to distribute the buttons evenly.
