@@ -423,3 +423,7 @@ Today I started another small project: a basic calculator. The first thing I did
 ## Day 104 - 2023/12/28
 
 Today I worked on improving the layout using CSS. I used flex containers to distribute the buttons evenly.
+
+## Day 105 - 2023/12/29
+
+Today, I started working on the JS document. The first thing I did was to have the number buttons work correctly, showing the number on the screen.

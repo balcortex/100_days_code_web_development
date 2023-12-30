@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 105 - Project: Calculator, Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 105 - Project: Calculator, Pt. 3</h1>
+  <p>It's time to make the buttons work correctly with the improved layout.</p>
+  <p>Once I was working on the JavaScript document, I realized I needed to include more information in the button's ID. So all the buttons with numbers have `num` in their ID, and the operators have the word `op`:</p>
+
+  <code>
+    ...<br>
+    &lt;button id="button-num-9"&gt;9&lt;/button&gt;<br>
+    &lt;button id="button-op-div"&gt;/&lt;/button&gt;<br>
+    ...<br>
+  </code>
+  <p>Next, in the JS document, we need first to retrieve the selector and add the listener to each button:</p>
+
+  <code>
+    const buttons = document.querySelectorAll("button");<br>
+    const screen = document.querySelector('#screen');<br><br>
+    buttons.forEach((button) =><br>
+    &emsp;button.addEventListener("click", handleButton)<br>
+    );<br>
+  </code>
+  <p>The `handleButton` function is going to do all the hard work. To know which button was pressed, we retrieve its ID and store the type (number or operator) and the value (the actual value of the button) in two variables:</p>
+
+  <code>
+    function handleButton(e) {<br>
+      &emsp;const [, type, value] = e.target.id.split('-');<br>
+      &emsp;<span class="comment">// the first part of the id is `button`, we do not need that</span><br>
+      &emsp;<span class="comment">// type -> `num`, `op`,</span> <br>
+      &emsp;<span class="comment">// value -> the actual value of the button (e.g., 7, 0, 8, etc.)</span><br>
+      &emsp;...<br>
+  </code>
+  <p>If the button is a number, we read the current content of the screen and append the pressed number to the right:</p>
+
+  <code>
+    &emsp;...<br>
+    &emsp;switch (type) {<br>
+    &emsp;&emsp;case 'num':<br>
+    &emsp;&emsp;&emsp;screen.innerText += value; <span class="comment">// append the pressed number to the right</span><br>
+    &emsp;&emsp;&emsp;break;<br>
+    &emsp;}<br>
+  }
+  </code>
+
+  <p>As of now, the number buttons work correctly:</p>
+
+  <div id="calculator">
+    <div id="screen">0</div>
+    <div id="buttons">
+      <div class="buttons-row">
+        <button id="button-num-7">7</button>
+        <button id="button-num-8">8</button>
+        <button id="button-num-9">9</button>
+        <button id="button-op-div">/</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-4">4</button>
+        <button id="button-num-5">5</button>
+        <button id="button-num-6">6</button>
+        <button id="button-op-mul">*</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-1">1</button>
+        <button id="button-num-2">2</button>
+        <button id="button-num-3">3</button>
+        <button id="button-op-dif">-</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-op-dot">.</button>
+        <button id="button-num-0">0</button>
+        <button id="button-eq">=</button>
+        <button id="button-op-sum">+</button>
+      </div>     
+    </div>
+  </div>
+</body>
+</html>
