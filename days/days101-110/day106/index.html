@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 106 - Project: Calculator, Pt. 4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 106 - Project: Calculator, Pt. 4</h1>
+  <p>The number buttons function correctly, but the display has a slight problem: you can input as many zeros to the left as you want. Of course, we do not want this behavior, and the solution is simple: cast the string to a number before adding it to the calculator screen.</p>
+  <code>
+    &emsp;...<br>
+    &emsp;case 'num':<br>
+    &emsp;&emsp;screen.innerText += value; <span class="comment">// append the pressed number to the right</span><br>
+    &emsp;&emsp;screen.innerText = +screen.innerText; <span class="comment">// delete left trailing zeros</span><br>
+    &emsp;&emsp;break;<br>
+    &emsp;...<br>
+  </code>
+  <p>The next step is getting the sum and equal buttons to work correctly. As the user will introduce another number once the sum button is pressed, we need to store the previous number, so we declare a variable at the top of the document. This number will be stored as a string (as the numbers entered by the buttons) to make it all consistent.</p>
+  <code>
+  let numMem = '0';<span class="comment"> // Memory to store the previous number before an operation</span><br>
+  </code>
+  <p>Now, in the `handleButton` function we have to dispatch the types `op` (operator) and `eq` (equals), apart from the `num` (which was covered yesterday). As we are testing just the sum, the code is straightforward:</p>
+  <code>
+    &emsp;...<br>
+    &emsp;case 'op':<br>
+    &emsp;&emsp;numMemory = screen.innerText; <span class="comment">// save to memory the number on screen</span><br>
+    &emsp;&emsp;screen.innerText = '0'; <span class="comment">// clear screen</span><br>
+    &emsp;&emsp;break<br><br>
+    &emsp;case 'eq':<br>
+    &emsp;&emsp;screen.innerText = +numMemory + +screen.innerText; <span class="comment">// just testing the sum</span><br>
+    &emsp;&emsp;break;<br>
+    &emsp;...<br>
+  </code>
+
+  <p>The calculator should now be able to perform a sum:</p>
+
+  <div id="calculator">
+    <div id="screen">0</div>
+    <div id="buttons">
+      <div class="buttons-row">
+        <button id="button-num-7">7</button>
+        <button id="button-num-8">8</button>
+        <button id="button-num-9">9</button>
+        <button id="button-op-div">/</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-4">4</button>
+        <button id="button-num-5">5</button>
+        <button id="button-num-6">6</button>
+        <button id="button-op-mul">*</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-1">1</button>
+        <button id="button-num-2">2</button>
+        <button id="button-num-3">3</button>
+        <button id="button-op-dif">-</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-op-dot">.</button>
+        <button id="button-num-0">0</button>
+        <button id="button-eq">=</button>
+        <button id="button-op-sum">+</button>
+      </div>     
+    </div>
+  </div>
+</body>
+</html>

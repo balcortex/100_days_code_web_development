@@ -427,3 +427,7 @@ Today I worked on improving the layout using CSS. I used flex containers to dist
 ## Day 105 - 2023/12/29
 
 Today, I started working on the JS document. The first thing I did was to have the number buttons work correctly, showing the number on the screen.
+
+## Day 106 - 2023/12/30
+
+Today I added support for the sum and equals buttons
