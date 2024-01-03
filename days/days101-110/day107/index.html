@@ -11,8 +11,44 @@
 
 <body>
   <h1>Day 107 - Project: Calculator, Pt. 5</h1>
+  <p>Before working on the rest of the operators, let's fix a little issue with the calculator code. Currently, the user inputs the first number, which appears on the screen. Still, the screen clears itself as soon as the user presses the operator button, which may confuse the user. Let's fix this by keeping the first number on the screen after the user selects the operator and before he enters the following number.</p>
+  <p>First, we need another variable to store the current number (we already have one for the memory):</p>
+  <code>
+    ...<br>
+    let numMemory = '0'; <span class="comment">// Memory to store the previous number before an operation</span><br>
+    let numCurrent = '0'; <span class="comment">// Variable to store the current number on screen</span><br>
+    ...<br>
+  </code>
+  <p>Now, instead of manipulating the number on the screen directly, we use the variable to store the user input and then set this number to the screen:</p>
+  <code>
+    &emsp;...<br>
+    &emsp;switch (type) {<br>
+    &emsp;&emsp;case 'num':<br>
+    &emsp;&emsp;&emsp;numCurrent += value; <span class="comment">// append the pressed number to the right</span><br>
+    &emsp;&emsp;&emsp;screen.innerText = +numCurrent; <span class="comment">// delete left trailing zeros</span><br>
+    &emsp;&emsp;&emsp;break;<br>
+    &emsp;&emsp;...<br>
+  </code>
+  <p>When the user presses the operator button, we store the number on the screen in the memory. Note that we do not use the `numCurrent` variable, as this variable can differ from the screen one (for instance, if a number is already on screen after pressing the operator twice).</p>
+  <code>
+    &emsp;&emsp;...<br>
+    &emsp;&emsp;case 'op':<br>
+    &emsp;&emsp;&emsp;numMemory = screen.innerText; <span class="comment">// save to memory the number on screen</span><br>
+    &emsp;&emsp;&emsp;numCurrent = '0'; <span class="comment">// don't clear screen yet, just the current number</span><br>
+    &emsp;&emsp;&emsp;break<br>
+    &emsp;&emsp;...<br>
+  </code>
+  <p>Finally, we use both number variables to update the screen after performing the operation (remember that we are only testing the sum now):</p>
+  <code>
+    &emsp;&emsp;...<br>
+    &emsp;&emsp;case 'eq':<br>
+    &emsp;&emsp;&emsp;screen.innerText = +numMemory + +numCurrent; <span class="comment">// just testing the sum</span><br>
+    &emsp;&emsp;&emsp;break;<br>
+    &emsp;}<br>
+    &emsp;...<br>
+  </code>
 
-  <p>The calculator should now be able to perform a sum:</p>
+  <p>The calculator should now maintain the number after the operator button is pressed and before the user enters a new number:</p>
 
   <div id="calculator">
     <div id="screen">0</div>

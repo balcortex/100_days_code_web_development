@@ -431,3 +431,7 @@ Today, I started working on the JS document. The first thing I did was to have t
 ## Day 106 - 2023/12/30
 
 Today I added support for the sum and equals buttons
+
+## Day 107 - 2024/01/02
+
+Today I fixed the issue of the screen clearing itself after the user selects the operator
