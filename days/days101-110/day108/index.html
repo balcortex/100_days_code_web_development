@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 108 - Project: Calculator, Pt. 6</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 108 - Project: Calculator, Pt. 6</h1>
+  <p>Let's complete the JS code to add the support for all the operations.</p>
+
+  <p>First, we need a variable to store the operator selected by the user, which is declared at the start of the document:</p>
+  <code>
+    ...<br>
+    let operator = '';<br>
+    ...<br>
+  </code>
+
+  <p>When the user presses an operator button, we store the selected operation:</p>
+
+  <code>
+  ...<br>
+  case 'op':<br>
+  &emsp;numMem = screen.innerText; <span class="comment">// save the current number on screen to memory</span><br>
+  &emsp;numCur = '0';  <span class="comment">// clear the current number</span><br>
+  &emsp;operator = value;<br>
+  &emsp;break;<br>
+  ...<br>
+  </code>
+
+  <p>And when the user presses the equal button, we call a function that operates on both the entered numbers and the selected operator:</p>
+  <code>
+    ...<br>
+    case 'eq':<br>
+    &emsp;screen.innerText = performOperation(+numMem, +numCur, operator);<br>
+    &emsp;numMem = screen.innerText;<br>
+    &emsp;numCur = '0'; <span class="comment">// clear the memory</span><br>
+    &emsp;break;<br>
+    ...<br>
+  </code>
+
+  <p>The function `performOperation` is straightforward:</p>
+  <code>
+    function performOperation(num1, num2, operator) {<br>
+    &emsp;switch (operator) {<br>
+    &emsp;&emsp;case 'div':<br>
+    &emsp;&emsp;&emsp;return num1 / num2;<br>
+    &emsp;&emsp;case 'mul':<br>
+    &emsp;&emsp;&emsp;return num1 * num2;<br>
+    &emsp;&emsp;case 'dif':<br>
+    &emsp;&emsp;&emsp;return num1 - num2;<br>
+    &emsp;&emsp;default:<br>
+    &emsp;&emsp;&emsp;return num1 + num2;<br>
+    &emsp;}<br>
+    }<br>
+  </code>
+
+  <p>As of now, all the operations should work:</p>
+
+  <div id="calculator">
+    <div id="screen">0</div>
+    <div id="buttons">
+      <div class="buttons-row">
+        <button id="button-num-7">7</button>
+        <button id="button-num-8">8</button>
+        <button id="button-num-9">9</button>
+        <button id="button-op-div">/</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-4">4</button>
+        <button id="button-num-5">5</button>
+        <button id="button-num-6">6</button>
+        <button id="button-op-mul">*</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-1">1</button>
+        <button id="button-num-2">2</button>
+        <button id="button-num-3">3</button>
+        <button id="button-op-dif">-</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-op-dot">.</button>
+        <button id="button-num-0">0</button>
+        <button id="button-eq">=</button>
+        <button id="button-op-sum">+</button>
+      </div>     
+    </div>
+  </div>
+</body>
+</html>
