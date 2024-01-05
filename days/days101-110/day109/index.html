@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 109 - Project: Calculator, Pt. 7</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 109 - Project: Calculator, Pt. 7</h1>
+
+  <p>By adding the support for division, we discovered a bug in the program: float numbers can overflow the screen. We can use the `toFixed` method of float numbers to fix this issue. Let's start by declaring a constant that specifies how many decimal places after the point we want to display (remember, don't hard code anything):</p>
+  <code>
+    const DECIMAL_PLACES = 4;<br>
+    ...<br>
+  </code>
+
+  <p>As integers don't have the `toFixed` method, we must first check if the number is an integer or a float. If there is an integer, we return the number as it is; if there is a float, we call the `toFixed` method to round the decimals (we cast it to a number again to get rid of any right trailing zeros):</p>
+
+  <code>
+    function parseNumberScreen(number) {<br>
+    &emsp;if (Number.isInteger(number)) return number;<br>
+    &emsp;else return +number.toFixed(DECIMAL_PLACES);<br>
+    }<br>
+  </code>
+
+  <p>Before putting the number on the screen, we call the previous function to get a nice formatted number:</p>
+  
+  <code>
+  &emsp;&emsp;...<br>
+  &emsp;&emsp;case 'eq':<br>
+  &emsp;&emsp;&emsp;let result = performOperation(+numMem, +numCur, operator);<br>
+  &emsp;&emsp;&emsp;screen.innerText = parseNumberScreen(result);<br>
+  &emsp;&emsp;&emsp;...<br>
+  </code>
+
+  <p>Since we are dealing with decimal numbers, let's also add the support for the decimal point button. We need to add a case in the `handleButton` function to check for the `dot` type. As we don't want to add more than one decimal point, we need to check that there isn't one yet:</p>
+
+  <code>
+    &emsp;&emsp;...<br>
+    &emsp;&emsp;case 'dot':<br>
+    &emsp;&emsp;&emsp;if (!numCur.includes('.')) { <span class="comment">// if there isn't a decimal point</span><br>
+    &emsp;&emsp;&emsp;&emsp;numCur += '.';             <span class="comment">// add one, else do nothing.</span><br>
+    &emsp;&emsp;&emsp;&emsp;screen.innerText = numCur;<br>
+    &emsp;&emsp;&emsp;}<br>
+    &emsp;&emsp;&emsp;break;<br>
+    &emsp;&emsp;...<br>
+  </code>
+
+  <p>The calculator now should work with decimal numbers correctly:</p>
+
+  <div id="calculator">
+    <div id="screen">0</div>
+    <div id="buttons">
+      <div class="buttons-row">
+        <button id="button-num-7">7</button>
+        <button id="button-num-8">8</button>
+        <button id="button-num-9">9</button>
+        <button id="button-op-div">/</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-4">4</button>
+        <button id="button-num-5">5</button>
+        <button id="button-num-6">6</button>
+        <button id="button-op-mul">*</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-1">1</button>
+        <button id="button-num-2">2</button>
+        <button id="button-num-3">3</button>
+        <button id="button-op-dif">-</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-dot">.</button>
+        <button id="button-num-0">0</button>
+        <button id="button-eq">=</button>
+        <button id="button-op-sum">+</button>
+      </div>     
+    </div>
+  </div>
+</body>
+</html>

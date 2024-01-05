@@ -439,3 +439,7 @@ Today I fixed the issue of the screen clearing itself after the user selects the
 ## Day 108 - 2024/01/03
 
 Today I added the support for all the operators (addition, subtraction, multiplication and division)
+
+## Day 109 - 2024/01/04
+
+Today I added support for the decimal point button and fixed the overflow of float numbers on the screen
