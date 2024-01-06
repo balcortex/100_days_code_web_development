@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 110 - Project: Calculator, Pt. 8</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 110 - Project: Calculator, Pt. 8</h1>
+
+  <p>All the numbers, operators, and decimal point work correctly. But if the user makes a mistake while entering a number, he will have to refresh the page, losing any number stored. Let's fix this by adding three more buttons: delete, clear screen, and clear all.</p>
+
+  <p>First, we add the buttons in the HTML document:</p>
+  <code>
+    ...<br>
+    &lt;div id="buttons"&gt;<br>
+    &emsp;&lt;div class="buttons-row"&gt;<br>
+    &emsp;&emsp;&lt;button id="button-ac"&gt;AC&lt;/button&gt;<br>
+    &emsp;&emsp;&lt;button id="button-c"&gt;C&lt;/button&gt;<br>
+    &emsp;&emsp;&lt;button id="button-del"&gt;&larr;&lt;/button&gt;<br>
+    &emsp;&lt;/div&gt;<br>
+    &emsp;...<br>
+  </code>
+
+  <p>The delete button will erase the last number entered by the user. We use the `slice` method on the `numCur` variable, starting at index 0 and ending at index -1, thus excluding the last digit:</p>
+
+  <code>
+    ...<br>
+    case 'del':<br>
+    &emsp;numCur = numCur.slice(0, -1); <span class="comment">// delete rightmost digit</span><br>
+    &emsp;if (numCur == '') numCur = '0'; <span class="comment">// if empty, set to 0</span><br>
+    &emsp;screen.innerText = numCur;<br>
+    &emsp;break;<br>
+  </code>
+
+  <p>The C button will delete the number on the screen, while the AC button will delete both the screen and memory. The code is straightforward:</p>
+
+  <code>
+    case 'c': <span class="comment">// clear the screen only</span><br>
+    &emsp;numCur = '0';<br>
+    &emsp;screen.innerText = numCur;<br>
+    &emsp;break;<br><br>
+    case 'ac': <span class="comment">// clear memory and screen</span><br>
+    &emsp;numCur = '0';<br>
+    &emsp;numMem = '0';<br>
+    &emsp;screen.innerText = numCur;<br>
+    &emsp;break;<br>
+    ...<br>
+  </code>
+
+  <p>The user is now able to delete the last number, the screen, or both the screen and memory:</p>
+
+  <div id="calculator">
+    <div id="screen">0</div>
+    <div id="buttons">
+      <div class="buttons-row">
+        <button id="button-ac">AC</button>
+        <button id="button-c">C</button>
+        <button id="button-del">&larr;</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-7">7</button>
+        <button id="button-num-8">8</button>
+        <button id="button-num-9">9</button>
+        <button id="button-op-div">/</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-4">4</button>
+        <button id="button-num-5">5</button>
+        <button id="button-num-6">6</button>
+        <button id="button-op-mul">*</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-1">1</button>
+        <button id="button-num-2">2</button>
+        <button id="button-num-3">3</button>
+        <button id="button-op-dif">-</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-dot">.</button>
+        <button id="button-num-0">0</button>
+        <button id="button-eq">=</button>
+        <button id="button-op-sum">+</button>
+      </div>     
+    </div>
+  </div>
+</body>
+</html>

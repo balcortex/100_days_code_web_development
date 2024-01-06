@@ -443,3 +443,7 @@ Today I added the support for all the operators (addition, subtraction, multipli
 ## Day 109 - 2024/01/04
 
 Today I added support for the decimal point button and fixed the overflow of float numbers on the screen
+
+## Day 110 - 2024/01/05
+
+Today I added the delete, clear, and clear all buttons.
