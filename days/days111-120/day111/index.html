@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 111 - Project: Calculator, Pt. 9</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 111 - Project: Calculator, Pt. 9</h1>
+
+  <p>All the buttons work correctly, and the user can delete numbers on the screen. However, the user may have difficulty reading large numbers, as the screen doesn't separate the numbers by thousands. Let's add this feature and wrap up this project.</p>
+
+  <p>This task involves several steps. Let's start by defining a function, named `toScreen`, that will be called each time we need to put numbers on screen. This function receives a string as an argument.</p>
+
+  <code>
+    function toScreen(number) {<br>
+  </code>
+    
+  <p>The first part of the function declares a variable `decimalFlag`, which is used to manually add the decimal point, as numbers like `1.` (when the user presses the decimal point button just before adding the following number) are displayed directly as `1` (without the decimal point) by the formatter:</p>
+
+  <code>
+    &emsp;let decimalFlag = false;<br>
+  </code>
+
+  <p>Next, we check if we need to add a zero to the left (if the user just pressed the decimal point button without a number before) and if the last button pressed was a decimal point (to add the decimal point immediately and not after the user inputs another number):</p>
+
+  <code>
+    &emsp;if (number[0] === '.') {<br>
+    &emsp;&emsp;number = '0' + number; <span class="comment">// add a zero to left of decimal point if needed</span><br>
+    &emsp;}<br><br>
+    &emsp;if (number.slice(-1) === '.') {<br>
+    &emsp;&emsp;decimalFlag = true; <span class="comment">// if last character is a decimal point</span><br>
+    &emsp;}<br>
+  </code>
+
+  <p>All the following operations involve a number, so we cast the string using the + operator. If the number is a float, we round the decimals to avoid overflowing the screen.</p>
+
+  <code>
+  &emsp;number = +number <span class="comment">// trim left zeros and cast to Number</span><br><br>
+  &emsp;if (!Number.isInteger(number)) {<br>
+  &emsp;&emsp;number = +number.toFixed(DECIMAL_PLACES); <span class="comment">// if float, round decimals</span><br>
+  &emsp;}<br>
+  </code>
+
+  <p>To separate thousands by commas, we use the `toLocaleString` method:</p>
+
+  <code>
+  &emsp;number = number.toLocaleString();<br>
+  </code>
+
+  Finally, we add the decimal point in case this is the last character of the number and return the number:
+
+  <code>
+  &emsp;if (decimalFlag) { <br>
+  &emsp;&emsp;number += '.'; <span class="comment">// add manually the decimal point if needed</span> <br>
+  &emsp;} <br><br>
+  &emsp;return number <br>
+  } <br>
+  </code>
+
+
+  <p>The screen now shows numbers that are easier to read:</p>
+
+  <div id="calculator">
+    <div id="screen">0</div>
+    <div id="buttons">
+      <div class="buttons-row">
+        <button id="button-ac">AC</button>
+        <button id="button-c">C</button>
+        <button id="button-del">&larr;</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-7">7</button>
+        <button id="button-num-8">8</button>
+        <button id="button-num-9">9</button>
+        <button id="button-op-div">/</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-4">4</button>
+        <button id="button-num-5">5</button>
+        <button id="button-num-6">6</button>
+        <button id="button-op-mul">*</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-num-1">1</button>
+        <button id="button-num-2">2</button>
+        <button id="button-num-3">3</button>
+        <button id="button-op-dif">-</button>
+      </div>
+      <div class="buttons-row">
+        <button id="button-dot">.</button>
+        <button id="button-num-0">0</button>
+        <button id="button-eq">=</button>
+        <button id="button-op-sum">+</button>
+      </div>     
+    </div>
+  </div>
+</body>
+</html>

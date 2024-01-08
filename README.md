@@ -447,3 +447,7 @@ Today I added support for the decimal point button and fixed the overflow of flo
 ## Day 110 - 2024/01/05
 
 Today I added the delete, clear, and clear all buttons.
+
+## Day 111 - 2024/01/07
+
+Today I added support for thousand-separated numbers on screen.
