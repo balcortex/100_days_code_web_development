@@ -451,3 +451,7 @@ Today I added the delete, clear, and clear all buttons.
 ## Day 111 - 2024/01/07
 
 Today I added support for thousand-separated numbers on screen.
+
+## Day 112 - 2024/01/08
+
+Today I learned the basics of HTML tables—the table, tr (table row), and td (table data) tags.

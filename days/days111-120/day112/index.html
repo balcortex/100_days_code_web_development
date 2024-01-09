@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 112 - HTML Tables</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 112 - HTML Tables</h1>
+
+  <p>A table is a structured set of data made up of rows and columns, which is known as <strong>tabular data</strong>. For instance, a table can show the relationship between a person's forename, surname, and age.</p>
+
+  <p>Tables were designed exclusively for use with tabular data, which is the only recommended use. Unfortunately, before the standardization of CSS, many people used HTML tables to lay out web pages. However, this is not recommended nowadays, and you should avoid it.</p>
+
+  <p>To declare a table, first use the `table` tag:</p>
+
+  <code>
+    &lt;table&gt;&lt;/table&gt;
+  </code>
+
+  <p>The smallest container inside a table is the cell, which is created by the tag `td` (td stands for table data). The following code will create a single cell:</p>
+
+  <code>
+    &lt;table&gt;<br>
+    &emsp;&lt;td&gt;This is a single cell&lt;/td&gt;<br>
+    &lt;/table&gt;
+  </code>
+
+<p>Which is rendered like this:</p>
+
+<table><td style="border: none;">This is a single cell</td></table>
+
+<p>That wasn't the expected result, but tables have no style (no borders, no background, etc.) right out of the box, so you must add the style to make it look like a proper table. Let's add a border to the td selector on the CSS document:</p>
+
+<code>
+  td {<br>
+  &emsp;border: 1px solid black;<br>
+  }<br>
+</code>
+
+<p>Now, the cell should look like a proper cell:</p>
+
+<table><td>This is a single cell</td></table>
+
+
+<p>Let's add another cell and see what happens:</p>
+
+<code>
+  &lt;table&gt;<br>
+  &emsp;&lt;td&gt;This is a single cell&lt;/td&gt;<br>
+  &emsp;&lt;td&gt;This is another single cell&lt;/td&gt;<br>
+  &lt;/table&gt;
+</code>
+
+<p>Which results in: </p>
+<table>
+  <td>This is a single cell</td>
+  <td>This is another cell</td>
+</table>
+
+<p>Thus, cells are placed right next to each other. To add a cell below, first use the `tr` (tr stands for table row) tag:</p>
+
+<code>
+  &lt;table&gt;<br>
+  &emsp;&lt;tr&gt;<br>
+  &emsp;&emsp;&lt;td&gt;Cell 1, Row 1&lt;/td&gt;<br>
+  &emsp;&emsp;&lt;td&gt;Cell 2, Row 1&lt;/td&gt;<br>
+  &emsp;&lt;/tr&gt;<br>
+  &emsp;&lt;tr&gt;<br>
+  &emsp;&emsp;&lt;td&gt;Cell 1, Row 2&lt;/td&gt;<br>
+  &emsp;&emsp;&lt;td&gt;Cell 2, Row 2&lt;/td&gt;<br>
+  &emsp;&lt;/tr&gt;<br>
+  &lt;/table&gt;<br>
+</code>
+
+<p>Which is rendered like this:</p>
+
+<table>
+  <tr>
+    <td>Cell 1, Row 1</td>
+    <td>Cell 2, Row 1</td>
+  </tr>
+  <tr>
+    <td>Cell 1, Row 2</td>
+    <td>Cell 2, Row 2</td>
+  </tr>
+</table>
+
+
+
+</body>
+</html>
