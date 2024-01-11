@@ -455,3 +455,7 @@ Today I added support for thousand-separated numbers on screen.
 ## Day 112 - 2024/01/08
 
 Today I learned the basics of HTML tables—the table, tr (table row), and td (table data) tags.
+
+## Day 113 - 2024/01/10
+
+Today I learned about the `th` element (table header) and how to style entire rows.

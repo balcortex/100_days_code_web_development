@@ -12,6 +12,23 @@
 <body>
   <h1>Day 113 - HTML Tables, Pt. 2</h1>
 
+  <p>We already covered the essential elements of HTML tables; let's dig deeper. First, we define a table containing a school timetable:</p>
+
+  <code>
+    &lt;table&gt;<br>
+    &emsp;&lt;tr&gt;<br>
+    &emsp;&emsp;&lt;td&gt;&lt;/td&gt;<br>
+    &emsp;&emsp;&lt;td&gt;Mon&lt;/td&gt;<br>
+    &emsp;&emsp;&lt;td&gt;Tues&lt;/td&gt;<br>
+    &emsp;&emsp;...<br>
+    &emsp;&lt;tr&gt;<br>
+    &emsp;&emsp;&lt;td&gt;09:00&lt;/td&gt;<br>
+    &emsp;&emsp;&lt;td&gt;Math&lt;/td&gt;<br>
+    &emsp;&emsp;...<br>
+  </code>
+
+  <p>Which is rendered something as (depending on the style you have already defined):</p>
+
   <table>
     <tr>
       <td></td>
@@ -21,7 +38,7 @@
       <td>Thurs</td>
       <td>Fri</td>
     </tr>
-    <tr style="border: 5px solid red;">
+    <tr>
       <td>09:00</td>
       <td>Math</td>
       <td>Biology</td>
@@ -53,8 +70,52 @@
       <td>Chemistry</td>
       <td>Arts</td>
     </tr>
+  </table>
+  
+  <p>The first issue that pops out is that all cells have the same style, and at first glance, it's not so easy to see the important reference cells (table headers). Let's make the row heading stand out using the `th` tag (table header) instead of the `td` tag:</p>
+
+<code>
+    &lt;table&gt;<br>
+    &emsp;&lt;tr&gt;<br>
+    &emsp;&emsp;&lt;th&gt;&lt;/th&gt;<br>
+    &emsp;&emsp;&lt;th&gt;Mon&lt;/th&gt;<br>
+  </code>
+
+  <table>
     <tr>
-      <td>13:00</td>
+      <th></th>
+      <th>Mon</th>
+      <th>Tues</th>
+      <th>Wed</th>
+      <th>Thurs</th>
+      <th>Fri</th>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>11:00</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
       <td>Math</td>
       <td>Biology</td>
       <td>Science</td>
@@ -62,11 +123,68 @@
       <td>Arts</td>
     </tr>
   </table>
-  
-  <!-- Arts, Biology, Sports, Break -->
 
+  <p>The table looks better, and the header stands out easily. By default, table headings have some default styling: bold and centered text. There are other benefits of table headers; for instance, screen readers can associate a whole column with its header and read out all the data from this column instead of going throughout the entire table.</p>
 
+ <p>To change the style of any row, you just need to add inline style (or a CSS better) to that row. For instance, let's change the background of the header and the break rows:</p>
 
+ <code>
+  &lt;table&gt;<br>
+  &emsp;&lt;tr style="background-color: darkgrey;"&gt;<br>
+  &emsp;&emsp;&lt;th&gt;&lt;/th&gt;<br>
+  &emsp;&emsp;&lt;th&gt;Mon&lt;/th&gt;<br>
+  &emsp;&emsp;...<br>
+  &emsp;&lt;tr style="background-color: whitesmoke;"&gt;<br>
+  &emsp;&emsp;&lt;td&gt;11:00&lt;/td&gt;<br>
+  &emsp;&emsp;&lt;td&gt;Break&lt;/td&gt;<br>
+  &emsp;&emsp;...<br>
+
+</code>
+
+<p>The final table is rendered as:</p>
+
+ <table>
+  <tr style="background-color: darkgrey;">
+    <th></th>
+    <th>Mon</th>
+    <th>Tues</th>
+    <th>Wed</th>
+    <th>Thurs</th>
+    <th>Fri</th>
+  </tr>
+  <tr>
+    <td>09:00</td>
+    <td>Math</td>
+    <td>Biology</td>
+    <td>Science</td>
+    <td>Chemistry</td>
+    <td>Arts</td>
+  </tr>
+  <tr>
+    <td>10:00</td>
+    <td>Math</td>
+    <td>Biology</td>
+    <td>Science</td>
+    <td>Chemistry</td>
+    <td>Arts</td>
+  </tr>
+  <tr style="background-color: whitesmoke;">
+    <td>11:00</td>
+    <td>Break</td>
+    <td>Break</td>
+    <td>Break</td>
+    <td>Break</td>
+    <td>Break</td>
+  </tr>
+  <tr>
+    <td>12:00</td>
+    <td>Math</td>
+    <td>Biology</td>
+    <td>Science</td>
+    <td>Chemistry</td>
+    <td>Arts</td>
+  </tr>
+</table>
 
 </body>
 </html>
