@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 113 - HTML Tables, Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 113 - HTML Tables, Pt. 2</h1>
+
+  <p>We already covered the basic elements of HTML tables, let's dig a bit deeper. First, we define a table containing a school timetable:</p>
+
+  <code>
+    &lt;table&gt;<br>
+    &emsp;&lt;tr&gt;<br>
+    &emsp;&emsp;&lt;td&gt;&lt;/td&gt;<br>
+    &emsp;&emsp;&lt;td&gt;Mon&lt;/td&gt;<br>
+    &emsp;&emsp;&lt;td&gt;Tues&lt;/td&gt;<br>
+    &emsp;&emsp;&lt;td&gt;Wed&lt;/td&gt;<br>
+    &emsp;&emsp;&lt;td&gt;Thurs&lt;/td&gt;<br>
+    &emsp;&emsp;&lt;td&gt;Fri&lt;/td&gt;<br>
+    &emsp;&lt;/tr&gt;<br>
+    &emsp;&lt;tr&gt;<br>
+    &emsp;&emsp;&lt;td&gt;09:00&lt;/td&gt;<br>
+    &emsp;&emsp;&lt;td&gt;Math&lt;/td&gt;<br>
+    &emsp;&emsp;...<br>
+  </code>
+
+  <p>Which is rendered something as (depending on the style you have already defined):</p>
+
+  <table>
+    <tr>
+      <td></td>
+      <td>Mon</td>
+      <td>Tues</td>
+      <td>Wed</td>
+      <td>Thurs</td>
+      <td>Fri</td>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>11:00</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>13:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+  </table>
+  
+  <p>The first issue that pops out is that all cells have the same style, and at first glance it's not so easy to see the important reference cells (table headers). Let's make the row heading stood out, using the `th` tag (table header) instead of the `td` tag:</p>
+
+<code>
+    &lt;table&gt;<br>
+    &emsp;&lt;tr&gt;<br>
+    &emsp;&emsp;&lt;th&gt;&lt;/th&gt;<br>
+    &emsp;&emsp;&lt;th&gt;Mon&lt;/th&gt;<br>
+  </code>
+
+  <table>
+    <tr>
+      <th></th>
+      <th>Mon</th>
+      <th>Tues</th>
+      <th>Wed</th>
+      <th>Thurs</th>
+      <th>Fri</th>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>11:00</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>13:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+  </table>
+
+  <p>The table looks better, and the header stands out easily. By default, table headings have some default styling: bold and centered text. There are other benefits of using table headers, for instance, screen readers can associate a whole column with its header, and read out all the data from this column, instead of going throughout the whole table.</p>
+
+  <p>To </p>
+
+  <table>
+    <colgroup>
+      <col>
+      <col style="background-color: lightblue;">
+      <col span="2">
+      <col style="background-color: lightblue;" span="2">
+    </colgroup>
+    <tr>
+      <th></th>
+      <th>Mon</th>
+      <th>Tues</th>
+      <th>Wed</th>
+      <th>Thurs</th>
+      <th>Fri</th>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>11:00</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>13:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+  </table>
+
+</body>
+</html>
