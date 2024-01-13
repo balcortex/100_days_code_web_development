@@ -459,3 +459,7 @@ Today I learned the basics of HTML tables—the table, tr (table row), and td (t
 ## Day 113 - 2024/01/10
 
 Today I learned about the `th` element (table header) and how to style entire rows.
+
+## Day 114 - 2024/01/12
+
+Today I learned how to define columns in HTML tables to apply style, using the colgroup element.
