@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 115 - HTML Tables, Pt. 4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 115 - HTML Tables, Pt. 4</h1>
+
+  <table>
+    <colgroup>
+      <col style="background-color: rgb(204, 204, 204);">
+    </colgroup>
+    <tr style="background-color: darkgrey;">
+      <th></th>
+      <th>Mon</th>
+      <th>Tues</th>
+      <th>Wed</th>
+      <th>Thurs</th>
+      <th>Fri</th>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr">
+      <td>11:00</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+  </table>
+
+  <table>
+    <colgroup>
+      <col style="background-color: rgb(204, 204, 204);">
+    </colgroup>
+    <tr style="background-color: darkgrey;">
+      <th></th>
+      <th>Mon</th>
+      <th>Tues</th>
+      <th>Wed</th>
+      <th>Thurs</th>
+      <th>Fri</th>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td rowspan="4">Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr">
+      <td>11:00</td>
+      <td colspan="5">Break</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+  </table>
+
+
+</body>
+</html>
