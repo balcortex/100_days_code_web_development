@@ -12,51 +12,16 @@
 <body>
   <h1>Day 115 - HTML Tables, Pt. 4</h1>
 
-  <table>
-    <colgroup>
-      <col style="background-color: rgb(204, 204, 204);">
-    </colgroup>
-    <tr style="background-color: darkgrey;">
-      <th></th>
-      <th>Mon</th>
-      <th>Tues</th>
-      <th>Wed</th>
-      <th>Thurs</th>
-      <th>Fri</th>
-    </tr>
-    <tr>
-      <td>09:00</td>
-      <td>Math</td>
-      <td>Biology</td>
-      <td>Science</td>
-      <td>Chemistry</td>
-      <td>Arts</td>
-    </tr>
-    <tr>
-      <td>10:00</td>
-      <td>Math</td>
-      <td>Biology</td>
-      <td>Science</td>
-      <td>Chemistry</td>
-      <td>Arts</td>
-    </tr>
-    <tr">
-      <td>11:00</td>
-      <td>Break</td>
-      <td>Break</td>
-      <td>Break</td>
-      <td>Break</td>
-      <td>Break</td>
-    </tr>
-    <tr>
-      <td>12:00</td>
-      <td>Math</td>
-      <td>Biology</td>
-      <td>Science</td>
-      <td>Chemistry</td>
-      <td>Arts</td>
-    </tr>
-  </table>
+  <p>Suppose that you want to combine contiguous cells that have the same value in the following table:</p>
+
+  <code>
+  &lt;table&gt;<br>
+  &emsp;...<br>
+  &emsp;&lt;tr style="background-color: darkgrey;"&gt;<br>
+  &emsp;&emsp;&lt;th&gt;&lt;/th&gt;<br>
+  &emsp;&emsp;&lt;th&gt;Mon&lt;/th&gt;<br>
+  &emsp;&emsp;...<br>
+  </code>
 
   <table>
     <colgroup>
@@ -72,17 +37,133 @@
     </tr>
     <tr>
       <td>09:00</td>
-      <td rowspan="4">Math</td>
-      <td>Biology</td>
+      <td>Math</td>
+      <td>Chemistry</td>
       <td>Science</td>
+      <td>Chemistry</td>
+      <td>Biology</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Arts</td>
       <td>Chemistry</td>
       <td>Arts</td>
     </tr>
     <tr>
-      <td>10:00</td>
+      <td>11:00</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+      <td>Break</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
+      <td>Arts</td>
       <td>Biology</td>
       <td>Science</td>
+      <td>Math</td>
+      <td>Arts</td>
+    </tr>
+  </table>
+
+  <p>Let's start with the row signaling the break hours. To allow a cell to span multiple columns, use the `colspan` attribute on the `td` element and specify an integer that sets the number of columns the cell will occupy:</p>
+
+  <code>
+  &lt;table&gt;<br>
+  &emsp;...<br>
+  &emsp;&lt;tr&gt;<br>
+  &emsp;&emsp;&lt;td&gt;11:00&lt;/td&gt;<br>
+  &emsp;&emsp;&lt;td colspan="5"&gt;Break&lt;/td&gt;<br>
+  &emsp;&lt;/tr&gt;<br>
+  &emsp;...<br>
+  </code>
+
+ <p>Now, the break time spans all the columns from Monday through Friday:</p>
+
+  <table>
+    <colgroup>
+      <col style="background-color: rgb(204, 204, 204);">
+    </colgroup>
+    <tr style="background-color: darkgrey;">
+      <th></th>
+      <th>Mon</th>
+      <th>Tues</th>
+      <th>Wed</th>
+      <th>Thurs</th>
+      <th>Fri</th>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td>Math</td>
       <td>Chemistry</td>
+      <td>Science</td>
+      <td>Chemistry</td>
+      <td>Biology</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Math</td>
+      <td>Biology</td>
+      <td>Arts</td>
+      <td>Chemistry</td>
+      <td>Arts</td>
+    </tr>
+    <tr>
+      <td>11:00</td>
+      <td colspan="5">Break</td>
+    </tr>
+    <tr>
+      <td>12:00</td>
+      <td>Arts</td>
+      <td>Biology</td>
+      <td>Science</td>
+      <td>Math</td>
+      <td>Arts</td>
+    </tr>
+  </table>
+
+
+  <p>Similarly, to allow a cell to span multiple rows, use the `rowspan` attribute on the `td` tag:</p>
+
+
+  <code>
+  &lt;table&gt;<br>
+  &emsp;...<br>
+  &emsp;&lt;tr&gt;<br>
+  &emsp;&emsp;&lt;td&gt;09:00&lt;/td&gt;<br>
+  &emsp;&emsp;&lt;td rowspan="2"&gt;Math&lt;/td&gt;<br>
+  &emsp;&emsp;...<br>
+  </code>
+
+  <p>Now, Math on Mondays and Chemistry on Thursdays span two rows each:</p>
+
+  <table>
+    <colgroup>
+      <col style="background-color: rgb(204, 204, 204);">
+    </colgroup>
+    <tr style="background-color: darkgrey;">
+      <th></th>
+      <th>Mon</th>
+      <th>Tues</th>
+      <th>Wed</th>
+      <th>Thurs</th>
+      <th>Fri</th>
+    </tr>
+    <tr>
+      <td>09:00</td>
+      <td rowspan="2">Math</td>
+      <td>Chemistry</td>
+      <td>Science</td>
+      <td rowspan="2">Chemistry</td>
+      <td>Biology</td>
+    </tr>
+    <tr>
+      <td>10:00</td>
+      <td>Biology</td>
+      <td>Arts</td>
       <td>Arts</td>
     </tr>
     <tr">
@@ -91,10 +172,10 @@
     </tr>
     <tr>
       <td>12:00</td>
-      <td>Math</td>
+      <td>Arts</td>
       <td>Biology</td>
       <td>Science</td>
-      <td>Chemistry</td>
+      <td>Math</td>
       <td>Arts</td>
     </tr>
   </table>

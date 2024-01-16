@@ -463,3 +463,7 @@ Today I learned about the `th` element (table header) and how to style entire ro
 ## Day 114 - 2024/01/12
 
 Today I learned how to define columns in HTML tables to apply style, using the colgroup element.
+
+## Day 115 - 2024/01/15
+
+Today I learned how to allow a cell to span multiple columns (colspan) and multiple rows (rowspan)
