@@ -467,3 +467,7 @@ Today I learned how to define columns in HTML tables to apply style, using the c
 ## Day 115 - 2024/01/15
 
 Today I learned how to allow a cell to span multiple columns (colspan) and multiple rows (rowspan)
+
+## Day 116 - 2024/01/16
+
+Today I learned how to include a title in the table with the < caption> element and to structure the table with the < thead>, < tbody>, and < tfoot> elements.

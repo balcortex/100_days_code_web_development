@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 116 - HTML Tables, Pt. 5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 116 - HTML Tables, Pt. 5</h1>
+
+  <p>If your table needs a caption (and it should), you can give it one with the &lt;caption&gt; element. You should put it just below the opening &lt;table&gt; tag:</p>
+
+  <code>
+  &lt;table&gt;<br>
+  &emsp;&lt;caption&gt;<br>
+  &emsp;&emsp;My 2024 School Timetable<br>
+  &emsp;&lt;/caption&gt;<br>
+  &emsp;...<br>
+  </code>
+
+  <p>The caption is placed directly above the table:</p>
+
+  <table>
+    <caption>
+      My 2024 School Timetable
+    </caption>
+    <colgroup>
+      <col style="background-color: rgb(204, 204, 204);">
+    </colgroup>
+    <tbody style="font-family: 'Times New Roman', Times, serif;">
+      <tr style="background-color: darkgrey;">
+        <th></th>
+        <th>Mon</th>
+        <th>Tues</th>
+        <th>Wed</th>
+        <th>Thurs</th>
+        <th>Fri</th>
+      </tr>
+      <tr>
+        <td>09:00</td>
+        <td rowspan="2">Math</td>
+        <td>Chemistry</td>
+        <td>Science</td>
+        <td rowspan="2">Chemistry</td>
+        <td>Biology</td>
+      </tr>
+      <tr>
+        <td>10:00</td>
+        <td>Biology</td>
+        <td>Arts</td>
+        <td>Arts</td>
+      </tr>
+      <tr">
+        <td>11:00</td>
+        <td colspan="5">Break</td>
+      </tr>
+      <tr>
+        <td>12:00</td>
+        <td>Arts</td>
+        <td>Biology</td>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Arts</td>
+      </tr>
+      <tr>
+        <td>Art eqpt.</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p>You can give your table a more structured definition using the elements &lt;thead&gt;, &lt;tfoot&gt;, and &lt;tbody&gt;, which allows you to mark up a header, footer, and body section for the table. These elements are helpful for styling but do not provide any style by default. Let's use them alongside the following CSS rules to improve the visual aspect of the table further:</p>
+
+<code>
+  thead { <br>
+    &emsp;text-transform: uppercase; <br>
+  } <br>
+   <br>
+  tbody { <br>
+    &emsp;font-family: "Lucida Handwriting", cursive; <br>
+  } <br>
+   <br>
+  tfoot { <br>
+    &emsp;text-align: center; <br>
+    &emsp;font-size: 12px; <br>
+    &emsp;background-color: rgba(79, 96, 255, 0.338); <br>
+  } <br>
+</code>
+
+<p>The result is rendered as follows:</p>
+
+  <table>
+    <caption>
+      My 2024 School Timetable
+    </caption>
+    <colgroup>
+      <col style="background-color: rgb(204, 204, 204);">
+    </colgroup>
+
+    <thead>
+      <tr style="background-color: darkgrey;">
+        <th></th>
+        <th>Mon</th>
+        <th>Tues</th>
+        <th>Wed</th>
+        <th>Thurs</th>
+        <th>Fri</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr>
+        <td>09:00</td>
+        <td rowspan="2">Math</td>
+        <td>Chemistry</td>
+        <td>Science</td>
+        <td rowspan="2">Chemistry</td>
+        <td>Biology</td>
+      </tr>
+      <tr>
+        <td>10:00</td>
+        <td>Biology</td>
+        <td>Arts</td>
+        <td>Arts</td>
+      </tr>
+      <tr">
+        <td>11:00</td>
+        <td colspan="5">Break</td>
+      </tr>
+      <tr>
+        <td>12:00</td>
+        <td>Arts</td>
+        <td>Biology</td>
+        <td>Science</td>
+        <td>Math</td>
+        <td>Arts</td>
+      </tr>
+    </tbody>
+    
+    <tfoot>
+      <tr>
+        <td>Art eqpt.</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+        <td>No</td>
+        <td>Yes</td>
+      </tr>
+    </tfoot>
+  </table>
+
+<p>Note: &lt;tbody&gt; is always included in every table, implicitly if you don't specify in your code. </p>
+
+</body>
+</html>
