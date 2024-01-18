@@ -471,3 +471,7 @@ Today I learned how to allow a cell to span multiple columns (colspan) and multi
 ## Day 116 - 2024/01/16
 
 Today I learned how to include a title in the table with the < caption> element and to structure the table with the < thead>, < tbody>, and < tfoot> elements.
+
+## Day 117 - 2024/01/18
+
+Today I learned about the two types of CSS units: absolute and relative. Absolute units remain consistent no matter the screen. px (pixel), cm, and in are the most used.

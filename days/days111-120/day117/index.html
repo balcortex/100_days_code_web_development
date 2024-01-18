@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 117 - CSS Units Pt. 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 117 - CSS Units Pt. 1</h1>
+
+  <p>You can use many different units to define sizes in CSS:  `px`, `cm`, `em`, `rem`, `%`, etc. These can be divided into two broader classifications:</p>
+
+  <ul>
+    <li>Absolute Units</li>
+    <li>Relative Units</li>
+  </ul>
+
+
+  <h3>Absolute Units</h3>
+  <p>Absolute units remain the same in any context. For instance, `px` is an absolute unit because the size of a pixel doesn't change relative to anything else on the page. Other absolute units relate to physical units such as in (inch) and cm (centimeter).</p>
+
+  <p>You can specify units in several elements; the most common one is font size. Let's see how different values affect the size of the text in the items of a list:</p>
+
+  <code>
+    &lt;ul&gt;<br>
+    &emsp;&lt;li style="font-size: 16px;"&gt;Font size of 16px (default)&lt;/li&gt;<br>
+    &emsp;&lt;li style="font-size: 10px;"&gt;Font size of 10px&lt;/li&gt;<br>
+    &emsp;&lt;li style="font-size: 24px;"&gt;Font size of 24px&lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+  </code>
+
+  <p>Which, depending on the browser, is rendered something like:</p>
+
+  <ul style="background-color: rgba(165, 94, 232, 0.298);">
+    <li style="font-size: 16px;">Font size of 16px (default)</li>
+    <li style="font-size: 10px;">Font size of 10px</li>
+    <li style="font-size: 24px;">Font size of 24px</li>
+  </ul>
+
+  <p>If you are preparing a document to be printed, you may want to use `cm` or `in` as the units:</p>
+
+  <code>
+    &lt;ul&gt;<br>
+    &emsp;&lt;li style="font-size: 16px;"&gt;Font size of 16px (default)&lt;/li&gt;<br>
+    &emsp;&lt;li style="font-size: 1cm;"&gt;Font size of 1cm&lt;/li&gt;<br>
+    &emsp;&lt;li style="font-size: 0.3in;"&gt;Font size of 0.3in&lt;/li&gt;<br>
+    &lt;/ul&gt;<br>
+  </code>
+
+  <p>Which, on the screen, would look like this:</p>
+  
+  <ul style="background-color: rgba(165, 94, 232, 0.298);">
+    <li style="font-size: 16px;">Font size of 16px (default)</li>
+    <li style="font-size: 1cm;">Font size of 1cm</li>
+    <li style="font-size: 0.3in;">Font size of 0.3in</li>
+  </ul>
+
+  <p>Absolute units work great if you want the size to stay the same no matter what. The problem with this approach is that, on bigger screens with high resolution (1920x1080, Full HD), a pixel would look tiny compared to a small screen with a resolution of 100x100. This way, relative units are great for scale content depending on the screen (resolution) size.</p>
+
+</body>
+
+</html>
