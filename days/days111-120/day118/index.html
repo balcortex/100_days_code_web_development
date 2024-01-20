@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 118 - CSS Units Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 118 - CSS Units Pt. 2</h1>
+
+  <h3>Relative units</h3>
+
+  <p>Relative units are units that can change based on their context. As their name suggests, these units are relative to something else, perhaps the size of the parent element's font, or the size of the viewport.</p>
+
+  <p>The benefit of using relative units is that you can make the size of text or other elements scales relative to everything else on the page. That is, the size of an element will adjust whether the user has a big or small screen (it does not depend on the resolution, like the pixel for example).</p>
+
+  <p>There are several relative units, like `em`, `rem`, `vw`, `vh`, etc. Let's start with the `em` unit.</p>
+
+  <h4>em unit</h4>
+
+  <p>`em` refers to the font size, though it could be used to define other attributes.</p>
+
+  <p> `1em` is the font size of the element's parent, in the case of typographical properties like font-size, and the font size of the element itself in the case of other properties like width.</p>
+
+  <p>For instance, </p>
+
+  <div style="font-size: 16px;">
+    Parent (16px)
+    <div style="font-size: 1em;">
+      Child (1em = 16px)
+      <div style="font-size: 1em;">
+        Grandchild (1em = 16px)
+      </div>
+    </div>
+  </div>
+
+  <p></p>
+
+  <div style="font-size: 10px;">
+    Parent (10px)
+    <div style="font-size: 2em;">
+      Child (2em = 2*10px = 20px)
+      <div style="font-size: 2em;">
+        Grandchild (2em = 2*20px = 40px)
+      </div>
+    </div>
+  </div>
+
+  <p></p>
+
+  <div style="font-size: 16px;">
+    Parent (16px)
+    <div style="font-size: 0.5em;">
+      Child (0.5em = 0.5*16px = 8px)
+      <div style="font-size: 2em;">
+        Grandchild (2em = 2*8px = 16px)
+      </div>
+    </div>
+  </div>
+
+
+
+</body>
+
+</html>
