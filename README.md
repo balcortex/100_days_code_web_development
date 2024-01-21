@@ -475,3 +475,8 @@ Today I learned how to include a title in the table with the < caption> element 
 ## Day 117 - 2024/01/18
 
 Today I learned about the two types of CSS units: absolute and relative. Absolute units remain consistent no matter the screen. px (pixel), cm, and in are the most used.
+
+## Day 118 - 2024/01/20
+
+Today I learned about relative units, which scale according to a reference element. The `em` unit refers to the parent's font size
+

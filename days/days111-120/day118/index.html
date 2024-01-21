@@ -14,31 +14,45 @@
 
   <h3>Relative units</h3>
 
-  <p>Relative units are units that can change based on their context. As their name suggests, these units are relative to something else, perhaps the size of the parent element's font, or the size of the viewport.</p>
+  <p>Relative units are units that can change based on their context. As their name suggests, these units are relative to something else, perhaps the size of the parent element's font or the viewport's size.</p>
 
-  <p>The benefit of using relative units is that you can make the size of text or other elements scales relative to everything else on the page. That is, the size of an element will adjust whether the user has a big or small screen (it does not depend on the resolution, like the pixel for example).</p>
+  <p>The benefit of using relative units is that the size of text or other elements scales relative to everything else on the page. That is, the size of an element will adjust whether the user has a big or small screen (it does not depend on the resolution, like the pixel, for example).</p>
 
   <p>There are several relative units, like `em`, `rem`, `vw`, `vh`, etc. Let's start with the `em` unit.</p>
 
   <h4>em unit</h4>
 
-  <p>`em` refers to the font size, though it could be used to define other attributes.</p>
+  <p>`em` refers primarily to the font size, though it could be used to define other attributes.</p>
 
-  <p> `1em` is the font size of the element's parent, in the case of typographical properties like font-size, and the font size of the element itself in the case of other properties like width.</p>
+  <p>`1em` is the font size of the element's parent in the case of typographical properties like font size, and the font size of the element itself in the case of other properties like width.</p>
 
-  <p>For instance, </p>
+  <p>For instance, suppose that you have three nested divs: the parent, the child, and the grandchild (child of the child), as the following code shows:</p>
+
+  <code>
+    &lt;div&gt;<br>
+    &emsp;Parent<br>
+    &emsp;&lt;div&gt;<br>
+    &emsp;&emsp;Child<br>
+    &emsp;&emsp;&lt;div&gt;<br>
+    &emsp;&emsp;&emsp;Grandchild<br>
+    &emsp;&emsp;&lt;/div&gt;<br>
+    &emsp;&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>If the parent has a fixed size of 16px, and the child has a size of 1.5em, that means that the font size of the child would be 1.5*16 = 24px. Now, the grandchild has a font size of 0.5em, and its parent element is the child, whose font is 24px. That means that the font size of the grandchild would be 12px.</p>
 
   <div style="font-size: 16px;">
     Parent (16px)
-    <div style="font-size: 1em;">
-      Child (1em = 16px)
-      <div style="font-size: 1em;">
-        Grandchild (1em = 16px)
+    <div style="font-size: 1.5em;">
+      Child (1.5em = 1.5*16px = 24px)
+      <div style="font-size: 0.5em;">
+        Grandchild (0.5em = 0.5*24px = 12px)
       </div>
     </div>
   </div>
 
-  <p></p>
+  <p>Similarly, if both the child and the grandchild have a font size of 2em, that means that the child would be twice as big as the parent, and the grandchild twice as big as the child:</p>
 
   <div style="font-size: 10px;">
     Parent (10px)
@@ -49,20 +63,6 @@
       </div>
     </div>
   </div>
-
-  <p></p>
-
-  <div style="font-size: 16px;">
-    Parent (16px)
-    <div style="font-size: 0.5em;">
-      Child (0.5em = 0.5*16px = 8px)
-      <div style="font-size: 2em;">
-        Grandchild (2em = 2*8px = 16px)
-      </div>
-    </div>
-  </div>
-
-
 
 </body>
 
