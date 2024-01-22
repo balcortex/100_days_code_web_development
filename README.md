@@ -480,3 +480,6 @@ Today I learned about the two types of CSS units: absolute and relative. Absolut
 
 Today I learned about relative units, which scale according to a reference element. The `em` unit refers to the parent's font size
 
+## Day 119 - 2024/01/22
+
+Today I learned the difference between the `em` and the `rem` units. The `em` relates to the parent, while the `rem` relates to the root element.

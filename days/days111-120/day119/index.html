@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 119 - CSS Units Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 119 - CSS Units Pt. 3</h1>
+
+  <h4>rem unit</h4>
+
+  <p>As the `em` unit, the `rem` unit refers primarily to the font size of an element. Still, instead of the parent's size, it relates to the root element's size.</p>
+
+  <p>The math works the same as with the `em` unit: `1rem` is the font size of the root element (the html element most of the time), and `2rem` is twice the size of the root element font size.</p>
+
+  <p>Let's compare both the `em` and the `rem` units with three nested divs, as the following code shows:</p>
+
+  <code>
+    &lt;div&gt;<br>
+    &emsp;Parent<br>
+    &emsp;&lt;div&gt;<br>
+    &emsp;&emsp;Child<br>
+    &emsp;&emsp;&lt;div&gt;<br>
+    &emsp;&emsp;&emsp;Grandchild<br>
+    &emsp;&emsp;&lt;/div&gt;<br>
+    &emsp;&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>Let's start by giving all the div elements the class of `div-em`:</p>
+
+  <code>
+    .div-em{<br>
+    &emsp;font-size: 1.5em;<br>
+    }<br>
+  </code>
+
+  <p>This results in an increase of 50% the font size in each nested level. The further the nesting, the bigger the font size:</p>
+
+  <div class="div-em">
+    Parent
+    <div class="div-em">
+      Child
+      <div class="div-em">
+        Grandchild
+      </div>
+    </div>
+  </div>
+
+  <p>Now, let's try with the `div-rem` class:</p>
+
+  <code>
+    .div-rem{<br>
+      &emsp;font-size: 1.5rem;<br>
+      }<br>
+  </code>
+
+  <p>Contrary to the last example, all the divs have the same font size, which is 50% bigger than the root element font size. Since the root element is the html element, with a default size of 16px, all the divs will have a font size of 24px:</p>
+
+  <div class="div-rem">
+    Parent
+    <div class="div-rem">
+      Child
+      <div class="div-rem">
+        Grandchild
+      </div>
+    </div>
+  </div>
+
+  <p>Most of the time, you want all the elements to refer to the root element. Thus, the `rem` unit is often more used.</p>
+
+</body>
+
+</html>
