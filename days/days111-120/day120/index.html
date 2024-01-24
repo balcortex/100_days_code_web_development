@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 120 - CSS Units Pt. 4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 120 - CSS Units Pt. 4</h1>
+
+  <h4>Viewport units</h4>
+
+  <p>These units relate to the viewport's size (i.e., the visible portion of the document), which can be helpful any time you want something to be sized relative to the viewport. Examples include full-height heroes and full-screen app-like interfaces.</p>
+
+  <p>There is a viewport-percentage length unit variant corresponding to each of the viewport sizes:</p>
+
+  <h4>vh</h4>
+
+  <p>Represents a percentage of the height of the viewport's initial containing block. 1vh is 1% of the viewport height.</p>
+
+
+  <h4>vw</h4>
+
+  <p>Represents a percentage of the width of the viewport's initial containing block. 1vw is 1% of the viewport width</p>
+
+  <h4>vmax</h4>
+
+  <p>Represents in percentage the largest of vw and vh.</p>
+
+  <h4>vmin</h4>
+
+  <p>Represents in percentage the smallest of vw and vh.</p>
+
+  <p style="margin-top: 50px;">These units are mainly used to define the width and height of the elements. For example, you can make a div element half the width of the viewport width:</p>
+
+  <code>
+    &lt;div style="width: 50vw;"&gt; <br>
+    &emsp;This div is half the width of the viewport<br>
+    &lt;/div&gt; <br>
+  </code>
+
+  <p>Which looks something like this:</p>
+
+  <div style="width: 50vw;">
+    This div is half the width of the viewport
+  </div>
+
+  <p>Or, you can set its height to be 10% of the viewport's height:</p>
+
+  <code>
+    &lt;div style="height: 10vh;"&gt; <br>
+    &emsp;This div is 10% the height of the viewport's height<br>
+    &lt;/div&gt; <br>
+  </code>
+
+
+  <p>Which gives the following result:</p>
+
+  <div style="height: 10vh;">
+    This div is 10% the height of the viewport's height
+  </div>
+
+</body>
+
+</html>

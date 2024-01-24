@@ -483,3 +483,7 @@ Today I learned about relative units, which scale according to a reference eleme
 ## Day 119 - 2024/01/22
 
 Today I learned the difference between the `em` and the `rem` units. The `em` relates to the parent, while the `rem` relates to the root element.
+
+## Day 120 - 2024/01/23
+
+Today I learned about the viewport units (vh and vw), which resize an element based on the page size (the document's visible part).
