@@ -487,3 +487,7 @@ Today I learned the difference between the `em` and the `rem` units. The `em` re
 ## Day 120 - 2024/01/23
 
 Today I learned about the viewport units (vh and vw), which resize an element based on the page size (the document's visible part).
+
+## Day 121 - 2024/01/24
+
+Today I learned the percentage unit, which relates a specific property of the element to that of the parent through a percentage.

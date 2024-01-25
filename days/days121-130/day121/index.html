@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 121 - CSS Units Pt. 5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 121 - CSS Units Pt. 5</h1>
+
+  <h4>Percentage unit</h4>
+
+  <p>This unit is similar to the `em` unit because both are relative to a parent's property. The difference is that the percentage unit could refer to different properties, while the `em` relates only to the font size.</p>
+
+  <p>For example, if you set an element's font-size as a percentage, it will be a percentage of the font-size of the element's parent. If you use a percentage for a width value, it will be a percentage of the parent's width.</p>
+
+  <p>Let's see the percentage unit in action making a div container half the size of the page (i.e., 50% of the parent) and the font twice as big (200%):</p>
+
+  <code>
+    &lt;div style="width: 50%; font-size: 200%;"&gt;<br>
+    &emsp;Div using % unit<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>Which results in:</p>
+
+  <div style="width: 50%; font-size: 200%;">
+    Div using % unit
+  </div>
+
+  <p>The same result could be achieved using the `vw` unit to specify the width and the `em` (or the `rem`) unit to set the font-size:</p>
+
+  <code>
+    &lt;div style="width: 50vw; font-size: 2em;"&gt;<br>
+    &emsp;Div using vw and em<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>This code is rendered as:</p>
+
+  <div style="width: 50vw; font-size: 2em;">
+    Div using vw and em
+  </div>
+
+  <p style="margin-top: 50px;">Note that the widths of both divs differ a bit because of the margins of the `html` and `body` elements.</p>
+
+</body>
+
+</html>
