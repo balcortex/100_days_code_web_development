@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+@font-face {
+  font-family: 'Miracle Dream';
+  src: url(fonts/miracle_dream/Miracle\ Dream.otf);
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ebeefd;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+code {
+  color: blue;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.comment {
+  color: green;
+  font-weight: 800;
+}
+
+div {
+  background-color: rgba(165, 94, 232, 0.298);
+  width: max-content;
+  padding: 3px 10px;
+}
+
+.fallback-font {
+  font-family: 'A non existing font', 'Comic Sans MS';
+}
+
+.roboto-font {
+  font-family: 'Roboto';
+}
+
+.miracle-font {
+  font-family: 'Miracle Dream';
+  font-size: 2rem;
+}

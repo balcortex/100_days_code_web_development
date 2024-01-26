@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 122 - CSS: Advanced Font Style - Pt. 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 122 - CSS: Advanced Font Style - Pt. 1</h1>
+
+  <h3>Fallback fonts</h3>
+
+  <p>If you use the font-family property to change the font, and this font does not happen to be installed on your user's computer, then the default HTML font will be used. If you prefer to employ your own fallback font, you can use a list of fonts ordered from the most to the least preferred one. The browser will go through each font in the list until it finds the first installed (or again, it will use the default if no one is found):</p>
+
+  <code>
+    .fallback-font {<br>
+    &emsp;font-family: 'A non-existing font', 'Comic Sans MS', 'Other Fonts...';<br>
+    }<br>
+  </code>
+
+  <p>As the first font does not exist in the system, the browser will use the Comic Sans MS font:</p>
+
+  <div class="fallback-font">
+    This text uses the Comic Sans MS font
+  </div>
+
+  <h3>Online fonts</h3>
+
+  <p>An easy method to get fonts not installed on a user's computer is to use an online font library like Google Fonts. For instance, you can utilize the Roboto font by including the following import on top of your CSS document:</p>
+
+  <code>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+  </code>
+
+  <p>And use it directly on the font-family property:</p>
+
+  <code>
+    .roboto-font {<br>
+    &emsp;font-family: 'Roboto';<br>
+    }<br>
+  </code>
+
+  <p>The browser then will download and display the font:</p>
+
+  <div class="roboto-font">
+    This is the Roboto font
+  </div>
+
+  <h3>Downloaded fonts</h3>
+
+  <p>It is also possible to use a font you downloaded from the web. In your CSS file, you import and define a custom font using the @font-face rule:</p>
+
+  <code>
+    @font-face {<br>
+    &emsp;font-family: 'Miracle Dream';<br>
+    &emsp;src: url(fonts/miracle_dream/Miracle\ Dream.otf);<br>
+    }<br>
+  </code>
+
+  <p>And then use it as you would any other font-family:</p>
+
+  <code>
+    .miracle-font {<br>
+    &emsp;font-family: 'Miracle Dream';<br>
+    }<br>
+  </code>
+
+  <p>The result is the following:</p>
+
+  <div class="miracle-font">
+    This is the Miracle Dream font
+  </div>
+
+</body>
+
+</html>

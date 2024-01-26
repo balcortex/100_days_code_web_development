@@ -491,3 +491,7 @@ Today I learned about the viewport units (vh and vw), which resize an element ba
 ## Day 121 - 2024/01/24
 
 Today I learned the percentage unit, which relates a specific property of the element to that of the parent through a percentage.
+
+## Day 122 - 2024/01/25
+
+Today I learned about the fallback fonts, and how to use online and downloaded fonts.
