@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 123 - CSS: Advanced Font Style - Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 123 - CSS: Advanced Font Style - Pt. 2</h1>
+
+  <h3>Font style</h3>
+
+  <p>We already saw that you can use the &lt;em&gt; tag to emphasize the text by italicizing its font. However, you should only use this tag (and the &lt;strong&gt;) whenever you want to give a semantic meaning rather than just styling.</p>
+
+  <p>If you only want to style the text, you should use the font-style attribute:</p>
+
+  <code>
+    &lt;div style="font-style: italic;"&gt;<br>
+    &emsp;This text is in italics<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>Which is displayed as (aside from the background color):</p>
+
+  <div style="font-style: italic;">
+    This text is in italics
+  </div>
+
+  <h3>Letter spacing</h3>
+
+  <p>You can adjust the space between the letters using the letter-spacing attribute. However, this should be used sparingly and with care. To make the space narrower, you can use negative units:</p>
+
+  <code>
+    &lt;div style="letter-spacing: -0.08em;"&gt;<br>
+    &emsp;This text is narrow<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>Which results in:</p>
+
+  <div style="letter-spacing: -0.08em;">
+    This text is narrow
+  </div>
+
+  <p>Similarly, you can increase the space using positive units:</p>
+
+  <code>
+    &lt;div style="letter-spacing: 1em;"&gt;<br>
+    &emsp;This text is wide<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>Which yields:</p>
+
+  <div style="letter-spacing: 1em;">
+    This text is wide
+  </div>
+
+
+
+
+</body>
+
+</html>

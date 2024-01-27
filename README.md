@@ -495,3 +495,7 @@ Today I learned the percentage unit, which relates a specific property of the el
 ## Day 122 - 2024/01/25
 
 Today I learned about the fallback fonts, and how to use online and downloaded fonts.
+
+## Day 123 - 2024/01/26
+
+Today I learned how to use italics (and other font styles) in CSS and to change the space between letters using the letter-spacing attribute.
