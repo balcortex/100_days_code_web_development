@@ -478,7 +478,7 @@ Today I learned about the two types of CSS units: absolute and relative. Absolut
 
 ## Day 118 - 2024/01/20
 
-Today I learned about relative units, which scale according to a reference element. The `em` unit refers to the parent's font size
+Today I learned about relative units,w which scale according to a reference element. The `em` unit refers to the parent's font size
 
 ## Day 119 - 2024/01/22
 
@@ -499,3 +499,7 @@ Today I learned about the fallback fonts, and how to use online and downloaded f
 ## Day 123 - 2024/01/26
 
 Today I learned how to use italics (and other font styles) in CSS and to change the space between letters using the letter-spacing attribute.
+
+## Day 124 - 2024/01/27
+
+Today I learned to increase the space between lines of text, transform the case of a given text, and to add a shadow to any text.

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 124 - CSS: Advanced Font Style - Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 124 - CSS: Advanced Font Style - Pt. 3</h1>
+
+  <h3>Line height</h3>
+
+  <p>You can adjust the space between the lines in wrapped text using the line-height property:</p>
+
+  <code>
+  &lt;div class="container"&gt;<br>
+  &emsp;&lt;div&gt;<br>
+  &emsp;&emsp;Lorem ipsum dolor...<br>
+  &emsp;&lt;/div&gt;<br>
+  &emsp;&lt;div style="line-height: 0.9em;"&gt;<br>
+  &emsp;&emsp;Lorem ipsum dolor...<br>
+  &emsp;&lt;/div&gt;<br>
+  &emsp;&lt;div style="line-height: 1.5em;"&gt;<br>
+  &emsp;&emsp;Lorem ipsum dolor...<br>
+  &emsp;&lt;/div&gt;<br>
+  &lt;/div&gt;<br>
+  </code>
+
+  <p>The result of the previous code is something like:</p>
+
+  <div class="container">
+    <div>
+      <strong>Standard (1.15em)</strong><br><br>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo nisi, porro reiciendis possimus iste magnam quidem quod neque quisquam explicabo et, reprehenderit nam velit! Suscipit eligendi magni deleniti quibusdam fugit.
+    </div>
+    <div style="line-height: 0.9em;">
+      <strong>Narrow (0.9em)</strong><br><br>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Numquam nesciunt maiores quisquam? Reprehenderit incidunt veniam suscipit debitis, mollitia ipsa deserunt dicta libero similique temporibus ratione nesciunt consectetur impedit blanditiis magni?
+    </div>
+    <div style="line-height: 1.5em;">
+      <strong>Wide (1.5em)</strong><br><br>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. Molestias pariatur ipsum magni obcaecati! Nihil earum magni autem, deserunt, minus illum dolor deleniti eaque sint, fuga alias tempora odit quas eius?
+    </div>
+  </div>
+
+  <h3>Text transform</h3>
+
+  <p>You can change the case of any text by using the text-transform property. For instance, you can force a given text to be uppercase only:</p>
+
+  <code>
+    &lt;div style="text-transform: uppercase;"&gt;<br>
+    &emsp;this text is written in lowercase in the HTML document<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>Which will show everything in uppercase:</p>
+
+  <div style="text-transform: uppercase;">
+    this text is written in lowercase in the HTML document
+  </div>
+
+  <h3>Text shadow</h3>
+
+  <p>The property text-shadow adds a shadow around the text in the selected element. This one is best used sparingly, but can be used to great effect in headings or other presentational text:</p>
+
+  <code>
+    &lt;div style="text-shadow: 2px 2px 7px black;"&gt;<br>
+    &emsp;This text has a shadow<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>The previous code adds a shadow 2px off the text in both directions (x-axis and y-axis) with a blur of 7px and color black:</p>
+
+  <div style="text-shadow: 2px 2px 7px black;">
+    This text has a shadow
+  </div>
+
+
+</body>
+
+</html>
