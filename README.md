@@ -503,3 +503,7 @@ Today I learned how to use italics (and other font styles) in CSS and to change 
 ## Day 124 - 2024/01/27
 
 Today I learned to increase the space between lines of text, transform the case of a given text, and to add a shadow to any text.
+
+## Day 125 - 2024/01/29
+
+Today I learned about the overflow property. If the content is too big to fit the element, you can select its behavior, like adding scrollbars or clipping the content.

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 125 - CSS: Overflow</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 125 - CSS: Overflow</h1>
+
+  <p>There are times when the content is too big to fit the available space of the correspondent element. In this case, it is possible to define several behaviors using the `overflow` property.</p>
+
+  <h3>visible</h3>
+
+  <p>This is the default option. The content will be visible and outside the box and may overlay other elements:</p>
+
+
+  <div style="overflow: visible;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ullam doloremque nobis dolorem molestias, fuga, recusandae aperiam nihil vero eos maiores voluptatum modi aspernatur vitae atque dignissimos labore. Ea, dolorem!<br>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ipsa laborum officiis iste est! Aspernatur accusamus optio laboriosam autem dolores
+  </div>
+
+  <h3 style="margin-top: 60px;">hidden</h3>
+
+  <p>The content is clipped. The clipped content is not visible but still exists. The user cannot interact directly with the clipped content, but it can be scrolled programmatically.</p>
+
+  <div style="overflow: hidden;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ullam doloremque nobis dolorem molestias, fuga, recusandae aperiam nihil vero eos maiores voluptatum modi aspernatur vitae atque dignissimos labore. Ea, dolorem!<br>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ipsa laborum officiis iste est! Aspernatur accusamus optio laboriosam autem dolores, vitae corrupti harum voluptatibus quos non. Perspiciatis dicta eius excepturi.
+  </div>
+
+  <h3>scroll</h3>
+
+  <p>The content is clipped and can be scrolled into view by the user with the scrolling bars.</p>
+
+  <div style="overflow: scroll;">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam ullam doloremque nobis dolorem molestias, fuga, recusandae aperiam nihil vero e  os maiores voluptatum modi aspernatur vitae atque dignissimos labore. Ea, dolorem!<br>
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perspiciatis ipsa laborum officiis iste est! Aspernatur accusamus optio laboriosam autem dolores, vitae corrupti harum voluptatibus quos non. Perspiciatis dicta eius excepturi.
+  </div>
+
+  <p style="margin-top: 40px;">There are two other options available: clip and auto. Clip acts like the hidden option, but the clipped content cannot be scrolled programmatically. The auto option adds scrolling bars when needed.</p>
+
+</body>
+
+</html>
