@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 126 - CSS: Advanced Selectors - Pt. 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 126 - CSS: Advanced Selectors - Pt. 1</h1>
+
+  <h3>Child and sibling combinators</h3>
+
+  <p>There are several ways to access different elements without using their id or class. Following are three new selectors to do that:</p>
+
+  <ul>
+    <li>> : the child combinator</li>
+    <li>+ : the adjacent sibling combinator</li>
+    <li>~ : the general sibling combinator</li>
+  </ul>
+
+  <p>To see how they work, we are going to be using the following HTML code:</p>
+
+  <code>
+  &lt;main class="parent"&gt;<br>
+  &emsp;&lt;div class="child group1"&gt;<br>
+  &emsp;&emsp;&lt;div class="grand-child group1"&gt;&lt;/div&gt;<br>
+  &emsp;&lt;/div&gt;<br>
+  &emsp;&lt;div class="child group2"&gt;<br>
+  &emsp;&emsp;&lt;div class="grand-child group2"&gt;&lt;/div&gt;<br>
+  &emsp;&lt;/div&gt;<br>
+  &emsp;&lt;div class="child group3"&gt;<br>
+  &emsp;&emsp;&lt;div class="grand-child group3"&gt;&lt;/div&gt;<br>
+  &emsp;&lt;/div&gt;<br>
+  &lt;/main&gt;<br>
+  </code>
+
+  <p>You should know that to select all the divs inside main (including child and grandchild), you would write:</p>
+
+  <code>
+    main div { <br>
+    &emsp;/* CSS code */ <br>
+    } <br>
+  </code>
+
+  <h4>Child combinator</h4>
+
+  <p>The child selector will select an element that is one level of indentation down. For instance, to select only the divs with a class of child, you can use:</p>
+
+  <code>
+    main > div { <br>
+      &emsp;/* CSS code */ <br>
+      } <br>
+  </code>
+
+  <p>To select only the grandchildren (without the children):</p>
+
+  <code>
+    main > div > div { <br>
+      &emsp;/* CSS code */ <br>
+      } <br>
+  </code>
+
+  <h4>Adjacent sibling combinator</h4>
+
+  <p>We can use the adjacent sibling combinator to select an adjacent element (immediately following) to our target or on the same level of indentation.</p>
+
+  <p>For instance, to select the class `child group2` you can use:</p>
+
+  <code>
+  .group1 + div { <br>
+  &emsp;/* CSS code */ <br>
+  } <br>
+  </code>
+
+  <p>And, to select the `child group3`, add another combinator:</p>
+
+  <code>
+    .group1 + div + div { <br>
+      &emsp;/* CSS code */ <br>
+      } <br>
+  </code>
+
+  <h4>General sibling combinator</h4>
+  
+  <p>If you want to select all the siblings, use the general sibling combinator. For instance, you can select all the elements with the class `child` (including groups 1, 2, and 3) using:</p>
+
+  <code>
+  .group1 ~ div {<br>
+  &emsp;/* CSS code */ <br>
+  } <br>
+  </code>
+
+</body>
+
+</html>

@@ -507,3 +507,7 @@ Today I learned to increase the space between lines of text, transform the case 
 ## Day 125 - 2024/01/29
 
 Today I learned about the overflow property. If the content is too big to fit the element, you can select its behavior, like adding scrollbars or clipping the content.
+
+## Day 126 - 2024/01/30
+
+Today I learned about three advanced CSS selectors: the child, the adjacent sibling, and the general sibling combinators.
