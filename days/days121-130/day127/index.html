@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 127 - CSS: Advanced Selectors - Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 127 - CSS: Advanced Selectors - Pt. 2</h1>
+  
+  <h3>Pseudo-classes</h3>
+
+  <p>A pseudo-class is a selector that selects elements in a specific state, e.g., they are the first element of their type or being hovered over by the mouse pointer.</p>
+
+  <p>Pseudo-classes are keywords that start with a colon. For example, <strong>:hover</strong> is a pseudo-class.</p>
+
+  <h4 style="margin-top: 60px;">Dynamic pseudo-classes</h4>
+
+  <p>These types of pseudo-classes help make the page more dynamic and interactive. For instance, you can apply a different style to any element that is under the pointer using the <strong>:hover</strong> pseudo-class:</p>
+
+  <code>
+  div:hover {<br>
+  &emsp;background-color: aqua;<br>
+  }<br>
+  </code>
+
+  <p>The result is the following:</p>
+
+  <div>
+    This div does not have a hover effect.
+  </div>
+
+  <div>
+    This div has a hover effect.
+  </div>
+
+  <div>
+    This div does not have a hover effect.
+  </div>
+
+  <p style="margin-top: 40px;">There are many dynamic pseudo-classes, like <strong>:focus, :active, :link, :visited</strong>.</p>
+
+  <h4 style="margin-top: 60px;">Structural pseudo-classes</h4>
+
+  <p>These pseudo-classes select elements based on their position within the DOM.</p>
+
+  <ul>
+    <li><strong>:root</strong> - a class that represents the top level of your document. It is generally where global CSS rules (i.e., rules you want to apply everywhere) are defined.</li>
+    <li><strong>:first-child</strong> - will match only the first sibling.</li>
+    <li><strong>:last-child</strong> - will match only the very last sibling.</li>
+    <li><strong>:empty</strong> - will select elements that have no children.</li>
+    <li><strong>:only-child</strong> - will match elements that have no siblings.</li>
+  </ul>
+
+  <p>The :nth-child offers a more flexible approach:</p>
+
+  <ul>
+    <li><strong>.myList:nth-child(5)</strong> - selects the fifth element with class myList</li>
+    <li><strong>.myList:nth-child(3n + 4)</strong> - selects every third element with class myList beginning at element four</li>
+    <li><strong>.myList:nth-child(even)</strong> - selects every even element with class myList</li>
+    <li><strong>.myList:nth-child(odd)</strong> - selects every odd element with class myList</li>
+  </ul>
+
+</body>
+
+</html>

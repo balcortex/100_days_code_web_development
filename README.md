@@ -511,3 +511,7 @@ Today I learned about the overflow property. If the content is too big to fit th
 ## Day 126 - 2024/01/30
 
 Today I learned about three advanced CSS selectors: the child, the adjacent sibling, and the general sibling combinators.
+
+## Day 127 - 2024/01/31
+
+Today I learned about pseudo-classes, which allow us to apply CSS rules to elements in a specific state (like if the mouse is over it)
