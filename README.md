@@ -515,3 +515,7 @@ Today I learned about three advanced CSS selectors: the child, the adjacent sibl
 ## Day 127 - 2024/01/31
 
 Today I learned about pseudo-classes, which allow us to apply CSS rules to elements in a specific state (like if the mouse is over it)
+
+## Day 128 - 2024/02/01
+
+Today I learned about the pseudo-elements, which apply CSS rules to HTML code that aren't elements at all. For instance, the ::first-letter selector.

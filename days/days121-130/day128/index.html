@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 128 - CSS: Advanced Selectors - Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 128 - CSS: Advanced Selectors - Pt. 3</h1>
+  
+  <h3>Pseudo-elements</h3>
+
+  <p>While pseudo-classes give us an alternative way to interact with our HTML elements based on their state or structure, pseudo-elements are more abstract. They allow us to affect parts of our HTML that aren't elements at all.</p>
+
+  <p>For instance, all the paragraphs in this document start with a red letter, which is easily achieved with the <strong>::first-letter</strong> selector:</p>
+
+  <code>
+  p::first-letter {<br>
+  &emsp;color: red;<br>
+  }<br>
+  </code>
+
+  <p>You can also customize the highlighted text using the <strong>::selection</strong> selector. For instance, you can change the background and the color:</p>
+
+  <code>
+  div::selection {<br>
+  &emsp;color: yellow;<br>
+  &emsp;background-color: red;<br>
+  }<br>
+  </code>
+
+  <p>This code yields the following result while highlighting some words in the middle line (the purple background is only to distinguish the example from the actual content):</p>
+
+  <div>
+  Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat deserunt minus eos, reprehenderit magni dicta deleniti placeat et aliquam dolorem quas velit nesciunt illo beatae quo possimus accusamus aperiam obcaecati.
+  </div>
+
+  <p>Other useful pseudo-elements are the <strong>::before</strong> and <strong>::after</strong>. You can use both add content before and after the element:</p>
+
+  <code>
+    .emphasis::before {<br>
+    &emsp;content: "---";<br>
+    }<br>
+    <br>
+    .emphasis::after {<br>
+    &emsp;content: "---";<br>
+    }<br>
+  </code>
+
+  <p>Now, you can use the class emphasis to add three hyphens before and after automatically to any element:</p>
+
+<code>
+  &lt;div class="emphasis"&gt; This text is important &lt;/div&gt;
+</code>
+
+  <p>Which is rendered by the browser like this:</p>
+
+  <div class="emphasis"> This text is important </div>
+
+  <p>Note: the content inside ::before and ::after isn't accessible (i.e., the user cannot select it), so you should only use it for decorative purposes and not to add actual content.</p>
+
+</body>
+
+</html>
