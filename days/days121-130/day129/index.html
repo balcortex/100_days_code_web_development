@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 129 - CSS: Advanced Selectors - Pt. 4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 129 - CSS: Advanced Selectors - Pt. 4</h1>
+  
+  <h3>Attribute selectors</h3>
+
+  <p>Recall that an attribute is anything in the opening tag of an HTML element - such as <em>class='my-class'</em> or <em>src='pic.jpg'</em>.</p>
+
+  <p>Since these values are very user-defined, we need a more flexible approach to target specific values. First, let's look at the basic usage:</p>
+
+  <ul>
+    <li><strong>[attribute]</strong> - This will select anything where the given attribute exists, despite its value.</li>
+    <li><strong>selector[attribute]</strong> - Optionally, we can combine the attribute selectors with other types of selectors, like class or element selectors.</li>
+    <li><strong>[attribute="value"]</strong> - To get specific, we can use the <strong>=</strong> to match a particular attribute with a specific value.</li>
+  </ul>
+
+  <p>Now, let's see some real cases:</p>
+
+  <code>
+  [src] {<br>
+  &emsp;/* This will target any element that has a src attribute. */<br>
+  }<br>
+  <br>
+  img[src] {<br>
+  &emsp;/* This will only target img elements that have a src attribute. */<br>
+  }<br>
+  <br>
+  img[src="puppy.jpg"] {<br>
+  &emsp;/* Elements with a src attribute that is exactly "puppy.jpg" */<br>
+  }<br>
+  </code>
+
+  <p>Sometimes, we must match a part of the attribute's value to target several elements simultaneously. For this purpose, we can use the following syntax:</p>
+
+  <ul>
+    <li><strong>[attribute^="value"]</strong> - ^= Will match strings from the start.</li>
+    <li><strong>[attribute$="value"]</strong> - $= Will match strings from the end.</li>
+    <li><strong>[attribute*="value"]</strong> - *= The wildcard selector will match anywhere inside the string</li>
+  </ul>
+
+  <p>For instance:</p>
+
+  <code>
+  [class^='aus'] {<br>
+  &emsp;/* Classes are attributes too!<br>
+  &emsp;This will target any class that begins with 'aus':<br>
+  &emsp;class='austria'<br>
+  &emsp;class='australia'<br>
+  &emsp;*/<br>
+  }<br><br>
+
+  [src$='.jpg'] {<br>
+  &emsp;/* This will target any src attribute that ends in '.jpg':<br>
+  &emsp;src='puppy.jpg'<br>
+  &emsp;src='kitten.jpg'<br>
+  &emsp;*/<br>
+  }<br><br>
+  
+  [for*='ill'] {<br>
+  &emsp;/* This will target any for attribute that has 'ill' anywhere inside it:<br>
+  &emsp;for="bill"<br>
+  &emsp;for="jill"<br>
+  &emsp;for="silly"<br>
+  &emsp;for="ill"<br>
+  &emsp;*/<br>
+  }<br>
+  </code>
+
+</body>
+
+</html>

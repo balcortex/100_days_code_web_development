@@ -519,3 +519,7 @@ Today I learned about pseudo-classes, which allow us to apply CSS rules to eleme
 ## Day 128 - 2024/02/01
 
 Today I learned about the pseudo-elements, which apply CSS rules to HTML code that aren't elements at all. For instance, the ::first-letter selector.
+
+## Day 129 - 2024/02/02
+
+Today I learned attribute selectors, which target elements based on the existence of an attribute or on a specific attribute's value.
