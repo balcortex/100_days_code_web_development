@@ -523,3 +523,7 @@ Today I learned about the pseudo-elements, which apply CSS rules to HTML code th
 ## Day 129 - 2024/02/02
 
 Today I learned attribute selectors, which target elements based on the existence of an attribute or on a specific attribute's value.
+
+## Day 130 - 2024/02/03
+
+Today I learned about the position property, which specifies how an element is set on the document.

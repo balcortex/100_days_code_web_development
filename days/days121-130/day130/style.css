@@ -1,0 +1,83 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ebeefd;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+code {
+  color: blue;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.comment {
+  color: green;
+  font-weight: 800;
+}
+
+body>div {
+  background-color: rgba(165, 94, 232, 0.298);
+  width: fit-content;
+  display: flex;
+  gap: 10px;
+  padding: 15px 30px;
+  border: 1px solid black;
+}
+
+div>div {
+  display: flex;
+  background-color: blueviolet;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+  font-size: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+[class^=pos] {
+  background-color: blue;
+}
+
+.pos-static {
+  position: static;
+}
+
+.pos-relative {
+  position: relative;
+  top: 20px;
+  left: 20px;
+}
+
+.pos-absolute {
+  position: absolute;
+  top: 600px;
+  left: 200px;
+}
+
+.pos-fixed {
+  position: fixed;
+  top: 780px;
+  left: 400px;
+}
+
+.pos-sticky {
+  position: sticky;
+  top: 20px;
+}

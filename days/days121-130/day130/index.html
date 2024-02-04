@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 130 - CSS: Positioning</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 130 - CSS: Positioning</h1>
+
+  <p>The position CSS property sets how an element is positioned in a document. The top, right, bottom, and left properties determine the final location of the positioned elements.</p>
+
+  <p>There are five values for position: static (default), relative, absolute, fixed, and sticky.</p>
+
+  <h3>Static</h3>
+
+  <p>The element is positioned according to the normal flow (generally, top to bottom and left to right).</p>
+
+  <div>
+    <div>1</div>
+    <div class="pos-static">2</div>
+    <div>3</div>
+  </div>
+
+  <h3>Relative</h3>
+
+  <p> The element is positioned relative to its original position, and its space in the original flow is preserved.</p>
+  
+  <div>
+    <div>1</div>
+    <div class="pos-relative">2</div>
+    <div>3</div>
+  </div>
+
+  <h3>Absolute</h3>
+
+  <p>The element is removed from the normal document flow, and no space is created for the element in the page layout.</p>
+  
+  <div>
+    <div>1</div>
+    <div class="pos-absolute">2</div>
+    <div>3</div>
+  </div>
+
+  <h3>Fixed</h3>
+
+  <p>The element is removed from the normal document flow, and no space is created for the element in the page layout. The element position remains the same, even after scrolling.</p>
+  
+  <div>
+    <div>1</div>
+    <div class="pos-fixed">2</div>
+    <div>3</div>
+  </div>
+
+  <h3>Sticky</h3>
+
+  <p>A sticky element "sticks" to its nearest ancestor that has a "scrolling mechanism".</p>
+  
+  <div style="height: 150vh;">
+    <div>1</div>
+    <div class="pos-sticky">2</div>
+    <div>3</div>
+  </div>
+  
+
+</body>
+
+</html>
