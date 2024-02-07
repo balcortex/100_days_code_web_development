@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 131 - CSS: Functions</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 131 - CSS: Functions</h1>
+
+  <p>Like any programming language function, CSS functions are reusable pieces of code that perform specific tasks. Similarly to other languages, functions in CSS are declared with parentheses, and the arguments are passed inside them.</p>
+
+  <p>For instance, you may have used the following syntax:</p>
+
+  <code>
+    color: rgb(0, 42, 255);
+  </code>
+
+  <p>Here, <strong>rgb()</strong> is a function that accepts numbers as arguments and calculates the corresponding rgb color.</p>
+
+  <p>Unlike programming functions, <strong>CSS functions cannot be created</strong>. Instead, the language comes with a list of pre-made functions. There are a lot, so here we will just cover a few.</p>
+
+  <h4>calc()</h4>
+
+  <p>This function allows us to perform basic math inside the CSS rules. You can use different units without any problem, for example, em and vh:</p>
+
+  <code>
+    padding: calc(3px + 1em - 1vh);
+  </code>
+
+  <h4>min()</h4>
+
+  <p>This function returns the minimum value from the given values:</p>
+
+  <code>
+    width: min(200px, 4rem, 100%);
+  </code>
+
+  <h4>max()</h4>
+
+  <p>This function works the same as <strong>min()</strong>, except that it returns the largest value:</p>
+
+  <code>
+    height: max(150px, 2rem, 50%);
+  </code>
+
+
+</body>
+
+</html>

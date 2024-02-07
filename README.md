@@ -527,3 +527,9 @@ Today I learned attribute selectors, which target elements based on the existenc
 ## Day 130 - 2024/02/03
 
 Today I learned about the position property, which specifies how an element is set on the document.
+
+## Day 131 - 2024/02/06
+
+### CSS Functions
+
+Today I learned about CSS functions. They work the same as other programming language functions, except they come predefined (the user cannot create new ones).
