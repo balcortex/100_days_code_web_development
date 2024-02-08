@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 132 - CSS: Variables - Pt. 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 132 - CSS: Variables - Pt. 1</h1>
+
+  <p><strong>Custom properties</strong> (variables) allow us to reference a CSS value several times throughout the file. Then, instead of updating every instance, we only have to update the variable itself.</p>
+
+  <p>The main advantage of using custom properties is keeping colors consistent throughout a project. Furthermore, we can even redefine the same properties under different contexts, for instance, dark and light themes.</p>
+
+  <h4>Declaring a custom property</h4>
+
+  <p>To declare a custom property, use a <strong>double hyphen</strong>:</p>
+
+  <code>
+    .fancy {<br>
+    &emsp;--color-text: black;<br>
+    }<br>
+  </code>
+
+  <h4>Using a custom property</h4>
+
+  <p>To access a custom property, use the <strong>var()</strong> function:</p>
+
+  <code>
+    .fancy {<br>
+      &emsp;...<br>
+      &emsp;color: var(--color-text);<br>
+    }<br>
+  </code>
+
+  <h4>Fallback values</h4>
+
+  <p>The <strong>var()</strong> function accepts another optional parameter: a fallback value. If the first value (the custom property) doesn't exist or is invalid, the fallback value is used instead.</p>
+
+  <code>
+    .fallback { <br>
+    &emsp;--color-text: black; <br><br>
+
+    &emsp;background-color: var(--this-property-does-not-exist, white);<br>
+    } <br>
+  </code>
+
+  <p>In the last example, the background color will be set to white, as the custom property isn't declared.</p>
+
+  
+
+
+
+
+</body>
+
+</html>

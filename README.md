@@ -533,3 +533,9 @@ Today I learned about the position property, which specifies how an element is s
 ### CSS Functions
 
 Today I learned about CSS functions. They work the same as other programming language functions, except they come predefined (the user cannot create new ones).
+
+## Day 132 - 2024/02/07
+
+### CSS Variables - Pt. 1
+
+Today, I learned about CSS custom properties (or CSS variables), which allow us to define a single property and reuse it however many times we need throughout the document.
