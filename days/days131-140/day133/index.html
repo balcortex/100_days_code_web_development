@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 133 - CSS: Variables - Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 133 - CSS: Variables - Pt. 2</h1>
+
+  <h4>Variable scope</h4>
+
+  <p>The scope of a custom property includes the selector in which it was defined and any of its descendants. For example, look at the following HTML code:</p>
+
+  <code>
+    &lt;div class='container'&gt;<br>
+    &emsp;&lt;p class='par-1'&gt;&lt;/p&gt;<br>
+    &lt;/div&gt;<br><br>
+
+    &lt;p class='par-2'&gt;&lt;/p&gt;<br>
+  </code>
+
+  <p>And the corresponding CSS code:</p>
+
+  <code>
+    .container {<br>
+    &emsp;--main-bg: red;<br>
+    }<br><br>
+
+    .par-1 {<br>
+    &emsp;background-color: var(--main-bg);<br>
+    }<br><br>
+
+    .par-2 {<br>
+    &emsp;background-color: var(--main-bg);<br>
+    }<br>
+  </code>
+
+  <p>In this example, only the <em>par-1</em> class will have its background changed, as the <em>par-2</em> is not in the scope, so no color will be applied to it (unless a fallback value is used).</p>
+
+  <h4>Global variables</h4>
+
+  <p>While you may want to limit the scope of a custom property, the ideal situation is to use them across the entire document. Hence, it is widely used to declare custom properties on the <strong>:root</strong> selector:</p>
+
+  <code>
+    :root {<br>
+    &emsp;--main-bg: red;<br>
+    }<br><br>
+
+    .par-1 {<br>
+    &emsp;background-color: var(--main-bg);<br>
+    }<br><br>
+
+    .par-2 {<br>
+    &emsp;background-color: var(--main-bg);<br>
+    }<br>
+  </code>
+
+  <p>By declaring our custom property on the <strong>:root</strong> selector in the example above, we can access it on any other selector within our CSS file, since any other selector would be considered a descendant of the <strong>:root</strong> selector.</p>
+
+
+</body>
+
+</html>

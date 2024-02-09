@@ -1,0 +1,42 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ebeefd;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+code {
+  color: blue;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.comment {
+  color: green;
+  font-weight: 800;
+}
+
+body>div {
+  background-color: rgba(165, 94, 232, 0.298);
+  width: fit-content;
+  padding: 15px 30px;
+}
+
+h4 {
+  margin-top: 40px;
+}

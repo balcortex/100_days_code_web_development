@@ -539,3 +539,9 @@ Today I learned about CSS functions. They work the same as other programming lan
 ### CSS Variables - Pt. 1
 
 Today, I learned about CSS custom properties (or CSS variables), which allow us to define a single property and reuse it however many times we need throughout the document.
+
+## Day 133 - 2024/02/08
+
+### CSS Variables - Pt. 2
+
+Today I learned about the scope of custom properties (CSS variables) and using the :root selector to declare global variables.
