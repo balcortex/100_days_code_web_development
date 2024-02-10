@@ -545,3 +545,9 @@ Today, I learned about CSS custom properties (or CSS variables), which allow us 
 ### CSS Variables - Pt. 2
 
 Today I learned about the scope of custom properties (CSS variables) and using the :root selector to declare global variables.
+
+## Day 134 - 2024/02/09
+
+### CSS Variables - Pt. 3
+
+Today I learned how to create custom themes (light and dark) using custom properties and the :root selector.

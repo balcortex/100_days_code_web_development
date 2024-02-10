@@ -1,0 +1,67 @@
+:root.light {
+  --border-btn: gray;
+  --color-base-bg: #ebeefd;
+  --color-base-text: black;
+  --color-btn-bg: white;
+}
+
+:root.dark {
+  --border-btn: white;
+  --color-base-bg: black;
+  --color-base-text: white;
+  --color-btn-bg: black;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: var(--color-base-bg);
+  color: var(--color-base-text);
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 20px;
+}
+
+code {
+  color: blue;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.comment {
+  color: green;
+  font-weight: 800;
+}
+
+body>div {
+  background-color: rgba(165, 94, 232, 0.298);
+  width: fit-content;
+  padding: 15px 30px;
+}
+
+h4 {
+  margin-top: 40px;
+}
+
+button {
+  border-color: var(--border-btn);
+  background-color: var(--color-btn-bg);
+  color: var(--color-base-text);
+}
+
+button:hover {
+  cursor: pointer;
+}

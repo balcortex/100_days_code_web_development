@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<!-- <html lang="en" class="dark"> -->
+<html lang="en" class="light">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 134 - CSS: Variables - Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 134 - CSS: Variables - Pt. 3</h1>
+
+  <h4>Custom themes</h4>
+
+  <p>In addition to allowing us to create global custom properties, the :root selector gives us a way to add themes to our pages.</p>
+    
+  <p>For instance, let's add a light and a dark theme to our CSS document:</p>
+
+  <code>
+  :root.light { <br>
+  &emsp;--border-btn: gray; <br>
+  &emsp;--color-base-bg: #ebeefd; <br>
+  &emsp;--color-base-text: black; <br>
+  &emsp;--color-btn-bg: white; <br>
+  } <br><br>
+
+  :root.dark { <br>
+  &emsp;--border-btn: white; <br>
+  &emsp;--color-base-bg: black; <br>
+  &emsp;--color-base-text: white; <br>
+  &emsp;--color-btn-bg: black; <br>
+  } <br>
+  </code>
+
+  <p>We defined the same custom properties on both themes but with different values. When the light theme is active, the --color-base-text property will be set to black; when the dark theme is active, this same property will have the value of white.</p>
+
+  <p>The rest of the CSS document looks like this:</p>
+
+  <code>
+    ... <br>
+    body { <br>
+    &emsp;background-color: var(--color-base-bg); <br>
+    &emsp;color: var(--color-base-text); <br>
+    } <br>
+    ... <br>
+  </code>
+
+  <p>Now, we need to change the class of the :root element when a button is pressed. This is done in JavaScript:</p>
+
+  <code>
+    const root = document.documentElement; <span class="comment">// the :root element</span><br>
+    document.querySelector('button').addEventListener('click', toggleTheme);<br><br>
+
+    function toggleTheme(e) {<br>
+    &emsp;const theme = root.className;<br>
+    &emsp;root.className = theme === 'dark' ? 'light' : 'dark';<br>
+    }<br>
+  </code>
+
+  <p>The theme is changed when the button is pressed:</p>
+
+  <button>
+    Toggle Theme
+  </button>
+
+
+
+
+</body>
+
+</html>
