@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 135 - HTML: Input Elements - Pt. 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 135 - HTML: Input Elements - Pt. 1</h1>
+
+  <h3>The input element</h3>
+
+  <p>Input elements are one of the most critical parts of a site: the user provides data, and you do stuff with it.</p>
+
+  <p>You need to specify the proper types of inputs for each possible data item since there are often multiple ways to collect a piece of data.</p>
+
+  <p>To add an input element to your document, use the <strong>&lt;input&gt;</strong> tag. Because you will need to retrieve data from a specific input element, you should always specify its <strong>id</strong>:</p>
+
+  <code>
+    &lt;input id="my-input"&gt;<br>
+  </code>
+
+  <p>Which by default accepts any text, and should look something like this:</p>
+
+  <input id="my-input">
+
+  <h3>Labels</h3>
+
+  <p>An input on its own isn't very useful since the user will not know what kind of data they are supposed to provide. Instead, we can label our inputs to inform users what data type they are expected to enter.</p>
+
+  <p>To create a label, we use the <strong>&lt;label&gt;</strong> element. The text we want displayed on the label will go between its opening and closing tags. Labels accept a <strong>for</strong> attribute, which associates it with a particular input:</p>
+
+  <code>
+    &lt;label for="name"&gt;Enter your name:&lt;/label&gt;<br>
+    &lt;input id="name"&gt;<br>
+  </code>
+
+  <p>Now, the label shows the user the information that is expected:</p>
+
+  <label for="name">Enter your name:</label>
+  <input id="name">
+
+  <p>When a label is clicked, it will focus the cursor on the associated input, ready for the user to introduce some data.</p>
+
+  <h3>Placeholder attribute</h3>
+
+  <p>To guide users on what to enter in form elements, we can include placeholder text in input fields using the <strong>placeholder</strong> attribute:</p>
+
+  <label for="name">Enter your name:</label>
+  <input id="name" placeholder="John Doe">
+
+  <p>The placeholder text will disappear once the user begins to enter his text.</p>
+
+</body>
+
+</html>

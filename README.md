@@ -551,3 +551,9 @@ Today I learned about the scope of custom properties (CSS variables) and using t
 ### CSS Variables - Pt. 3
 
 Today I learned how to create custom themes (light and dark) using custom properties and the :root selector.
+
+## Day 135 - 2024/02/10
+
+### HTML Input Elements - Pt. 1
+
+Today, I learned about the input element, which allows the user to enter information to be used later on the page.
