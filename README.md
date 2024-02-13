@@ -557,3 +557,9 @@ Today I learned how to create custom themes (light and dark) using custom proper
 ### HTML Input Elements - Pt. 1
 
 Today, I learned about the input element, which allows the user to enter information to be used later on the page.
+
+## Day 136 - 2024/02/12
+
+### HTML Input Elements - Pt. 2
+
+Today I learned about the types of inputs, like text, password, and date.
