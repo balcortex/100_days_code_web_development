@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 137 - HTML: Input Elements - Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 137 - HTML: Input Elements - Pt. 3</h1>
+
+  <h4>Radio type</h4>
+
+  <p>Radio buttons allow us to create multiple options that the user can choose only one of.</p>
+
+  <p>When we select one of the radio buttons and then select another, it will deselect the first one. Radio buttons know to do this because they have the same <strong>name</strong> attribute</p>
+
+  <input type="radio" id="radio-1" name="radio-name">
+  <label for="radio-1">Option 1</label><br>
+  <input type="radio" id="radio-2" name="radio-name">
+  <label for="radio-2">Option 2</label><br>
+  <input type="radio" id="radio-3" name="radio-name">
+  <label for="radio-3">Option 3</label>
+
+  <h4>Checkbox type</h4>
+
+  <p>Checkboxes are similar to radio buttons, allowing users to choose from a set of predefined options. But unlike radio buttons, they allow multiple options to be selected simultaneously.</p>
+
+  <input type="checkbox" id="check-1">
+  <label for="check-1">Checkbox 1</label><br>
+  <input type="checkbox" id="check-2">
+  <label for="check-2">Checkbox 2</label><br>
+  <input type="checkbox" id="check-3">
+  <label for="check-3">Checkbox 3</label>
+
+  <h4>Color type</h4>
+
+  <p>The color input provides a user interface element that lets a user specify a color, either by using a visual color picker interface or by entering the color into a text field in hexadecimal format.</p>
+
+  <input type="color">
+
+  <h4>Range type</h4>
+
+  <p>The range input lets the user specify a numeric value, which must be no less than a given value (min) and no more than another given value (max). The precise value, however, is not considered relevant. This is typically represented using a slider or dial control rather than a text entry box like the number input type.</p>
+
+  <input type="range" value="24" min="1" max="100" oninput="this.nextElementSibling.value = this.value">
+  <output>24</output>
+
+    
+</body>
+
+</html>

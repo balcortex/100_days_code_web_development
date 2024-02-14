@@ -563,3 +563,9 @@ Today, I learned about the input element, which allows the user to enter informa
 ### HTML Input Elements - Pt. 2
 
 Today I learned about the types of inputs, like text, password, and date.
+
+## Day 137 - 2024/02/13
+
+### HTML Input Elements - Pt. 3
+
+Today, I continued learning about other input types: radio buttons, checkboxes, color pickers, and range sliders.
