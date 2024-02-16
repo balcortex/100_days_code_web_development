@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 139 - HTML: Input Elements - Pt. 5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 139 - HTML: Input Elements - Pt. 5</h1>
+
+  <h3>Organizing input elements</h3>
+
+  <p>Having many input elements floating around the page may not be the best option because users can easily get overwhelmed and discouraged if there are many inputs to fill in.</p>
+
+  <p>HTML provides a couple of elements that make it easy to organize forms into sections that are visually distinct and manageable to digest.</p>
+
+  <h4>Fieldset</h4>
+
+  <p>The <strong>fieldset</strong> element is a container element that allows us to group related form inputs into one logical unit.</p>
+
+<p>To create a fieldset, we use the <strong>&lt;fieldset&gt;</strong> element. Whatever form inputs we want to group together go within the opening and closing fieldset tags.</p>
+
+<h4>Legend</h4>
+
+<p>The <strong>legend</strong> element gives field sets a heading or caption so the user can see what a grouping of inputs is for.</p>
+
+<p>We use the <strong>&lt;legend&gt;</strong> element with the text we want to display to create a legend within its opening and closing tags. A legend should always come right after an opening fieldset tag.</p>
+
+<p style="margin-top: 50px;">For instance, if we want to group the elements of a "Contact Us" form, we would use the following code:</p>
+
+<code>
+  &lt;fieldset&gt;<br>
+  &emsp;&lt;legend&gt;Contact us&lt;/legend&gt;<br>
+  &emsp;&lt;label for="name"&gt;Name:&lt;/label&gt;<br>
+  &emsp;... <br>
+
+</code>
+
+<p>Which is rendered something like this:</p>
+
+  <fieldset>
+    <legend>Contact Us</legend>
+
+    <label for="name">Name:</label>
+    <input type="text" id="name" placeholder="Enter your name..">
+
+    <label for="email">Email address:</label>
+    <input type="email" id="email" placeholder="Enter your email address..">
+
+    <label for="comment">Your message:</label>
+    <textarea id="comment" cols="30" rows="6" placeholder="Tell us something.."></textarea>
+  </fieldset>
+
+
+</body>
+
+</html>

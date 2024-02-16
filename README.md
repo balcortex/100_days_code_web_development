@@ -575,3 +575,9 @@ Today, I continued learning about other input types: radio buttons, checkboxes, 
 ### HTML Input Elements - Pt. 4
 
 Today, I learned about other elements used for user input, the textarea and the select elements.
+
+## Day 139 - 2024/02/15
+
+### HTML Input Elements - Pt. 5
+
+Today, I learned about the fieldset and legend elements, which allow us to group input elements logically and visually.
