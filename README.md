@@ -581,3 +581,9 @@ Today, I learned about other elements used for user input, the textarea and the 
 ### HTML Input Elements - Pt. 5
 
 Today, I learned about the fieldset and legend elements, which allow us to group input elements logically and visually.
+
+## Day 140 - 2024/02/16
+
+### HTML Web Forms - Pt. 1
+
+Today, I learned about the form element, which wraps all the user inputs and is responsible for sending them to the server.

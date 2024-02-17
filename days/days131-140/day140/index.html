@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 140 - HTML: Web Forms - Pt. 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 140 - HTML: Web Forms - Pt. 1</h1>
+
+  <p>While you can use input to interact with the user and make your page more dynamic, most of the time, the entered information must be sent to a server to process and store it. Other times, you must retrieve information from the server based on the input and display it to the user.</p>
+
+  <p>This interaction between the user and the server is achieved through the <strong>&lt;form&gt;</strong> element.</p>
+
+  <h4>Form element</h4>
+
+  <p>The <strong>&lt;form&gt;</strong> element is a container element (like the <strong>div</strong> element). The form element wraps all the inputs a user will interact with on a form.</p>
+
+  <p>The <strong>&lt;form&gt;</strong> element accepts two essential attributes:</p>
+  
+  <ul>
+    <li><strong>action</strong>:  takes a URL value that tells the form where it should send its data to be processed.</li>
+    <li><strong>method</strong>:  tells the browser which HTTP request method it should use to submit the form. The GET and POST request methods are the two you will use most.</li>
+  </ul>
+
+  <p>We use GET when we want to retrieve something from a server. For example, Google uses a GET request when you search as it gets the search results.</p>
+
+  <p>POST is used when we want to change something on the server, for example, when a user makes an account or a payment on a website.</p>
+
+  <p>The markup for creating a form element looks like this:</p>
+
+  <code>
+    &lt;form action="example.com/path" method="post"&gt; <br>
+    &emsp;... <br>
+    &emsp;<span class="comment">&lt;!-- HTML code that declare input elements --&gt; </span><br>
+    &emsp;... <br>
+    &lt;/form&gt; <br>
+  </code>
+
+
+
+</body>
+
+</html>
