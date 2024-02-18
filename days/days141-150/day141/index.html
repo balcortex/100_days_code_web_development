@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 141 - HTML: Web Forms - Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 141 - HTML: Web Forms - Pt. 2</h1>
+
+  <p>We already saw that the form element is responsible for sending information to the server, but how exactly is the data sent?</p>
+
+  <h4>The name attribute</h4>
+
+  <p>Just like we use labels and IDs to refer to an input, the data we send to the backend must also be identified.</p>
+
+  <p>We do this by adding a <strong>name</strong> attribute to our inputs:</p>
+
+  <code>
+    &lt;label for="first_name"&gt;First Name:&lt;/label&gt;<br>
+    &lt;input type="text" id="first_name" name="first_name"&gt;<br>
+  </code>
+
+  <p>You can think of it as a variable name for the input. <strong>
+    Form input should always have a name attribute; otherwise, it
+      will be ignored when the form is submitted
+  </strong>.</p>
+
+  <p>To better understand what this looks like, we can submit a form to <strong>httpbin</strong>. This service will send a response to let us view what data was submitted.</p>
+
+  <code>
+    &lt;form action="https://httpbin.org/post" method="post"&gt; <br>
+    &emsp;...<br>
+    &emsp;&lt;input type="text" name="first_name" id="first_name"&gt; <br>
+    &emsp;...<br>
+    &emsp;&lt;input type="text" name="last_name" id="last_name"&gt; <br>
+    &emsp;...<br>
+    &emsp;&lt;input type="number" name="user_age" id="age"&gt; <br>
+    &emsp;...<br>
+    &emsp;&lt;button type="submit"&gt;Submit&lt;/button&gt; <br>
+    &emsp;...<br>
+    &lt;/form&gt; <br>
+  </code>
+
+  <p>Which is rendered something like this:</p>
+
+  <form action="https://httpbin.org/post" method="post">
+    <fieldset>
+      <legend>User Information</legend>
+
+      <div>
+        <label for="first_name">First Name:</label>
+        <input type="text" name="first_name" id="first_name" value="John">
+      </div>
+      
+      <div>
+        <label for="last_name">Last Name:</label>
+        <input type="text" name="last_name" id="last_name" value="Doe">
+      </div>
+      
+      <div>
+        <label for="age">Age:</label>
+        <input type="number" name="user_age" id="age" value="31">
+      </div>
+      
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+  <p>Once we press the submit button, the information sent (and received by the server), correspondent only to the form, is:</p>
+
+  <code>
+  "form": { <br>
+  &emsp;"first_name": "John",  <br>
+  &emsp;"last_name": "Doe",  <br>
+  &emsp;"user_age": "31" <br>
+  }, <br>
+  </code>
+
+  <p>As we see, the name attribute is paired with the correspondent information filled by the user. The ID and the name could be different, but the best practice is to use the same value.</p>
+
+</body>
+
+</html>

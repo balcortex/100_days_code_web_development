@@ -587,3 +587,9 @@ Today, I learned about the fieldset and legend elements, which allow us to group
 ### HTML Web Forms - Pt. 1
 
 Today, I learned about the form element, which wraps all the user inputs and is responsible for sending them to the server.
+
+## Day 141 - 2024/02/17
+
+### HTML Web Forms - Pt. 2
+
+Today I learned about the name attribute, a crucial element in forms. If an input does not have a name, it will be ignored when sending the form.
