@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 142 - HTML: Web Forms - Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 142 - HTML: Web Forms - Pt. 3</h1>
+
+  <h3>Form validation</h3>
+
+  <p>Validations allow us to set specific constraints determining what data users can enter into an input. The form will only be sent if the entered information is valid.</p>
+
+  <h4>Required validation</h4>
+
+  <p>We often want to ensure that specific fields are correctly filled before submitting the form, for instance, the email and password in a login form. To make a field required, we add the <strong>required</strong> attribute:</p>
+
+  <code>
+    &lt;form action="#" method="post"&gt;<br>
+    &emsp;&lt;label for="email"&gt;*Email:&lt;/label&gt;<br>
+    &emsp;&lt;input type="text" id="email" <strong>required</strong>&gt;<br>
+    &emsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+    &lt;/form&gt;<br>
+  </code>
+
+  <p>When the user leaves a required field blank, a message will appear to remind the user to fill in the specific field:</p>
+
+  <form action="#" method="post" id="form1">
+    <fieldset>
+      <label for="email">*Email:</label>
+      <input type="text" id="email" required>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+  <p style="margin-top: 50px;">We should always indicate which fields are required. This will often be done by adding an asterisk (*) to the required field label.</p>
+
+</body>
+
+</html>

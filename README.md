@@ -593,3 +593,9 @@ Today, I learned about the form element, which wraps all the user inputs and is 
 ### HTML Web Forms - Pt. 2
 
 Today I learned about the name attribute, a crucial element in forms. If an input does not have a name, it will be ignored when sending the form.
+
+## Day 142 - 2024/02/21
+
+### HTML Web Forms - Pt. 3
+
+Today I learned about form validation, starting with the `required` attribute, which forces the user to fill in a field.
