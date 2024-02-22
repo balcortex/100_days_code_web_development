@@ -599,3 +599,9 @@ Today I learned about the name attribute, a crucial element in forms. If an inpu
 ### HTML Web Forms - Pt. 3
 
 Today I learned about form validation, starting with the `required` attribute, which forces the user to fill in a field.
+
+## Day 143 - 2024/02/22
+
+### HTML Web Forms - Pt. 4
+
+Today I learned about the minimum text length validation, which prevents the user from inputting less than a desired number of characters.

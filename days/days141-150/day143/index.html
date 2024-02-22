@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 143 - HTML: Web Forms - Pt. 4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 143 - HTML: Web Forms - Pt. 4</h1>
+
+  <h4>Minimum text length validation</h4>
+
+  <p>Sometimes, we want the users to enter a minimum amount of text for passwords, for example.</p>
+
+  <p>The minimum length validation will prevent the user from inputting less than the desired characters. For example, in a password field, we want the user to enter eight characters at least:</p>
+
+  <code>
+    &lt;form action="#" method="post"&gt;<br>
+    &emsp;&lt;label for="password"&gt;*Password:&lt;/label&gt;<br>
+    &emsp;&lt;input type="password" id="password" name="password"<strong style="color: rgb(0, 179, 255);"> minlength="8"</strong> required&gt;<br>
+    &emsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+    &lt;/form&gt;<br>
+  </code>
+
+  <p>Suppose the user enters less than eight characters. In that case, the browser will show a message advising the user to enter at least eight characters:</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <label for="password">*Password:</label>
+      <input type="password" id="password" name="password" minlength="8" required>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+</body>
+
+</html>
