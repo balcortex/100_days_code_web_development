@@ -611,3 +611,9 @@ Today I learned about the minimum text length validation, which prevents the use
 ### HTML Web Forms - Pt. 5
 
 Today I learned about the maximum length validation, which will directly prevent the user from entering more than the specified characters.
+
+## Day 145 - 2024/02/24
+
+### HTML Web Forms - Pt. 6
+
+Today I learned about number range validation, which allows us to control the minimum and maximum numerical values (time and dates too) the user can enter.

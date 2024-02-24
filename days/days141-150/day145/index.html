@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 145 - HTML: Web Forms - Pt. 6</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 145 - HTML: Web Forms - Pt. 6</h1>
+
+  <h3>Number range validation</h3>
+
+  <p>Like character length validation, we often want to control the range of values users can enter into number-based inputs.</p>
+
+  <p>We can set a lower bound with the <strong>min</strong> attribute, an upper bound with the <strong>max</strong> attribute, or a range combining both attributes simultaneously. Note that these attributes only work with number-based input form controls such as number, time, and dates.</p>
+
+  <p>For instance, suppose that you are working in a form for employees. You know that employees can't be under 18 or over 100 years old (in the best-case scenario), so you can use both the <strong>min</strong> and <strong>max</strong> attributes to allow only values between 18 and 100.</p>
+
+  <code>
+    &lt;form action="#" method="post"&gt;<br>
+      &emsp;&lt;label for="age"&gt;Age:&lt;/label&gt;<br>
+      &emsp;&lt;input type="number" id="age" name="age" <strong style="color: rgb(0, 166, 255);">min="18" max="100"</strong>&gt;<br>
+      &emsp;&lt;input type="submit"&gt;<br>
+    &lt;/form&gt;<br>
+  </code>
+
+  <p>If the user tries to enter a value out of the range, the browser will show a message:</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="18" max="100">
+      <input type="submit">
+    </fieldset>
+  </form>
+
+
+</body>
+
+</html>
