@@ -605,3 +605,9 @@ Today I learned about form validation, starting with the `required` attribute, w
 ### HTML Web Forms - Pt. 4
 
 Today I learned about the minimum text length validation, which prevents the user from inputting less than a desired number of characters.
+
+## Day 144 - 2024/02/23
+
+### HTML Web Forms - Pt. 5
+
+Today I learned about the maximum length validation, which will directly prevent the user from entering more than the specified characters.

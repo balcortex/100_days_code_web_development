@@ -1,0 +1,75 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ebeefd;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 40px;
+}
+
+code {
+  color: blue;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.comment {
+  color: green;
+  font-weight: 800;
+}
+
+body>div {
+  background-color: rgba(165, 94, 232, 0.298);
+  width: fit-content;
+  padding: 15px 30px;
+}
+
+h4 {
+  margin-top: 40px;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+label {
+  width: 100px;
+  display: inline-block;
+}
+
+input[type=text],
+input[type=number],
+input[type=password],
+select,
+textarea {
+  width: 200px;
+  padding: 2px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-top: 6px;
+}
+
+fieldset {
+  width: max-content;
+  border-radius: 6px;
+  background-color: rgb(238, 238, 253);
+}
+
+button {
+  /* display: block; */
+  /* width: 30%; */
+  /* margin: 20px auto 0px; */
+}

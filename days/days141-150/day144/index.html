@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 144 - HTML: Web Forms - Pt. 5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 144 - HTML: Web Forms - Pt. 5</h1>
+
+  <h3>Maximum length validation</h3>
+
+  <p>The maximum length validation works differently than the minimum length validation. Instead of informing the user, the browser will prevent users from entering more characters than the declared maxlength attribute value.</p>
+
+  <p>For instance, to limit a field to no more than six characters, we set the maxlength to 6:</p>
+
+  <code>
+    &lt;form action="#" method="post"&gt;<br>
+      &emsp;&lt;label for="account-no"&gt;*Account No.:&lt;/label&gt;<br>
+      &emsp;&lt;input type="text" id="account-no" <strong style="color: rgb(40, 161, 248);">maxlength="6"</strong> required&gt;<br>
+      &emsp;&lt;button type="submit"&gt;Submit&lt;/button&gt;<br>
+    &lt;/form&gt;<br>
+  </code>
+
+  <p>The browser will prevent the user from entering more than six characters, omitting the rest once the length is reached. If the user enters the following sequence "123456789", the browser will accept only the sequence "123456", discarding the other characters.</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <label for="account-no">*Account No.:</label>
+      <input type="text" id="account-no" maxlength="6" required>
+      <button type="submit">Submit</button>
+    </fieldset>
+  </form>
+
+  <p style="margin-top: 50px;"><strong>Note</strong>: you can use both the min and the max validation simultaneously.</p>
+
+</body>
+
+</html>
