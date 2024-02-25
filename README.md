@@ -617,3 +617,9 @@ Today I learned about the maximum length validation, which will directly prevent
 ### HTML Web Forms - Pt. 6
 
 Today I learned about number range validation, which allows us to control the minimum and maximum numerical values (time and dates too) the user can enter.
+
+## Day 146 - 2024/02/25
+
+### HTML Web Forms - Pt. 7
+
+Today I learned about pattern validation. This type of validation is more complex as it uses regular expressions (regex).

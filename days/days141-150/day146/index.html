@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 146 - HTML: Web Forms - Pt. 7</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 146 - HTML: Web Forms - Pt. 7</h1>
+
+  <h3>Pattern validation</h3>
+
+  <p>To ensure the user enters the correct information, sometimes we want to ensure the data matches a specific pattern, for example, a credit card number or a postal code.</p>
+
+  <p>To add a pattern validation, add the <strong>pattern</strong> attribute with the regular expression (regex) that defines the expected data shape. Regex is a complex topic, but you can always search the web for common patterns.</p>
+  
+  <p>For instance, if you want to validate a 5-digit postal code, use the following regular expression:</p>
+  
+  <code>
+    &lt;form action="#" method="post"&gt;<br>
+      &emsp;&lt;label for="zip-code"&gt;Zip Code:&lt;/label&gt;<br>
+      &emsp;&lt;input type="text" id="zip-code" name="zip-code" <span class="code-highlight">pattern="(\d{5})"</span><br>
+      &emsp;placeholder="65251" title="Please enter a 5-digit zip code"&gt;<br>
+      &emsp;&lt;input type="submit"&gt;<br>
+    &lt;/form&gt;<br>
+  </code>
+
+  <p>The browser will display a message if the user enters an incorrect pattern. To add more descriptive information about what is expected, you can use the <strong>title</strong> attribute, which also is shown in the message:</p>
+
+  <form action="#" method="post">
+    <fieldset>
+      <label for="zip-code">Zip Code:</label>
+      <input type="text" id="zip-code" name="zip-code" pattern="(\d{5})" placeholder="65251" title="Please enter a 5-digit zip code">
+      <input type="submit">
+    </fieldset>
+  </form>
+
+
+</body>
+
+</html>
