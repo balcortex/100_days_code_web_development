@@ -623,3 +623,9 @@ Today I learned about number range validation, which allows us to control the mi
 ### HTML Web Forms - Pt. 7
 
 Today I learned about pattern validation. This type of validation is more complex as it uses regular expressions (regex).
+
+## Day 147 - 2024/02/26
+
+### HTML Web Forms - Pt. 8
+
+Today, I learned about styling validations, which is very helpful for giving direct feedback to the user on which fields he has the wrong data.

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 147 - HTML: Web Forms - Pt. 8</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 147 - HTML: Web Forms - Pt. 8</h1>
+
+  <h3>Styling validations</h3>
+
+  <p>Until now, the user must click the submit button to know whether the entered data is valid. We can improve this situation by using the valid and invalid pseudo-classes, which will let the user know if the input is valid or not even before he tries to submit the form.</p>
+
+  <p>For instance, we can give the valid form controls a green border and the invalid ones a red border in the CSS document:</p>
+
+  <code>
+    input:invalid {<br>
+      &emsp;border-color: red;<br>
+    }<br>
+    input:valid {<br>
+      &emsp;border-color: green;<br>
+    }<br>
+  </code>
+
+  <p>Now, the user can receive direct feedback by just looking at the borders. Note that on the left, the name and email fields are invalid because they are required, while the age field is green because it is not mandatory to fill it in. On the right, the email is still red as the email is not valid:</p>
+
+  <div class="container">
+    <form action="#" method="post">
+      <fieldset>
+        <div>
+          <label for="name">*Name:</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div>
+          <label for="email">*Email:</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="1" max="100">
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+  
+      </fieldset>
+    </form>
+
+    <form action="#" method="post">
+      <fieldset>
+        <div>
+          <label for="name">*Name:</label>
+          <input type="text" id="name" name="name" required value="John">
+        </div>
+        <div>
+          <label for="email">*Email:</label>
+          <input type="email" id="email" name="email" required value="johndoe81">
+        </div>
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" name="age" min="1" max="100" value="32">
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+  
+      </fieldset>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
