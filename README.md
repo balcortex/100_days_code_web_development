@@ -636,3 +636,8 @@ Today, I learned about styling validations, which is very helpful for giving dir
 
 Today, I learned about Grid, a layout tool that allows easy placement of elements into a two-dimensional pattern (it works in one dimension too).
 
+## Day 149 - 2024/02/28
+
+### CSS Grid - Pt. 2
+
+Today, I learned how to specify the number and width of columns in a grid layout using the grid-template-columns property.

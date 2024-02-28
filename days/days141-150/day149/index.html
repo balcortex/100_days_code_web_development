@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 149 - CSS: Grid - Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 149 - CSS: Grid - Pt. 2</h1>
+
+  <h3>Columns</h3>
+
+  <p>To specify the number of columns (and their width), use the <strong>grid-template-columns</strong> property, followed by the widths of the columns. For instance, to create two columns, one of 50px and the other of 80px wide, use the following CSS code:</p>
+
+  <code>
+    .container {<br>
+      &emsp;display: grid;<br>
+      &emsp;<span class="code-highlight">grid-template-columns: 50px 80px;</span><br>
+    }<br>
+  </code>
+
+  <p>The HTML document is like this:</p>
+
+  <code>
+    &lt;div class="container"&gt;<br>
+      &emsp;&lt;div"&gt;Item 1&lt;/div&gt;<br>
+      &emsp;...<br>
+      &emsp;&lt;div"&gt;Item 5&lt;/div&gt;<br>
+  &lt;/div&gt;<br>
+</code>
+
+  <p>Note that, depending on the total number of children, the rows are automatically generated. In this case, there are five items, so the layout is a 3x2 grid (with a blank space):</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+  </div>
+
+
+</body>
+
+</html>
