@@ -629,3 +629,10 @@ Today I learned about pattern validation. This type of validation is more comple
 ### HTML Web Forms - Pt. 8
 
 Today, I learned about styling validations, which is very helpful for giving direct feedback to the user on which fields he has the wrong data.
+
+## Day 148 - 2024/02/27
+
+### CSS Grid - Pt. 1
+
+Today, I learned about Grid, a layout tool that allows easy placement of elements into a two-dimensional pattern (it works in one dimension too).
+

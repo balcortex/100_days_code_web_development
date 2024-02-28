@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 148 - CSS: Grid - Pt. 1</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 148 - CSS: Grid - Pt. 1</h1>
+
+  <p><strong>Grid</strong>, like Flexbox, is a layout tool. The difference is that Grid was primarily designed for the easy placement of items in a two-dimensional layout (but it can be used for one-dimensional layouts, too).</p>
+
+  <p>You will notice a lot of similarities between Flex and Grid, but you will also come across many differences between the two and opinions on how each module should be used. For example, if you've been struggling to get your Flex items to match evenly in size, Grid can make this type of layout much more effortless.</p>
+
+  <h3>Grid container</h3>
+
+
+  <p>We can think about CSS Grid in terms of a container and items. When you make an element a grid container, it will “contain” the whole grid. In CSS, an element is turned into a grid container with the property <strong>display: grid</strong>.</p>
+
+  <code>
+    .container { <br>
+      &emsp;<span class="code-highlight">display: grid;</span> <br>
+    } <br>
+  </code>
+
+  <p>In this example, the parent element becomes a grid container, and each of the direct child elements below it automatically become grid items:</p>
+
+  <code>
+    &lt;div <span class="code-highlight">class="container"</span>&gt;<br>
+      &emsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+      &emsp;&lt;div&gt;Item 2&lt;/div&gt;<br>
+      &emsp;&lt;div&gt;Item 3&lt;/div&gt;<br>
+      &emsp;&lt;div&gt;Item 4&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>As we haven't specified the rows and columns yet, all the items are arranged in a single column:</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+  </div>
+
+
+</body>
+
+</html>
