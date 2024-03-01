@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 150 - CSS: Grid - Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 150 - CSS: Grid - Pt. 3</h1>
+
+  <h3>Rows</h3>
+
+  <p>Unlike columns, rows are created automatically to fit all the items once the number of columns has been specified. However, we can still decide each row's size (height).</p>
+
+  <p>To specify the height of the rows, use the <strong>grid-template-rows</strong> property, followed by the heights of the rows. For instance, to give two rows the height of 50px and 100px, respectively, use the following code:</p>
+
+  <code>
+    .container {<br>
+      &emsp;display: grid;<br>
+      &emsp;grid-template-columns: 50px 80px;<br>
+      &emsp;<span class="code-highlight">grid-template-rows: 50px 100px;</span><br>
+    }<br>
+  </code>
+
+  <p>The HTML code is as follows:</p>
+
+  <code>
+    &lt;div class="container"&gt;<br>
+      &emsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+      &emsp;...<br>
+      &emsp;&lt;div&gt;Item 4&lt;/div&gt;<br>
+    &lt;/div&gt;<br>
+  </code>
+
+
+  <p>The container has four children, and we have defined two columns so the layout will be a 2x2 grid. The rows are 50px and 100px high:</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+  </div>
+
+</body>
+
+</html>

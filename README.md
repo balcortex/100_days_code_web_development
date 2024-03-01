@@ -641,3 +641,10 @@ Today, I learned about Grid, a layout tool that allows easy placement of element
 ### CSS Grid - Pt. 2
 
 Today, I learned how to specify the number and width of columns in a grid layout using the grid-template-columns property.
+
+## Day 150 - 2024/02/29
+
+### CSS Grid - Pt. 3
+
+Today I learned about the grid-template-rows property to specify the height of the rows on the grid layout.
+
