@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 152 - CSS: Grid - Pt. 5</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 152 - CSS: Grid - Pt. 5</h1>
+
+  <h3>Implicit grid - columns</h3>
+
+  <p>With default settings, the items are arranged into the grid, filling the columns and then filling the rows until all items are included. This is the default implicit grid behavior.</p>
+
+  <p>We can change the grid behavior to first fill the rows and then the columns, using the <strong>grid-auto-flow property</strong>, setting its value to <strong>column</strong> (row is the default):</p>
+
+  <code>
+    .container {<br>
+      &emsp;grid-template-columns: 50px 80px;<br>
+      &emsp;grid-template-rows: 50px 100px;<br>
+      <span class="code-highlight">
+        &emsp;grid-auto-flow: column;<br>
+        &emsp;grid-auto-columns: 200px;<br>
+      </span>
+    }<br>
+  </code>
+
+  <p>Every new item for which we haven't defined an explicit layout will be placed in the next column (that is, to the right). The columns that haven't had their width defined with the <strong>grid-template-columns</strong> property will follow the width of the <strong>grid-auto-columns</strong> property.</p>
+
+  <p>As the CSS defines, we have an explicit grid layout of 2x2, but the actual container declared in the HTML has five items:</p>
+
+  <code>
+    &lt;div class="container"&gt;<br>
+      &emsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+      &emsp;...<br>
+      <span class="code-highlight">&emsp;&lt;div&gt;Item 5&lt;/div&gt;<br></span>
+    &lt;/div&gt;<br>
+  </code>
+
+  <p>The new item will be added to a new column whose width is defined by the <strong>grid-auto-columns</strong> property.</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item"><strong>Item 5</strong></div>
+  </div>
+
+</body>
+
+</html>

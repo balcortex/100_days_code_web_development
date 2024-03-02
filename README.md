@@ -653,3 +653,9 @@ Today I learned about the grid-template-rows property to specify the height of t
 ### CSS Grid - Pt. 4
 
 Today, I learned about the implicit grid concept for rows, which makes the automatic placing of new items into the necessary rows.
+
+## Day 152 - 2024/03/02
+
+### CSS Grid - Pt. 5
+
+Today I learned how to change the placement direction of items in the grid with the grid-auto-flow property.
