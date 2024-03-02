@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 151 - CSS: Grid - Pt. 4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 151 - CSS: Grid - Pt. 4</h1>
+
+  <h3>Implicit grid - rows</h3>
+
+  <p>We already saw that rows are automatically created if more items fit than those declared in the <strong>grid-template</strong> properties. For instance, suppose that we have a 4-item container with the following properties (note the <strong>grid-auto-rows</strong> property that we will cover later):</p>
+
+  <code>
+    .container {<br>
+      &emsp;display: grid;<br>
+      &emsp;grid-template-columns: 50px 80px;<br>
+      &emsp;grid-template-rows: 50px 100px;<br>
+      &emsp;<span class="code-highlight">grid-auto-rows: 20px;</span><br>
+}<br>
+  </code>
+
+  <p>As the <strong>grid-template</strong> properties declare, the layout is set as a 2x2 grid, perfect for the 4-item container. But what happens if we add another item without changing the <strong>grid-template</strong> properties:</p>
+
+  <code>
+    &lt;div class="container"&gt;<br>
+      &emsp;&lt;div&gt;Item 1&lt;/div&gt;<br>
+      &emsp;...<br>
+      <span class="code-highlight">&emsp;&lt;div&gt;Item 5&lt;/div&gt;<br></span>
+    &lt;/div&gt;<br>
+  </code>
+
+
+  <p>The new item (Item 5) is slotted into a third row we did not define. This is because of the implicit grid concept, and it's how CSS Grid can automatically place grid items when we haven't explicitly defined the layout for them.</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item"><strong>Item 5</strong></div>
+  </div>
+
+  <p>The size values established from the <strong>grid-template-rows</strong> property are not carried over into these implicit grid tracks. But we can define values for the implicit grid tracks using the <strong>grid-auto-rows</strong> property (later, we will see the equivalent for columns). In this way, we can ensure that any new tracks the implicit grid makes for extra content are set at values we defined.</p>
+
+</body>
+
+</html>

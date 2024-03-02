@@ -648,3 +648,8 @@ Today, I learned how to specify the number and width of columns in a grid layout
 
 Today I learned about the grid-template-rows property to specify the height of the rows on the grid layout.
 
+## Day 151 - 2024/03/01
+
+### CSS Grid - Pt. 4
+
+Today, I learned about the implicit grid concept for rows, which makes the automatic placing of new items into the necessary rows.
