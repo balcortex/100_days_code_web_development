@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 153 - CSS: Grid - Pt. 6</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 153 - CSS: Grid - Pt. 6</h1>
+
+  <h3>Gap</h3>
+
+  <p>Using the <strong>gap</strong> property, we can easily change the space between two adjacent rows (or columns). Gap sizes can be adjusted separately for rows and columns using the <strong>column-gap</strong> and <strong>row-gap</strong> properties.</p>
+
+  <p>For instance, to space all the rows and columns symmetrically by 30px, set the <strong>gap</strong> property directly to this number:</p>
+
+  <code>
+    .container {<br>
+    &emsp;display: grid;<br>
+    &emsp;grid-template-columns: 50px 80px;<br>
+    &emsp;grid-template-rows: 50px 100px;<br>
+    <span class="code-highlight">
+      &emsp;gap: 30px; <br>
+    </span>
+    }<br>
+  </code>
+
+  <p>All the rows and columns will be 30px away from each other (without accounting for the distance to the container's border):</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+  </div>
+
+</body>
+
+</html>

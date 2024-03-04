@@ -659,3 +659,9 @@ Today, I learned about the implicit grid concept for rows, which makes the autom
 ### CSS Grid - Pt. 5
 
 Today I learned how to change the placement direction of items in the grid with the grid-auto-flow property.
+
+## Day 153 - 2024/03/04
+
+### CSS Grid - Pt. 6
+
+Today I learned about the Grid's gap property, which allows us to set the distance between rows and columns.
