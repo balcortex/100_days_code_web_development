@@ -665,3 +665,9 @@ Today I learned how to change the placement direction of items in the grid with 
 ### CSS Grid - Pt. 6
 
 Today I learned about the Grid's gap property, which allows us to set the distance between rows and columns.
+
+## Day 154 - 2024/03/05
+
+### CSS Grid - Pt. 7
+
+Today I learned about grid lines and how to use them to position items on the grid. For example, you can make a item span multiple columns

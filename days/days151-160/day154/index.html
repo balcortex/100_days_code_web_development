@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 154 - CSS: Grid - Pt. 7</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 154 - CSS: Grid - Pt. 7</h1>
+
+  <h3>Grid lines</h3>
+
+  <p>Whenever we create grid tracks, grid lines are created implicitly. These grid lines are used to position grid items.</p>
+
+  <p>Every grid has start and end lines. The lines are numbered from left to right and top to bottom, starting at 1. So, in a 2x2 grid, the columns range from 1 to 3, as well as the horizontal lines.</p>
+
+  <h3>Positioning - Multiple Columns</h3>
+
+  <p>We can set the column where it starts and ends using the <strong>grid-column-start</strong> and <strong>grid-column-end</strong> properties on the actual item.</p>
+
+  <p>Suppose you have a 2x2 grid with three items and want the first item to span two columns. To achieve this, you must set the start of the item to 1 and the end to 3 (the line number 2 is the middle):</p>
+
+  <code>
+    #item1 {<br>
+      <span class="code-highlight">
+        &emsp;grid-column-start: 1;<br>
+        &emsp;grid-column-end: 3;<br>
+      </span>
+    }<br>
+  </code>
+
+  <p>If any item doesn't have an explicit position, it is placed normally on the grid:</p>
+
+  <div class="container">
+    <div class="item" id="item1">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+</body>
+
+</html>
