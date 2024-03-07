@@ -671,3 +671,9 @@ Today I learned about the Grid's gap property, which allows us to set the distan
 ### CSS Grid - Pt. 7
 
 Today I learned about grid lines and how to use them to position items on the grid. For example, you can make a item span multiple columns
+
+## Day 155 - 2024/03/06
+
+### CSS Grid - Pt. 8
+
+Today I learned about the grid-row properties, which allow us to vertically position an item on the grid.

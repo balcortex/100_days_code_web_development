@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 155 - CSS: Grid - Pt. 8</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 155 - CSS: Grid - Pt. 8</h1>
+
+  <h3>Positioning - Multiple Rows</h3>
+
+  <p>As with columns, we can define the start and end of an item regarding rows. The corresponding properties are <strong>grid-row-start</strong> and <strong>grid-row-end</strong>.</p>
+
+  <p>Remember that these properties belong to the item, not the container.</p>
+
+  <p>Following the previous example, we have a 2x2 grid with three items. Now we want the second item to span two rows, so all the available space is used in this grid.</p>
+
+  <p>Because Item 2 is the only item we position explicitly on the grid, we must define the row and column position. We want Item 2 right to Item 1, so we set the column start to 2 and the end to 3 (this is done in one line using the grid-column shorthand). Finally, we set the rows properties to 1 and 3, making Item 2 span two rows:</p>
+
+  <code>
+    #item2 {<br>
+      &emsp;grid-column: 2 / 3;<br>
+      <span class="code-highlight">
+        &emsp;grid-row-start: 1;<br>
+        &emsp;grid-row-end: 3;<br>
+      </span>
+    }<br>
+  </code>
+
+  <p>As expected, Item 2 is next to Item 1 and has a height of two cells:</p>
+
+  <div class="container">
+    <div class="item" >Item 1</div>
+    <div class="item" id="item2">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+</body>
+
+</html>
