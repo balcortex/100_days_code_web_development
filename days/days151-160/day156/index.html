@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 156 - CSS: Grid - Pt. 9</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 156 - CSS: Grid - Pt. 9</h1>
+
+  <h3>Positioning - Span keyword </h3>
+
+  <p>Instead of defining the start and end of an item in the grid, we can use the <strong>span</strong> keyword to define the start and the number of cells the item will fit in.</p>
+
+  <p>Also, you can even define the endpoint and use the <strong>span</strong> keyword to specify where the item is supposed to start.</p>
+
+  <p>Suppose you have a 3x3 grid with three elements to exemplify this. You want the first item to fit the entire first row (3 cells), the second to fit the remaining space of the first column (2 cells), and the third item to make up the rest of the grid (4 cells).</p>
+
+  <p>The CSS code is as follows:</p>
+
+  <code>
+    #item1 { <br>
+      &emsp;grid-column-end: <span class="code-highlight">span 3</span>; <br>
+    } <br>
+    #item2 { <br>
+      &emsp;grid-row-end: <span class="code-highlight">span 2</span>; <br>
+    } <br>
+    #item3 { <br>
+      &emsp;grid-column-end: <span class="code-highlight">span 2</span>; <br>
+      &emsp;grid-row-end: <span class="code-highlight">span 2</span>; <br>
+    } <br>
+  </code>
+
+  <p>The benefit of using this syntax is that the number of cells (the area) composing each item is immediately apparent.</p>
+
+  <p>The resulting grid container is the following:</p>
+
+  <div class="container">
+    <div class="item" id="item1">Item 1</div>
+    <div class="item" id="item2">Item 2</div>
+    <div class="item" id="item3">Item 3</div>
+  </div>
+
+</body>
+
+</html>
