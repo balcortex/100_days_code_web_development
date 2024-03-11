@@ -683,3 +683,9 @@ Today I learned about the grid-row properties, which allow us to vertically posi
 ### CSS Grid - Pt. 9
 
 Today, I learned about the span keyword, which is an easy syntax for specifying how tall/wide an item should be without counting the grid lines.
+
+## Day 157 - 2024/03/10
+
+### CSS Grid - Pt. 10
+
+Today, I learned how to position the items in the grid using the grid-template-areas property, which acts as a blueprint for the final layout.

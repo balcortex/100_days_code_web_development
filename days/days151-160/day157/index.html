@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 157 - CSS: Grid - Pt. 10</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.jsp" defer></script>
+</head>
+
+<body>
+  <h1>Day 157 - CSS: Grid - Pt. 10</h1>
+
+  <h3>Positioning - Grid area </h3>
+
+  <p>There is another approach to positioning the items on the grid. Instead of using grid lines to delimit the items, we can create a visual layout of the grid using words. That is, we make a blueprint of the final layout.</p>
+
+  <p>First, we need to define the areas in the container using the <strong>grid-template-areas</strong> property. This property's value will be a series of strings (one for each row) in which we map each cell (each column of the row) to a specific area name.</p>
+
+  <p>For instance, we can obtain the same layout we used in the previous example using <strong>grid-template-areas</strong> with the following code:</p>
+
+  <code>
+    .container {<br>
+      <span class="comment">&emsp;/* Other CSS code . . . */<br></span>
+      <span class="code-highlight">
+        &emsp;grid-template-areas:<br>
+        &emsp;&emsp;"area-1 area-1 area-1"<br>
+        &emsp;&emsp;"area-2 area-3 area-3"<br>
+        &emsp;&emsp;"area-2 area-3 area-3";<br>
+      </span>
+    }<br>
+  </code>
+
+  <p>Then, using these areas in each item (only the first item is shown; the other items are similar):</p>
+
+  <code>
+    #item1 {<br>
+      &emsp;<span class="code-highlight">grid-area: area-1;</span><br>
+    }<br>
+  </code>
+
+
+  <p>The result is the following:</p>
+
+  <div class="container">
+    <div class="item" id="item1">Item 1</div>
+    <div class="item" id="item2">Item 2</div>
+    <div class="item" id="item3">Item 3</div>
+  </div>
+
+  <p>If you look closely, the final layout and the one we define in the grid-template-areas are the same. This approach is more lengthy, but it is more straightforward to understand.</p>
+
+</body>
+
+</html>
