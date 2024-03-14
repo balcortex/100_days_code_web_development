@@ -689,3 +689,9 @@ Today, I learned about the span keyword, which is an easy syntax for specifying 
 ### CSS Grid - Pt. 10
 
 Today, I learned how to position the items in the grid using the grid-template-areas property, which acts as a blueprint for the final layout.
+
+## Day 158 - 2024/03/13
+
+### CSS Grid - Pt. 11
+
+Today, I learned about the repeat function in the grid layout, which helps define repeating patterns, eliminating the need to specify each track size.

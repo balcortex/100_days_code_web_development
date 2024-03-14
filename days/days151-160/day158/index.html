@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 158 - CSS: Grid - Pt. 11</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 158 - CSS: Grid - Pt. 11</h1>
+
+  <h3>The repeat function</h3>
+
+  <p>Until now, we have seen that to make a 2x5 grid, we manually have to declare each row and column size individually. It's not a problem for small grids, but imagine that your grid has tens or hundreds of columns and rows; that would take some effort.</p>
+
+  <p>Luckily, CSS provides us with the <strong>repeat</strong> function, which allows us to define multiple rows or columns and their size without manually typing each size.</p>
+
+  <p>For example, imagine that your layout is a 10x30 grid, and you have to make each row and column the size of 15px. Using the standard syntax, you have to type 30 times the size for the columns, and 10 times the size for the rows, but using the <strong>repeat</strong> function, you only have to write two numbers for each property:</p>
+
+  <code>
+    .container {<br>
+      &emsp;display: grid;<br>
+      <span class="code-highlight">
+        &emsp;grid-template-columns: repeat(30, 15px);<br>
+        &emsp;grid-template-rows: repeat(10, 15px);<br>
+      </span>
+    }<br>
+  </code>
+
+
+  <p>Our final layout is a 10x30 grid, where each cell is a square of 15px per side:</p>
+
+  <div class="container">
+  </div>
+</body>
+
+</html>
