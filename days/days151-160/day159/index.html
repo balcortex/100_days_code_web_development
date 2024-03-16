@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 159 - CSS: Grid - Pt. 12</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 159 - CSS: Grid - Pt. 12</h1>
+
+  <h3>Fractional units</h3>
+
+  <p>The most basic way to make our grid items dynamic is using <strong>fractional units</strong>, also known as <strong>fr</strong>.</p>
+
+  <p>The <strong>fr</strong> unit is a way of distributing whatever remaining space is left in the grid. For example, suppose we have a four-column grid with a total width of 400px and four grid items each on a column track assigned 1fr as their size. In that case, all grid items should be given one fraction of that 400px of space, which is 100 pixels.</p>
+
+  <p>We can also mix fractional units with static units (like px). For example, look at the following code:</p>
+
+  <code>
+    .container {<br>
+      &emsp;display: grid;<br>
+      &emsp;grid-template-columns: 50px <span class="code-highlight">1fr 3fr</span>;<br>
+      &emsp;grid-template-rows: 50px 50px;<br>
+    }<br>
+  </code>
+
+  <p>That means the first column will have a fixed width of 50px. In contrast, the remaining space in the container will be filled in the proportion of 1/4 by the second column and 3/4 by the third column (because the total available space is 1fr + 3fr = 4fr):</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+  <p>If we make the container smaller, the dynamic items will adjust accordingly:</p>
+
+  <div class="container narrow">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+</body>
+
+</html>

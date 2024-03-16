@@ -695,3 +695,9 @@ Today, I learned how to position the items in the grid using the grid-template-a
 ### CSS Grid - Pt. 11
 
 Today, I learned about the repeat function in the grid layout, which helps define repeating patterns, eliminating the need to specify each track size.
+
+## Day 159 - 2024/03/15
+
+### CSS Grid - Pt. 12
+
+Today I learned about grid fractional units (fr), which make the size of the cells dynamic.
