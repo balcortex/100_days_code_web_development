@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 160 - CSS: Grid - Pt. 13</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 160 - CSS: Grid - Pt. 13</h1>
+
+  <h3>Minimum and maximum track sizes: min() and max()</h3>
+
+  <p>When working with dynamic sizes, we often don't want the items to stretch indefinitely or shrink too much, so we can use the <strong>min()</strong> and <strong>max()</strong> functions to decide how small and large the item should be.</p>
+
+  <p>For instance, look at the following code:</p>
+
+  <code>
+    .container {<br>
+      &emsp;display: grid;<br>
+      &emsp;grid-template-rows: repeat(2, <span class="code-highlight">min(40px, 50%))</span>;<br>
+      &emsp;grid-template-columns: 50px <span class="code-highlight">max(50px, 30%) max(50px, 40%)</span>;<br>
+    }<br>
+  </code>
+
+  <p>Starting with the rows, we define two rows that will be either 40px high or 50% of the container's height, whichever number is the smallest. That is, we define 40px as the maximum height unless the container is smaller than 80px high.</p>
+
+  <p>Conversely, the width of the columns will be at least 50px; that is, we define the minimum width using the <strong>max()</strong> function.</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+  <p>If we resize the container, we will see the rows are smaller than 40px, meaning that 50% of the container's height is less than 40px. Also, the second column is reduced to the declared minimum width (50px) and will not shrink beyond that.</p>
+
+  <div class="container narrow">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+</body>
+
+</html>
