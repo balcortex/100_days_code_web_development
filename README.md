@@ -702,8 +702,14 @@ Today, I learned about the repeat function in the grid layout, which helps defin
 
 Today I learned about grid fractional units (fr), which make the size of the cells dynamic.
 
-## Day 159 - 2024/03/18
+## Day 160 - 2024/03/18
 
 ### CSS Grid - Pt. 13
 
 Today I learned how to use the min() and max() functions to specify size limits on the grid tracks.
+
+## Day 161 - 2024/03/19
+
+### CSS Grid - Pt. 14
+
+Today, I learned about the minmax() function, which is a grid-exclusive function to set both the minimum and maximum of a grid track

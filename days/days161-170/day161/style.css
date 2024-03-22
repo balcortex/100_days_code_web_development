@@ -1,0 +1,64 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: #ebeefd;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin-top: 40px;
+}
+
+code {
+  color: blue;
+  display: block;
+  margin-bottom: 30px;
+}
+
+.code-highlight {
+  color: rgb(0, 166, 255);
+  font-weight: 900;
+}
+
+.comment {
+  color: green;
+  font-weight: 800;
+}
+
+body>div {
+  background-color: rgba(165, 94, 232, 0.298);
+  /* width: fit-content; */
+  padding: 8px;
+  border: 2px solid black;
+}
+
+.container {
+  display: grid;
+  gap: 4px;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-columns: 50px 100px minmax(150px, 300px);
+  resize: both;
+  overflow: auto;
+  height: 100px;
+}
+
+.narrow {
+  overflow: hidden;
+  width: 250px;
+  height: 100px;
+}
+
+.item {
+  border: 2px dotted black;
+}

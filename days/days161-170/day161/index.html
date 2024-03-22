@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 161 - CSS: Grid - Pt. 14</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 161 - CSS: Grid - Pt. 14</h1>
+
+  <h3>Minimum and maximum track sizes: <strong>minmax()</strong></h3>
+
+  <p>On the last day, we saw that we could use <strong>min()</strong> to set the maximum size and <strong>max()</strong> to set the minimum size. But what if we want to set both attributes at a time? Enter <strong>minmax()</strong></p>
+
+  <p>The function <strong>minmax()</strong> is exclusive of the Grid layout, and is a straightforward manner to set the minimum and maximum sizes a grid track can be. Unlike the <strong>min()</strong> and <strong>max(</strong>) functions, we can use static values for both arguments.</p>
+
+  <p>Take a look at the following code:</p>
+
+  <code>
+    .container {<br>
+      &emsp;display: grid;<br>
+      &emsp;grid-template-rows: repeat(2, 1fr);<br>
+      &emsp;grid-template-columns: 50px 100px <span class="code-highlight">minmax(150px, 300px)</span>;<br>
+    }<br>
+  </code>
+
+  <p>With our grid-template-columns set with <strong>minmax()</strong> values, the third column item's width will grow and shrink with the grid container as it resizes horizontally. However, as the grid shrinks, the column tracks will stop shrinking at 150px:</p>
+
+  <div class="container narrow">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+  <p>And as the grid grows, they will stop growing at 300px:</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+
+</body>
+
+</html>
