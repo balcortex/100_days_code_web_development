@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 162 - CSS: Grid - Pt. 15</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 162 - CSS: Grid - Pt. 15</h1>
+
+  <h3>Minimum and maximum track sizes: clamp()</h3>
+
+  <p>Unlike <strong>minmax()</strong>, <strong>clamp()</strong> is a CSS function that can be used anywhere, not just within grid containers. This function adds another parameter to the <strong>minmax()</strong>, allowing our item to resize itself until it reaches one of the minimum or maximum threshold values.</p>
+
+  <p>The syntax is the following:</p>
+
+  <code>
+    clamp(minimum-size, ideal-size, maximum-size)
+  </code>
+
+  <p>Since <strong>clamp()</strong> purpose is to create a flexibly sized track with constraints, we want to use a dynamic value for the "ideal size" argument and typically a static size for the minimum and maximum size. However, it is possible to use a dynamic value here too.</p>
+
+  <p>Let's take a look at the following code:</p>
+
+  <code>
+    .container { <br>
+      &emsp;display: grid; <br>
+      &emsp;grid-template-rows: repeat(2, 1fr); <br>
+      &emsp;grid-template-columns: repeat(3, <span class="code-highlight">clamp(50px, 30%, 150px)</span>); <br>
+    } <br>
+  </code>
+
+  <p>Here, we specify that the three columns will have a width of 30% of their container unless this number is smaller than 50px or bigger than 150px. The container below has a width of 350px, which gives each column a width of 105px (30%):</p>  
+
+  <div class="container narrow">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+  <p>In contrast, if we make the container 600px wide, the 30% would correspond to 180px. Then, the clamp function will use the maximum defined, which is 150px for each column:</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+
+</body>
+
+</html>

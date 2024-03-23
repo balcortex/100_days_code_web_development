@@ -713,3 +713,9 @@ Today I learned how to use the min() and max() functions to specify size limits 
 ### CSS Grid - Pt. 14
 
 Today, I learned about the minmax() function, which is a grid-exclusive function to set both the minimum and maximum of a grid track
+
+## Day 162 - 2024/03/24
+
+### CSS Grid - Pt. 15
+
+Today, I learned about the clamp() function, which lets us specify three values: the minimum, the ideal, and the maximum size value of an item.
