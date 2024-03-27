@@ -719,3 +719,9 @@ Today, I learned about the minmax() function, which is a grid-exclusive function
 ### CSS Grid - Pt. 15
 
 Today, I learned about the clamp() function, which lets us specify three values: the minimum, the ideal, and the maximum size value of an item.
+
+## Day 163 - 2024/03/26
+
+### CSS Grid - Pt. 16
+
+Today I learned about the auto-fit value of the repeat() function, which gives the grid a flexible number of columns based on its size. 

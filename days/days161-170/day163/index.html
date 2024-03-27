@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 163 - CSS: Grid - Pt. 16</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 163 - CSS: Grid - Pt. 16</h1>
+
+  <h3>auto-fit and auto-fill</h3>
+
+  <p>Imagine that you want to give your grid a flexible number of columns based on its size. For example, if the grid is only 150px wide, you may only need one column. If it's 300px, you may want two columns, and so on.</p>
+
+  <p>You can easily accomplish this task using the <strong>auto-fit</strong> (or <strong>auto-fill</strong>) value, which is a part of the <strong>repeat()</strong> function:</p>
+
+  <code>
+    .container {<br>
+      &emsp;display: grid;<br>
+      &emsp;grid-template-rows: repeat(2, 1fr);<br>
+      &emsp;grid-template-columns: <span class="code-highlight">repeat(auto-fit, 150px)</span>;<br>
+    }<br>
+  </code>
+
+  <p>If the container has a width between 300px and 449px (despising gap and paddings), the items will fit two columns:</p>
+
+  <div class="container narrow">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+  <p>And if we increase the container's width beyond 450px (and less than 600px), the items will be distributed in three columns (and so on): </p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+    <div class="item">Item 4</div>
+    <div class="item">Item 5</div>
+    <div class="item">Item 6</div>
+  </div>
+
+  <p>Note: <strong>auto-fit</strong> and <strong>auto-fill</strong> behave similarly. We'll cover the difference later.</p>
+
+</body>
+
+</html>
