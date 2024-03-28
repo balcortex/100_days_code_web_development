@@ -725,3 +725,10 @@ Today, I learned about the clamp() function, which lets us specify three values:
 ### CSS Grid - Pt. 16
 
 Today I learned about the auto-fit value of the repeat() function, which gives the grid a flexible number of columns based on its size. 
+
+## Day 164 - 2024/03/27
+
+### CSS Grid - Pt. 17
+
+Today I learned the difference between auto-fit and auto-fill. When using minmax(), the former will always stretch the items to fit the entire container.
+

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 164 - CSS: Grid - Pt. 17</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 164 - CSS: Grid - Pt. 17</h1>
+
+  <h3>auto-fit vs. auto-fill</h3>
+
+  <p>On the last day, we saw that we could use the <strong>auto-fit</strong> (or <strong>auto-fill</strong>) value on the repeat function to set a flexible number of columns in the container, depending on the container's width. For this task, we used a static column width.</p>
+
+  <p>But, the real magic of <strong>auto-fill</strong> and <strong>auto-fit</strong> comes when we incorporate the <strong>minmax()</strong> with dynamic sizes in the equation, adjusting the number of the columns and resizing the items to fill the entire container without overflowing it. This adaptability ensures our layouts remain consistent and visually appealing, regardless of the container's dimensions.</p>
+
+  <code>
+    .container {<br>
+      &emsp;display: grid;<br>
+      &emsp;grid-template-rows: repeat(2, 1fr);<br>
+      &emsp;grid-template-columns: <span class="code-highlight">repeat(auto-fit, minmax(50px, 1fr))</span>;<br>
+    }<br>
+  </code>
+
+  <p>The items will stretch to the container's width, adding or removing columns as the container changes size.</p>
+
+  <div class="container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+  <p>Now, let's explore the difference between <strong>auto-fit</strong> and <strong>auto-fill</strong>. In more cases, these two values will behave similarly. The only difference is when the items don't fill an entire row once. While <strong>auto-fit</strong> will stretch the items in any condition, <strong>auto-fill</strong> will set the items' width at their minimum once the space becomes available to add another item:</p>
+
+  <code>
+    .container {<br>
+      &emsp;grid-template-columns: <span class="code-highlight">repeat(auto-fill, minmax(50px, 1fr))</span>;<br>
+    }<br>
+  </code>
+
+  <div class="container narrow">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+
+</body>
+
+</html>
