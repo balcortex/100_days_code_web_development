@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 165 - JavaScript: Prototype</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 165 - JavaScript: The Prototype</h1>
+
+  <h3>The prototype</h3>
+
+  <p>All objects in JavaScript have a <strong>prototype</strong>. The prototype is another object that the original object inherits from, which means that the original object has access to all of its prototype's methods and properties.</p>
+
+  <h3>Accessing the object's prototype</h3>
+
+  <p>You can check the object's prototype by using the <strong>Object.getPrototypeOf()</strong> function on the object:</p>
+
+  <code>
+    function User(name, isAdmin) {<br>
+      &emsp;this.name = name;<br>
+      &emsp;this.isAdmin = isAdmin;<br>
+    }<br>
+    <br>
+    const user1 = new User("John", false);<br>
+    const user2 = new User("Andy", true);<br>
+    <br>
+    console.log(<span class="code-highlight">Object.getPrototypeOf(user1)</span>); <span class="comment">// Object {...}</span><br>
+    <br>
+    console.log(<span class="code-highlight">Object.getPrototypeOf(user1)</span> === <span class="code-highlight">Object.getPrototypeOf(user2)</span>); <span class="comment">// true</span><br>
+  </code>
+
+  <p>From the previous code, we can see that the prototypes of both users are the same. That is, `user1` and `user2` have access to all the methods and properties defined in the `User` prototype.</p>
+
+  <p>There's also another way to access the prototype by using the <strong>property .prototype</strong> on the constructor:</p>
+
+  <code>
+    console.log(Object.getPrototypeOf(user1) === <span class="code-highlight">User.prototype</span>); <span class="comment">// true</span>
+  </code>
+
+  <p>Later, we'll see the prototype use cases.</p>
+  
+
+
+</body>
+
+</html>

@@ -732,3 +732,8 @@ Today I learned about the auto-fit value of the repeat() function, which gives t
 
 Today I learned the difference between auto-fit and auto-fill. When using minmax(), the former will always stretch the items to fit the entire container.
 
+## Day 165 - 2024/03/30
+
+### JavaScript: The Prototype - Pt 1
+
+Today I learned about the prototype, which is like a parent object. All objects that inherit from the prototype have access to all its methods and properties
