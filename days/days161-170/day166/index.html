@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 166 - JavaScript: Prototype - Pt. 2</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 166 - JavaScript: The Prototype - Pt. 2</h1>
+
+  <h3>Declaring methods in the prototype</h3>
+
+  <p>We can declare new methods in the prototype, and all objects inherited from it will have access to them. For instance, look at the following code:</p>
+
+  <code>
+    function User(name, isAdmin) { <br>
+      &emsp;this.name = name; <br>
+      &emsp;this.isAdmin = isAdmin; <br>
+      &emsp;this.revokeAdmin = function () { <br>
+        &emsp;&emsp;this.isAdmin = false; <br>
+        &emsp;}; <br>
+    } <br>
+     <br>
+    <span class="code-highlight">
+      User.prototype.greet = function () { <br>
+        &emsp;console.log(`Hi! I'm ${this.name}`); <br>
+      }; <br>
+    </span>
+     <br>
+    const user1 = new User("John", false); <br>
+    const user2 = new User("Andy", true); <br>
+     <br>
+    user1.greet(); <span class="comment">// Hi! I'm John</span> <br>
+    user2.greet(); <span class="comment">// Hi! I'm Andy</span> <br>
+  </code>
+
+  <p>Both users can access the method greet() defined in the prototype. But what's the difference between declaring the method in the prototype and the method in the constructor? Let's use the console to examine one of the users:</p>
+  
+  <code>
+    console.log(user1); <span class="comment">// User {name: 'John', isAdmin: false, revokeAdmin: ƒ}</span>
+  </code>
+
+  <p>If you look closely, the method greet() isn't declared in `user1`, whereas the method revokeAdmin() is. That means constructor methods are copied in each instance. In contrast, <strong>prototype methods are only defined once</strong>, which can help us save memory space.</p>
+
+</body>
+
+</html>

@@ -737,3 +737,9 @@ Today I learned the difference between auto-fit and auto-fill. When using minmax
 ### JavaScript: The Prototype - Pt 1
 
 Today I learned about the prototype, which is like a parent object. All objects that inherit from the prototype have access to all its methods and properties
+
+## Day 166 - 2024/04/01
+
+### JavaScript: The Prototype - Pt 2
+
+Today I learned that defining methods in the prototype helps us save memory because the method is created only once and not in every object like in the constructor
