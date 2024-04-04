@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 167 - JavaScript: Prototype - Pt. 3</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 167 - JavaScript: Prototype - Pt. 3</h1>
+
+  <h3>The ultimate prototype</h3>
+
+  <p>Until now, we have seen that all objects created with the same constructor share one prototype. And sharing the prototype means sharing all its methods and properties. <em><strong>But can a prototype also have a prototype?</strong></em> Let's check the following code:</p>
+
+  <code>
+    function User(name, isAdmin) {<br>
+      &emsp;this.name = name;<br>
+      &emsp;this.isAdmin = isAdmin;<br>
+    }<br>
+    <br>
+    let user1 = new User("John", false);<br>
+    <br>
+    console.log(user1.<span class="code-highlight">valueOf()</span>); <span class="comment">// User {name: 'John', isAdmin: false}</span><br>
+  </code>
+
+  <p>Where did the method <strong>valueOf()</strong> come from? It results that all objects have as their last prototype the <strong>Object.prototype</strong>:</p>
+
+  <code>
+    console.log(Object.getPrototypeOf(User.prototype) === Object.prototype); <span class="comment">// true</span> <br>
+  </code>
+
+  <p>Thus, all objects have access to the methods and properties of the <strong>Object.prototype</strong>, including the <strong>valueOf()</strong> method that we saw earlier.</p>
+
+</body>
+
+</html>

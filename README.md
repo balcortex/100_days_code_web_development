@@ -743,3 +743,10 @@ Today I learned about the prototype, which is like a parent object. All objects 
 ### JavaScript: The Prototype - Pt 2
 
 Today I learned that defining methods in the prototype helps us save memory because the method is created only once and not in every object like in the constructor
+
+## Day 167 - 2024/04/03
+
+### JavaScript: The Prototype - Pt 3
+
+Today I learned that all objects share the Object.prototype as their last prototype. That means all objects can access the methods on the Object.prototype
+
