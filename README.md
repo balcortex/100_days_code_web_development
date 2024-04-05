@@ -750,3 +750,8 @@ Today I learned that defining methods in the prototype helps us save memory beca
 
 Today I learned that all objects share the Object.prototype as their last prototype. That means all objects can access the methods on the Object.prototype
 
+## Day 168 - 2024/04/04
+
+### JavaScript: The Prototype - Pt 4
+
+Today I learned how to change an object's prototype, which allows us to modify the inheritance hierarchy

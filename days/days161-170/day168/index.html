@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Day 168 - JavaScript: Prototype - Pt. 4</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:,"> <!-- Suppress favicon warning -->
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <h1>Day 168 - JavaScript: Prototype - Pt. 4</h1>
+
+  <h3>Prototypal inheritance</h3>
+
+  <p>We've seen that when a method is called, JavaScript first searches for it in the current object. If not found, it searches in the object's prototype. The search ends when the method is encountered or if the prototype of the <strong>Object.prototype</strong> (which is null) is reached.</p>
+
+  <p>Since every prototype inherits from <strong>Object.prototype</strong> by default, and any object can have one unique prototype, how can we create a deeper prototype chain? JavaScripts provides the <strong>Object.setPrototypeOf()</strong> method for this purpose.</p>
+
+  <p>Let's explain this directly in code:</p>
+
+  <code>
+    function Person(name) { <br>
+      &emsp;this.name = name; <br>
+    } <br>
+     <br>
+    Person.prototype.greet = function () { <br>
+      &emsp;console.log(`Hi I'm ${this.name}`); <br>
+    }; <br>
+     <br>
+    function User(name, isAdmin) { <br>
+      &emsp;this.name = name; <br>
+      &emsp;this.isAdmin = isAdmin; <br>
+    } <br>
+     <br>
+    <span class="code-highlight">Object.setPrototypeOf(User.prototype, Person.prototype);</span> <br>
+     <br>
+    let user1 = new User("John", false); <br>
+     <br>
+    user1.greet(); <span class="comment">// Hi I'm John</span> <br>
+  </code>
+
+  <p>The `user1` object can access the methods in the <strong>Person.prototype</strong> because we make User inherits from Person. The method resolution order for this code would be:</p>
+  
+  <ol>
+    <li>user1</li>
+    <li>User.prototype</li>
+    <li>Person.prototype</li>
+    <li>Object.prototype</li>
+  </ol>
+
+
+
+</body>
+
+</html>
